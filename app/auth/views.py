@@ -70,46 +70,41 @@ def signup():
 
         #check username exist
 
-        user=User.query.filter_by(username=username).first()
+        user_name=User.query.filter_by(username=username).first()
+        user_email = User.query.filter_by(email=email).first()
         
-        if user:
-                return render_template('auth/signup.html',
-                                    msg='Username already registered',
+        if user_name and user_email != None:
+
+            flash('email or username already exist')
+
+            return render_template('auth/signup.html',
                                     success=False,
                                     form=form)
+        else:
 
-            # Check email exists
-        user = User.query.filter_by(email=email).first()
+            new_user = User(email=email,
+                        username=username,
+                        password=password)
 
-        if user:
-            return render_template('auth/signup.html',
-                                msg='Email already registered',
-                                   success=False,
-                                   form=form)
+            db.session.add(new_user)
+            db.session.commit()
 
-        new_user = User(email=email,
-                    username=username,
-                    password=password)
+            token = new_user.generate_confirmation_token()
 
-        db.session.add(new_user)
-        db.session.commit()
+            
+            email_data={
+                "to": email,
+                "subject": 'Confirm Your Account',
+                "template": 'auth/email/confirm',
+                "username": username,
+                "token":token
+            }
 
-        token = new_user.generate_confirmation_token()
+            send_async_email(email_data)
 
-        
-        email_data={
-            "to": email,
-            "subject": 'Confirm Your Account',
-            "template": 'auth/email/confirm',
-            "username": username,
-            "token":token
-        }
+            flash('A confirmation email has been sent to you by email.')
 
-        send_async_email(email_data)
-
-        flash('A confirmation email has been sent to you by email.')
-
-        return redirect(url_for('auth.login'))
+            return redirect(url_for('auth.login'))
     return render_template('auth/signup.html', form=form)
 
 
