@@ -1,1 +1,1 @@
-web: gunicorn unbiased-analytics:app
+web: gunicorn webapp:app

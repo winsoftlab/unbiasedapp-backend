@@ -2,7 +2,7 @@ from email import message
 import os
 from flask import current_app, render_template
 from flask_mail import Message
-from server import mail, celery_app
+from app import mail, celery_app
 from flask import current_app
 import tweepy as tw
 import pandas as pd

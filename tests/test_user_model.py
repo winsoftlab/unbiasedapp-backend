@@ -1,5 +1,5 @@
 import unittest
-from server.models import User
+from app.models import User
 
 class UserModelTestCase(unittest.TestCase):
     def test_password_setter(self):

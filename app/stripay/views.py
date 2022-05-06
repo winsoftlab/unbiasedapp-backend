@@ -6,7 +6,7 @@ from . import stripay
 import stripe
 from flask import flash, jsonify, render_template, render_template_string, request, url_for, redirect
 from flask_cors import cross_origin
-from server import db
+from app import db
 
 stripe_keys={
             "publishable_key":os.environ.get("STRIPE_PUBLISHABLE_KEY"),

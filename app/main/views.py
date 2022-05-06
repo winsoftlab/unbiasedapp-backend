@@ -2,7 +2,7 @@ import os
 from flask import jsonify, render_template, request, session
 from flask_cors import cross_origin
 from . import main
-from server import db
+from app import db
 from flask_login import current_user, login_required
 from jinja2 import TemplateNotFound
 from ..models import User,StripeCustomer #THis will be used to load the user model

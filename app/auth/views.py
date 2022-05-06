@@ -5,7 +5,7 @@ from flask_login import login_required, login_user, logout_user, current_user
 
 from . import auth
 from ..models import User
-from server import db
+from app import db
 from ..tasks import send_async_email
 from .forms import LoginForm, SignUpForm
 

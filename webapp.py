@@ -1,7 +1,6 @@
-
 import os
-from server import create_app, db
-from server.models import User, StripeCustomer
+from app import create_app, db
+from app.models import User, StripeCustomer
 from flask_migrate import Migrate, upgrade
 
 
