@@ -1,6 +1,6 @@
 import os
 #os.environ.setdefault('FORKED_BY_MULTIPROCESSING','1')
-basedir = os.path.abspath(os.path.dirname(__file__))
+basedir = os.path.dirname(os.path.abspath(__file__))
 
 class Config:
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.googlemail.com')
