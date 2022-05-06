@@ -1,0 +1,8 @@
+.sqlite
+__pycache__
+.json
+.env
+.flaskenv
+.sh
+.flaskenv
+redis-stable
