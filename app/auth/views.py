@@ -105,7 +105,7 @@ def signup():
             "token":token
         }
 
-        send_async_email.apply_async(args=[email_data], countdown=5)
+        send_async_email(email_data)
 
         flash('A confirmation email has been sent to you by email.')
 
