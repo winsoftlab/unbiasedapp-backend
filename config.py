@@ -9,14 +9,14 @@ class Config:
         ['true', 'on', '1']
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    MAIL_SUBJECT_PREFIX = 'Unbiased Opinion'
+    MAIL_SUBJECT_PREFIX = 'Unbiased Analytics|'
     MAIL_SENDER = os.environ.get('MAIL_SENDER','anabantiakachi1@gmail.com')
     SERVER_ADMIN = os.environ.get('SERVER_ADMIN')
     MONGO_URI = os.environ.get("MONGO_URI")
     SECRET_KEY = os.environ.get("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SERVER_NAME='127.0.0.1:5000'
+    #SERVER_NAME='127.0.0.1:5000'
     TWITTER_SECRET = os.environ.get("TWITTER_SECRET")
     TWITTER_KEY = os.environ.get("TWITTER_KEY")
     CORS_HEADERS = 'Content-Type'
