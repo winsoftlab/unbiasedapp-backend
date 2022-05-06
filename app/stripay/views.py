@@ -79,7 +79,7 @@ def create_checkout_session():
             #This will allow you to associate the stripe session with  the user saved in the database
             #eg: Client_reference_id = user.id,
             client_reference_id = current_user.id,
-            success_url = "https://127.0.0.1:5000/dashboard", #domain_url + "success?session_id={CHECKOUT_SESSION_ID}",
+            success_url = "/dashboard", #domain_url + "success?session_id={CHECKOUT_SESSION_ID}",
             cancel_url = domain_url + "cancel",
             payment_method_types=["card"],
             mode="subscription",
