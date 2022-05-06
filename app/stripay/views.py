@@ -69,7 +69,7 @@ def create_checkout_session():
 
     data = request.json
 
-    domain_url ="http://127.0.0.1:5000/stripy/order/"
+    domain_url ="/stripy/order/"
     
     stripe.api_key = stripe_keys["secret_key"]
 
