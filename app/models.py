@@ -16,8 +16,8 @@ class StripeCustomer(db.Model):
 class User(UserMixin, db.Model):
     __tablename__='users'
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True, index=True)
-    username = db.Column(db.String(64), unique=False, index=True)
+    email = db.Column(db.String(100), index=True)
+    username = db.Column(db.String(64), index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=False)
     #about_me = db.Column(db.String(255), unique=True)
