@@ -47,12 +47,13 @@
                         <!---input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required--->
                     </div>
                     <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon4">&#x1F511;</span>
                         {{ form.password(class="form-control", type="password", placeholder="password") }}
                         <!---input type="password" class="form-control" placeholder="Password"  aria-describedby="basic-addon1" required--->
                     </div>
                     <div>
-                        {{ form.submit()}} <br>
-                        {{ form.remember_me(name="Keep me logged in")}}
+                        {{ form.submit() }} <br>
+                        {{ form.remember_me.label}} {{form.remember_me()}}
                     </div>
                     <p>
                         Don't have an account? 
