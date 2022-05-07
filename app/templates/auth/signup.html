@@ -40,7 +40,9 @@
                     </div>
                 </div>
                 
-                
+                {% for field, errors in form.errors.items() %}
+                    {{ ', '.join(errors) }}
+                {% endfor %}
                 <form  role="form" action="" method="post">
                     {{ form.hidden_tag() }} 
                     <div class="input-group mb-3">
