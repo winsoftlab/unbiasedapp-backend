@@ -90,6 +90,12 @@
       <div class="card-footer">
         <button type="submit" class="btn btn-fill btn-primary">Save</button>
       </div>
+      <div class="card-footer">
+        <a href="{{ url_for('auth.delete_account, id=current_user.id') }}">
+         <button type="submit" class="btn btn-fill btn-primary">Delete Account</button>
+      </a>
+      </div>
+
     </div>
   </div>
   <div class="col-md-4">

@@ -7,7 +7,7 @@ from . import auth
 from ..models import User
 from app import db
 from ..tasks import send_async_email
-from .forms import LoginForm, SignUpForm
+from .forms import LoginForm, SignUpForm, DeleteAccountForm
 
 
 
@@ -135,3 +135,16 @@ def resend_confirmation():
     flash('A new confirmation email has been sent to you!.')
 
     return redirect(url_for('main.home'))
+
+
+@auth.route('/delete-account/<int:id>', methods=['POST','GET'])
+def delete_account(id):
+    form = DeleteAccountForm()
+    if form.validate_on_submit():
+        if form.answer.data:
+            user = User.query.get_or_404(id)
+            db.session.delete(user)
+            db.session.commit()
+            flash('Account deleted', message='info')
+        return redirect(url_for('main.home'))
+    return render_template('auth/delete_account.html', form=form)
