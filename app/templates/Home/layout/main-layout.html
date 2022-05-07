@@ -19,10 +19,8 @@
 <body class="">
     <!--Including the navigation bar-->
     {% include 'Home/components/navbar.html' %}
-    
-    {% include 'Home/components/messages.html' %}
-
     {% block page_content %}
+    {% include 'Home/components/messages.html' %}
     <main class="main-layout">
 
         <div className="main-layout-wrap">
