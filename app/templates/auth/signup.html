@@ -23,16 +23,6 @@
             
             <div class="card-header">
                 <h5 class="title">Signup</h5>
-    
-                <h6 class="card-category">
-                    {% if msg %}
-                      <span class="text-danger">{{ msg | safe }}</span>
-                    {% else %}
-                    <span>
-                      Add your credentials
-                    </span>
-                    {% endif %}  
-                </h6>
             </div>
             <div class="card-body">
                 <div>
@@ -63,11 +53,14 @@
                         <!---input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required--->
                     </div>
                     <div class="input-group mb-3">
-                        {{ form.password(class="form-control", type="password", placeholder="Password") }}
+                        {{ form.password(class="form-control", type="password") }}
                         <!---input type="password" class="form-control" placeholder="Password"  aria-describedby="basic-addon1" required--->
                     </div>
+                    <div class="input-group mb-3">
+                        {{ form.password2(class="form-control", type="password") }}
+                    </div>
                     <div>
-                      <button class="btn btn-outline-primary" type="submit" name="signup">Signup</button>
+                      {{ form.submit(class="btn btn-outline-primary") }}
                       &nbsp; &nbsp;
                       <p>
                         Have an account? <a href="/login.html" class="text-primary">Login</a>

@@ -45,6 +45,7 @@ def login():
             if next is None or not next.startswith('/'):
                 next = url_for('main.home')
             return redirect(next)
+        flash('Invalid username or password')
     return render_template ("auth/login.html", form=form)
 
 
@@ -53,6 +54,7 @@ def login():
 @login_required
 def logout():
     logout_user()
+    flash('You have been logged out!')
     return redirect(url_for("main.home"))
 
 
@@ -70,41 +72,30 @@ def signup():
 
         #check username exist
 
-        user_name=User.query.filter_by(username=username).first()
-        user_email = User.query.filter_by(email=email).first()
+
+        new_user = User(email=email,
+                    username=username,
+                    password=password)
+
+        db.session.add(new_user)
+        db.session.commit()
+
+        token = new_user.generate_confirmation_token()
+
         
-        if user_name and user_email != None:
+        email_data={
+            "to": email,
+            "subject": 'Confirm Your Account',
+            "template": 'auth/email/confirm',
+            "username": username,
+            "token":token
+        }
 
-            flash('email or username already exist')
+        send_async_email(email_data)
 
-            return render_template('auth/signup.html',
-                                    success=False,
-                                    form=form)
-        else:
+        flash('Thank you for signing up, A confirmation email has been sent to you by email.')
 
-            new_user = User(email=email,
-                        username=username,
-                        password=password)
-
-            db.session.add(new_user)
-            db.session.commit()
-
-            token = new_user.generate_confirmation_token()
-
-            
-            email_data={
-                "to": email,
-                "subject": 'Confirm Your Account',
-                "template": 'auth/email/confirm',
-                "username": username,
-                "token":token
-            }
-
-            send_async_email(email_data)
-
-            flash('A confirmation email has been sent to you by email.')
-
-            return redirect(url_for('auth.login'))
+        return redirect(url_for('auth.login'))
     return render_template('auth/signup.html', form=form)
 
 
@@ -116,7 +107,7 @@ def confirm(token):
 
     if current_user.confirm(token):
         db.session.commit()
-        flash('You have confirmed your account. Thanks!')
+        flash('You have confirmed your account. Registration complete!')
 
     else:
         flash('The confirmation link is invalid or has expired.')

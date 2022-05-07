@@ -21,16 +21,6 @@
             
             <div class="card-header">
                 <h5 class="title">Login</h5>
-    
-                <h6 class="card-category">
-                    {% if msg %}
-                      <span class="text-danger">{{ msg | safe }}</span>
-                    {% else %}
-                    <span>
-                      Add your credentials
-                    </span>
-                    {% endif %}  
-                </h6>
             </div>
             <div class="card-body">
                 <div>
@@ -61,12 +51,13 @@
                         <!---input type="password" class="form-control" placeholder="Password"  aria-describedby="basic-addon1" required--->
                     </div>
                     <div>
-                        <button class="btn" type="submit" name="login">Login</button>
-                        <p>
-                            Don't have an account? 
-                            <a href="{{ url_for('auth.signup') }}" class="text-primary">Signup</a>
-                        </p>
+                        {{ form.submit(class='btn')}} <br>
+                        {{ form.remember_me (class='check')}}
                     </div>
+                    <p>
+                        Don't have an account? 
+                        <a href="{{ url_for('auth.signup') }}" class="text-primary">Signup</a>
+                    </p>
                     
                 </form>
             </div>

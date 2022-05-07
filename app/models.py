@@ -6,6 +6,7 @@ from .extensions import db, login_manger
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class StripeCustomer(db.Model):
+    __tablename__ = 'stripe_customer'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     StripeCustomerId = db.Column(db.String(255), nullable=False)
@@ -16,8 +17,8 @@ class StripeCustomer(db.Model):
 class User(UserMixin, db.Model):
     __tablename__='users'
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), index=True)
-    username = db.Column(db.String(64), index=True)
+    email = db.Column(db.String(64), unique=True, index=True)
+    username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=False)
     #about_me = db.Column(db.String(255), unique=True)
