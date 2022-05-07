@@ -43,16 +43,16 @@
                     {{ form.hidden_tag() }} 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">@</span>
-                        {{ form.email(class="form-control", placeholder="Email") }}
+                        {{ form.email(class="form-control", placeholder="email@example.com") }}
                         <!---input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required--->
                     </div>
                     <div class="input-group mb-3">
-                        {{ form.password(class="form-control", type="password") }}
+                        {{ form.password(class="form-control", type="password", placeholder="password") }}
                         <!---input type="password" class="form-control" placeholder="Password"  aria-describedby="basic-addon1" required--->
                     </div>
                     <div>
-                        {{ form.submit(class='btn')}} <br>
-                        {{ form.remember_me (class='check')}}
+                        {{ form.submit()}} <br>
+                        {{ form.remember_me(name="Keep me logged in")}}
                     </div>
                     <p>
                         Don't have an account? 

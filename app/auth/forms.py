@@ -10,10 +10,8 @@ from wtforms import ValidationError
 
 class LoginForm(FlaskForm):
     email = StringField('Email',
-                         id='email_login',
                          validators=[DataRequired(), Email()])
     password = PasswordField('Password',
-                             id='pwd_login',
                              validators=[DataRequired()])
     remember_me = BooleanField("Keep me logged in")
 
@@ -22,16 +20,13 @@ class LoginForm(FlaskForm):
 
 class SignUpForm(FlaskForm):
     username = StringField('Username',
-                         id='username_create',
                          validators=[DataRequired(), Length(1, 64), Regexp('^[A-Za-z][A-Za-z0-9_.]*$',0, 'Username must have only letters,numbers, dots or underscores')])
 
     email = StringField('Email',
-                      id='email_create',
                       validators=[DataRequired(), Length(1,64), Email()])
 
 
     password = PasswordField('Password',
-                             id='pwd_create',
                              validators=[DataRequired(), EqualTo('password2', message='Paswords must match.')])
 
     password2 = PasswordField('Confirm password', validators=[DataRequired()])

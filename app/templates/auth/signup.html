@@ -44,6 +44,7 @@
                 <form  role="form" action="" method="post">
                     {{ form.hidden_tag() }} 
                     <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">&#128100;</span>
                       {{ form.username(class="form-control", placeholder="Username") }}
                       <!---input type="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required--->
                     </div>
@@ -53,11 +54,13 @@
                         <!---input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required--->
                     </div>
                     <div class="input-group mb-3">
-                        {{ form.password(class="form-control", type="password") }}
+                        <span class="input-group-text" id="basic-addon1">&#128273;</span>
+                        {{ form.password(class="form-control", type="password", placeholder="password") }}
                         <!---input type="password" class="form-control" placeholder="Password"  aria-describedby="basic-addon1" required--->
                     </div>
+                    <span class="input-group-text" id="basic-addon1">&#x1F511;</span>
                     <div class="input-group mb-3">
-                        {{ form.password2(class="form-control", type="password") }}
+                        {{ form.password2(class="form-control", type="password", placeholder="confirm password") }}
                     </div>
                     <div>
                       {{ form.submit(class="btn btn-outline-primary") }}
