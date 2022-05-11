@@ -138,6 +138,7 @@ def resend_confirmation():
 
 
 @auth.route('/delete-account/<int:id>', methods=['POST','GET'])
+@login_required
 def delete_account(id):
     form = DeleteAccountForm()
     if form.validate_on_submit():
@@ -145,6 +146,6 @@ def delete_account(id):
             user = User.query.get_or_404(id)
             db.session.delete(user)
             db.session.commit()
-            flash('Account deleted', message='info')
+            flash('Account deleted')
         return redirect(url_for('main.home'))
     return render_template('auth/delete_account.html', form=form)

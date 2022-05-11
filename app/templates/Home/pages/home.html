@@ -18,11 +18,13 @@
                            Track your first product
                         </button>
                            <form class="row row-cols-2" id="SearchFormElement" aria-hidden="true">
-                              <div class="col-auto">
+                              <!--div class="col-auto">
                                  <input type="search" class="form-control" />
-                              </div>
+                              </div-->
                               <div class="col-auto">
-                                 <button class="btn btn-success " id="test-bg-job">SEARCH</button>
+                                 <a href="{{ url_for('demo.dashboard')}}">
+                                    <button class="btn btn-success " id="DEMO">DEMO</button>
+                                 </a>
                               </div>
                            </form>
                      </div>

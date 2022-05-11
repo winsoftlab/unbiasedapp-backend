@@ -1,0 +1,127 @@
+{% extends "Home/layout/main-layout.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link rel="stylesheet" href="../../static/demo/demo.css">
+{% endblock stylesheets %}
+{% block title%}Demo Dashboard{% endblock %}
+{% block page_content %}
+
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" id="DemoFormInputGroup">
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <button class="btn btn-primary" id="DemoSearchButton">SEARCH</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="form-group" id="process" style="display: none;">
+    <div class="progress" style='height: 7px'>
+      <div class="progress-bar progress-bar-striped progress-bar-animated active bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="progbar"></div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Reports
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                Integrations
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                Customers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-chart">
+          <div class="card-header ">
+            <div class="row">
+              <div class="col-sm-6 text-left">
+                <h5 class="card-category">Twitter Analytics</h5>
+                <h2 class="card-title">Sentiment Performance</h2>
+              </div>
+              <div class="col-sm-6">
+                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                  <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                    <input type="radio" name="options" checked>
+                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Twitter</span>
+                    <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-single-02"></i>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="chartBig1"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category">Bar chart</h5>
+            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i></h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="CountryChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+<script src="../../static/demo/demo.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/nanobar/0.2.1/nanobar.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      analysisPlots.initDashboardPageCharts();
+    });
+  </script>
+
+{% endblock script %}

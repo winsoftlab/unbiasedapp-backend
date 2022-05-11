@@ -50,4 +50,7 @@ def create_app(config_name):
     from .data import data as data_blueprint
     app.register_blueprint(data_blueprint, url_prefix='/data')
 
+    from .demo import demo as demo_blueprint
+    app.register_blueprint(demo_blueprint, url_prefix='demo')e
+
     return app
