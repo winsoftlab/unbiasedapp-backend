@@ -1,6 +1,6 @@
 from . import demo
 from flask import request, render_template
-from tasks import gettweets_pipeline, analyise_tweet_pipe
+from ..tasks import gettweets_pipeline, analyise_tweet_pipe
 
 @demo.route('/dashboard', methods=["GET"])
 def dashboard():
