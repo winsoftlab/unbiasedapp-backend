@@ -1,12 +1,14 @@
 from . import demo
 from flask import request, render_template
+from flask_cors import cross_origin
 from ..tasks import gettweets_pipeline, analyise_tweet_pipe
 
 @demo.route('/dashboard', methods=["GET"])
-def dashboard():
+def demo_dashboard():
     return render_template('demo/demo.html')
 
 @demo.route('/demo-tweets', methods=["POST"])
+@cross_origin()
 def demo_tweets():
     """
     """
