@@ -43,7 +43,7 @@ def gettweets_pipeline(search_query, item_data_count):
     twitter_api = tw.API(auth, wait_on_rate_limit=True)
 
 #------------------SEARCHING FOR TWEET----------------------
-    from_date = "2022-09-16"
+    from_date = "2020-09-16"
 
 
     tweets = tw.Cursor(twitter_api.search_tweets,
@@ -83,7 +83,7 @@ def gettweets_pipeline(search_query, item_data_count):
 #-------------CONVERTING TO JSON-------------------------------------
     df_tweets["date"] = df_tweets["date"].astype("string")
     df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
-    
+
     df_val = df_tweets.drop(["Date"], axis=1)
 
     main_value = df_val.to_dict(orient="index")
