@@ -141,11 +141,11 @@ def resend_confirmation():
 @login_required
 def delete_account(id):
     form = DeleteAccountForm()
-    if form.validate_on_submit():
-        if form.answer.data:
-            user = User.query.get_or_404(id)
-            db.session.delete(user)
-            db.session.commit()
-            flash('Account deleted')
+    if form.validate_on_submit() and form.answer.data=='Yes':
+        user = User.query.get(id)
+        db.session.delete(user)
+        db.session.commit()
+        flash('Account deleted')
         return redirect(url_for('main.home'))
+    flash("incorrect input", message='warning')
     return render_template('auth/delete_account.html', form=form)

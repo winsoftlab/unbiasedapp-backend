@@ -1,3 +1,4 @@
+from wsgiref.validate import validator
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, EmailField, BooleanField, SubmitField
 from wtforms.validators import Email, DataRequired,Length,Regexp,EqualTo
@@ -42,5 +43,5 @@ class SignUpForm(FlaskForm):
 
 
 class DeleteAccountForm(FlaskForm):
-    answer = BooleanField('Yes', DataRequired())
+    answer =StringField('Enter "Yes" to delete', validators=[DataRequired()])
     submit =SubmitField("Delete account")
