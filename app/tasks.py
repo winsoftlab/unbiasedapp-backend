@@ -141,8 +141,6 @@ def gettweets_pipeline(search_query, item_data_count):
 
     twitter_api = authenticate()
 
-    time.sleep(3)
-
     tweets_array = search_tweet(twitter_api, search_query, item_data_count)
 
     tweet_df = convert_to_dataframe(tweets_array, twitter_api)
