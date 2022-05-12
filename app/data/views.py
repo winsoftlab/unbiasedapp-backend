@@ -19,19 +19,12 @@ def get_tweets():
         search_query = request.form.get("query")
 
         item_data_count = 10
-        
-        try:
 
-            tweets = gettweets_pipeline(search_query, item_data_count)
-        except:
-            "Error occured while fetching tweets"
 
-        try:
+        tweets = gettweets_pipeline(search_query, item_data_count)
 
-            result = analyise_tweet_pipe(tweets)
+        result = analyise_tweet_pipe(tweets)
 
-        except:
-            "Error occured while analizing tweets"
         return result
 
 
