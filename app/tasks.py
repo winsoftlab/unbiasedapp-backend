@@ -11,6 +11,7 @@ import os
 import pandas as pd
 import numpy as np
 from textblob import TextBlob
+from config import Config
 
 
 
@@ -34,8 +35,8 @@ def gettweets_pipeline(search_query, item_data_count):
 #-----------------AUTHENTICATION-----------------------------
 
 
-    api_key = os.environ.get("TWITTER_KEY")
-    api_secret = os.environ.get("TWITTER_SECRET")
+    api_key = Config.TWITTER_KEY #os.environ.get("TWITTER_KEY")
+    api_secret = Config.TWITTER_SECRET #os.environ.get("TWITTER_SECRET")
 
     auth = tw.OAuthHandler(api_key, api_secret)
 
