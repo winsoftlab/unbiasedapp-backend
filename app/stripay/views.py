@@ -57,6 +57,7 @@ def index():
 
 
 @stripay.route("/config")
+@cross_origin()
 def get_publishabel_key():
     stripe_config = {'publicKey':stripe_keys["publishable_key"]}
 

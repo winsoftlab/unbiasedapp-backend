@@ -23,6 +23,7 @@ fetch("/stripy/config")
 .then((data) => {
   const stripe = Stripe(data.publicKey);
 
+  window.alert(stripe)
     
 
     document.getElementById("checkout-basic").addEventListener("click", () => {
