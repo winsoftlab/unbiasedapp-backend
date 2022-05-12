@@ -309,7 +309,7 @@ analysisPlots = {
         $('#DemoSearchButton').click(function () {
 
           $.ajax({
-            url: "demo/demo_tweets",
+            url: "/demo_tweets",
 
             type: "POST",
 

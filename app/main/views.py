@@ -17,7 +17,7 @@ def home():
 
 @main.route('/dashboard', methods=["GET","POST"])
 @cross_origin()
-@login_required
+#@login_required
 #@subscription_required #New subscription required decorator
 def dashboard():
     try:
@@ -49,7 +49,7 @@ def profile():
 
 
 @main.route('/<template>')
-@login_required
+#@login_required
 def route_template(template):
 
     try:
