@@ -15,7 +15,7 @@ from textblob import TextBlob
 
 
 
-@celery_app.task()
+
 def send_async_email(email_data):
     app = current_app._get_current_object()
 
@@ -58,7 +58,7 @@ def search_tweet( twitter_api, search_query, item_data_count):
 
     """
 
-    from_date = "2020-09-16"
+    from_date = "2022-09-16"
 
 
     tweets = tw.Cursor(twitter_api.search_tweets,
@@ -136,7 +136,7 @@ def dataframe_to_list_dict(tweeter_df):
 
 
 
-@celery_app.task()
+
 def gettweets_pipeline(search_query, item_data_count):
 
     twitter_api = authenticate()
@@ -205,12 +205,10 @@ def calculate_polarity(df_data):
 
 
 
-@celery_app.task()
+
 def analyise_tweet_pipe(main_value):
 
      #message to be displayed on processing information
-
-    message = 'Analyzing data'
 
     clean_tweets = clean_tweet(main_value)
     tweet_reg = tweet_regex(clean_tweets)
