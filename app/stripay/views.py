@@ -128,13 +128,6 @@ def stripe_webhook():
 
         handle_checkout_session(session)
 
-
-        out_file = open("myfile.json", "w")
-  
-        json.dump(session, out_file, indent = 6)
-  
-        out_file.close()
-
         #Fulfill the purchase
         
 

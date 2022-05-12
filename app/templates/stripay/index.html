@@ -1,9 +1,10 @@
 {% extends "Home/layout/main-layout.html" %}
-{% block title %}Payment{% endblock %}
+{% block title %}Subscription{% endblock %}
 
 {% block script %}
 
 <script src="{{ url_for('static', filename='js/stripe-subscription.js') }}"></script>
+<script src="{{ url_for('static', filename='js/stripe-change-subscription') }}"></script>
 {% endblock %}
 
 {% block page_content %}
@@ -22,7 +23,10 @@
                         <li>Email support</li>
                         <li>Help center access</li>
                     </ul>
-                    <button type="button" id="free-trial-button" class="w-100 btn btn-lg btn-outline-primary">Try now</button>
+                    <a href="{{ url_for('main.dashboard') }}">
+                        
+                        <button type="button" id="free-trial-button" class="w-100 btn btn-lg btn-outline-primary">Try now</button>
+                    </a>
                     </div>
                 </div>
                 </div>

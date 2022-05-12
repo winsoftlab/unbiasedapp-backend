@@ -5,7 +5,7 @@ from . import data
 from flask_cors import cross_origin
 from flask import jsonify, request, url_for
 from ..tasks import gettweets_pipeline
-
+from ..decorators import subscription_required
 
 
 @data.route('/get_tweets', methods=["POST"])
@@ -26,6 +26,8 @@ def get_tweets():
 
 
 @data.route('/save_to_database/<result>', methods=["PUT"])
+@login_required
+@subscription_required
 @cross_origin()
 def save_tweets(result):
     pass

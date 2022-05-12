@@ -17,8 +17,8 @@ def home():
 
 @main.route('/dashboard', methods=["GET","POST"])
 @cross_origin()
-#@login_required
-#@subscription_required #New subscription required decorator
+@login_required
+@subscription_required #New subscription required decorator
 def dashboard():
     try:
 
