@@ -35,8 +35,8 @@ def gettweets_pipeline(search_query, item_data_count):
 #-----------------AUTHENTICATION-----------------------------
 
 
-    api_key = Config.TWITTER_KEY #os.environ.get("TWITTER_KEY")
-    api_secret = Config.TWITTER_SECRET #os.environ.get("TWITTER_SECRET")
+    api_key ='U7Ec18ZVElWd0tYnSosTsGUiB' #Config.TWITTER_KEY #os.environ.get("TWITTER_KEY")
+    api_secret ='ATmIUJQlEdTzIGif4L8ei6Bp64llWw7YWbc8dfQlmodnLzMMXO' #Config.TWITTER_SECRET #os.environ.get("TWITTER_SECRET")
 
     auth = tw.OAuthHandler(api_key, api_secret)
 
