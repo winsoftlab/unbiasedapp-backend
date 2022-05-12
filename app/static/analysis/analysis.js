@@ -614,8 +614,7 @@ analysisPlots = {
                 }, 5000) */
 
                 //Plotting values
-                window.alert(response)
-                
+
                 const date = response.date //access the date object of the response
                 const sentiments = response.sentiment_polarity //access the sentiment polarity object of the response
                 const location = response.user_location //access the user location object of the response
