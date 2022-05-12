@@ -21,11 +21,8 @@ def get_tweets():
         item_data_count = 10
 
 
-        tweets = gettweets_pipeline(search_query, item_data_count)
-
-        #result = analyise_tweet_pipe(tweets)
-
-        return jsonify(tweets)
+        result = gettweets_pipeline(search_query, item_data_count)
+        return result
 
 
 @data.route('/save_to_database/<result>', methods=["PUT"])

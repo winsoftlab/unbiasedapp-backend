@@ -84,54 +84,49 @@ def gettweets_pipeline(search_query, item_data_count):
             df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
             df_val = df_tweets.drop(["Date"], axis=1)
 
-            j_son = df_val.to_dict(orient="index")
-
-            return j_son
-
-    except:
-        return {"Error occurred while fetching tweet "}
-
-
+            main_value = df_val.to_dict(orient="index")
 
 #--------------PORCESSESS TO ANALIZE TWEETS---------------------#
 
-def analyise_tweet_pipe(main_value):
 
-    list_dictionary =[]
+        list_dictionary =[]
 
-    for items in main_value.values():
+        for items in main_value.values():
 
-        list_dictionary.append(items)
+            list_dictionary.append(items)
 
-    new_main_value = pd.DataFrame(list_dictionary, columns=['date', 'text', 'user_location'])
+        new_main_value = pd.DataFrame(list_dictionary, columns=['date', 'text', 'user_location'])
 
-    #main_value = pd.DataFrame(main_value)#Convert list dictionary to dataframe.
+        #main_value = pd.DataFrame(main_value)#Convert list dictionary to dataframe.
 
-    new_main_value['date'] = pd.to_datetime(new_main_value['date'])
-    new_main_value['text'] = new_main_value['text'].astype('string')
-    new_main_value['user_location'] = new_main_value['user_location'].astype('category')
+        new_main_value['date'] = pd.to_datetime(new_main_value['date'])
+        new_main_value['text'] = new_main_value['text'].astype('string')
+        new_main_value['user_location'] = new_main_value['user_location'].astype('category')
 
-    df_value = new_main_value
+        df_value = new_main_value
 
-    a = np.array(df_value['text'])
-    array_text = []
-    for n in a:
-        k = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|RT", " ", n).split())
-        array_text.append(k)
+        a = np.array(df_value['text'])
+        array_text = []
+        for n in a:
+            k = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|RT", " ", n).split())
+            array_text.append(k)
 
-    data = pd.DataFrame(array_text, columns=["new_text"])
+        data = pd.DataFrame(array_text, columns=["new_text"])
 
-    df_data = pd.concat([df_value, data], axis=1)
-    df_data = df_data.drop("text", axis = 1)
+        df_data = pd.concat([df_value, data], axis=1)
+        df_data = df_data.drop("text", axis = 1)
 
-    pol_val =[]
-    sent = np.array(df_data["new_text"])
-    for i in sent:
-        analysis = TextBlob(i)
-        sent_polarity = round(analysis.sentiment.polarity, 4)
-        pol_val.append(sent_polarity)
-    sent_df=pd.DataFrame(pol_val, columns =["sentiment_polarity"])
+        pol_val =[]
+        sent = np.array(df_data["new_text"])
+        for i in sent:
+            analysis = TextBlob(i)
+            sent_polarity = round(analysis.sentiment.polarity, 4)
+            pol_val.append(sent_polarity)
+        sent_df=pd.DataFrame(pol_val, columns =["sentiment_polarity"])
 
-    df_sentiment = pd.concat([df_data, sent_df], axis=1)
+        df_sentiment = pd.concat([df_data, sent_df], axis=1)
 
-    return df_sentiment.to_dict()
+        return df_sentiment.to_dict()
+        
+    except:
+        return {"Error occurred while fetching tweet "}
