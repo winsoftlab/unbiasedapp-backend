@@ -1,7 +1,7 @@
 from . import demo
 from flask import request, render_template
 from flask_cors import cross_origin
-from ..tasks import gettweets_pipeline, analyise_tweet_pipe
+from ..tasks import gettweets_pipeline
 
 @demo.route('/dashboard', methods=["GET"])
 def demo_dashboard():
@@ -18,9 +18,7 @@ def demo_tweets():
 
         item_data_count = 100
         
-        tweets = gettweets_pipeline(search_query, item_data_count)
-
-        result = analyise_tweet_pipe(tweets)
+        result = gettweets_pipeline(search_query, item_data_count)
 
         
         return result
