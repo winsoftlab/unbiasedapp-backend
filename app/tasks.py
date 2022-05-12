@@ -15,7 +15,6 @@ from textblob import TextBlob
 
 
 
-
 def send_async_email(email_data):
     app = current_app._get_current_object()
 
@@ -31,8 +30,8 @@ def send_async_email(email_data):
 
 
 
-def authenticate():
-
+def gettweets_pipeline(search_query, item_data_count):
+#-----------------AUTHENTICATION-----------------------------
     try:
 
         api_key = os.environ.get("TWITTER_KEY")
@@ -42,119 +41,61 @@ def authenticate():
 
         twitter_api = tw.API(auth, wait_on_rate_limit=True)
 
-        return twitter_api
-
-    except:
-        return {"Unable to authenticatae "}
+#------------------SEARCHING FOR TWEET----------------------
+        from_date = "2022-09-16"
 
 
-
-def search_tweet(twitter_api, search_query, item_data_count):
-
-    """
-    An search function that takes search query and item count as parameter
-
-    an return a tweet array as tweet_copy 
-
-    """
-
-    from_date = "2022-09-16"
-
-
-    tweets = tw.Cursor(twitter_api.search_tweets,
+        tweets = tw.Cursor(twitter_api.search_tweets,
                         q=search_query,
                         lang="en",
                         since=from_date).items(item_data_count)
 
-    tweets_array = []
+        tweets_array = []
 
-    for tweet in tweets:
-        tweets_array.append(tweet)
-        
-    return tweets_array
+        for tweet in tweets:
+            tweets_array.append(tweet)
 
+#----------------CONVERTING TO DATA FRAME-----------------------
+        tweets_df = pd.DataFrame()
+        # populate the dataframe
+        for tweet in tweets_array:
+            hashtags = []
+            try:
+                for hashtag in tweet.entities["hashtags"]:
+                    hashtags.append(hashtag["text"])
 
-def convert_to_dataframe(tweets_array, twitter_api):
+                text = twitter_api.get_status(id=tweet.id, tweet_mode='extended').full_text
+            except:
+                pass
+            tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet.user.name, 
+                                                    'user_location': tweet.user.location,\
+                                                    'user_description': tweet.user.description,
+                                                    'user_verified': tweet.user.verified,
+                                                    'date': tweet.created_at,
+                                                    'text': tweet.text, 
+                                                    'hashtags': [hashtags if hashtags else None],
+                                                    'source': tweet.source}))
+            tweets_df = tweets_df.reset_index(drop=True)
 
+            df_tweets = tweets_df[["date", "user_location", "text"]]
 
-    """
-    A function that takes the tweet array and returns tweets as dataframe 
-    
-    """
+#-------------CONVERTING TO JSON-------------------------------------
+            df_tweets["date"] = df_tweets["date"].astype("string")
+            df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
+            df_val = df_tweets.drop(["Date"], axis=1)
 
-    tweets_df = pd.DataFrame()
-    # populate the dataframe
-    for tweet in tweets_array:
-        hashtags = []
-        try:
-            for hashtag in tweet.entities["hashtags"]:
-                hashtags.append(hashtag["text"])
+            j_son = df_val.to_dict(orient="index")
 
-            text = twitter_api.get_status(id=tweet.id, tweet_mode='extended').full_text
-        except:
-            pass
-        tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet.user.name, 
-                                                'user_location': tweet.user.location,\
-                                                'user_description': tweet.user.description,
-                                                'user_verified': tweet.user.verified,
-                                                'date': tweet.created_at,
-                                                'text': tweet.text, 
-                                                'hashtags': [hashtags if hashtags else None],
-                                                'source': tweet.source}))
-        tweets_df = tweets_df.reset_index(drop=True)
+            return j_son
 
-    # show the dataframe
+    except:
+        return {"Error occurred while fetching tweet "}
 
-    return tweets_df
-
-
-
-def select_var(df_tweets):
-
-    '''A function that selects the required processing variables'''
-    
-    tweeter_df = df_tweets[["date", "user_location", "text"]]
-
-    return tweeter_df
-
-
-def dataframe_to_list_dict(tweeter_df):
-
-    """
-
-    A function that converts the required variable dataframe to dictionary
-    
-    """    
-    tweeter_df["date"] = tweeter_df["date"].astype("string")
-    tweeter_df[['date','Date']] = tweeter_df['date'].str.split(' ',expand=True)
-    df_val = tweeter_df.drop(["Date"], axis=1)
-
-    j_son = df_val.to_dict(orient="index")
-
-    return j_son
-
-
-
-
-
-def gettweets_pipeline(search_query, item_data_count):
-
-    twitter_api = authenticate()
-
-    tweets_array = search_tweet(twitter_api, search_query, item_data_count)
-
-    tweet_df = convert_to_dataframe(tweets_array, twitter_api)
-
-    required_variables = select_var(tweet_df)
-
-    final_value = dataframe_to_list_dict(required_variables)
-
-    return final_value
 
 
 #--------------PORCESSESS TO ANALIZE TWEETS---------------------#
 
-def clean_tweet(main_value):
+def analyise_tweet_pipe(main_value):
 
     list_dictionary =[]
 
@@ -169,30 +110,20 @@ def clean_tweet(main_value):
     new_main_value['date'] = pd.to_datetime(new_main_value['date'])
     new_main_value['text'] = new_main_value['text'].astype('string')
     new_main_value['user_location'] = new_main_value['user_location'].astype('category')
+
     df_value = new_main_value
 
-    return df_value
-
-
-
-def tweet_regex(df_value):
     a = np.array(df_value['text'])
     array_text = []
     for n in a:
         k = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|RT", " ", n).split())
         array_text.append(k)
+
     data = pd.DataFrame(array_text, columns=["new_text"])
 
-    return data
-
-def sort_data_frames(df_value, data):
     df_data = pd.concat([df_value, data], axis=1)
     df_data = df_data.drop("text", axis = 1)
 
-    return df_data
-
-
-def calculate_polarity(df_data):
     pol_val =[]
     sent = np.array(df_data["new_text"])
     for i in sent:
@@ -200,18 +131,7 @@ def calculate_polarity(df_data):
         sent_polarity = round(analysis.sentiment.polarity, 4)
         pol_val.append(sent_polarity)
     sent_df=pd.DataFrame(pol_val, columns =["sentiment_polarity"])
+
     df_sentiment = pd.concat([df_data, sent_df], axis=1)
 
-    return df_sentiment
-
-
-
-
-def analyise_tweet_pipe(main_value):
-
-    clean_tweets = clean_tweet(main_value)
-    tweet_reg = tweet_regex(clean_tweets)
-    sorted_data_frames = sort_data_frames(clean_tweets, tweet_reg)
-    cal_polarity = calculate_polarity(sorted_data_frames)
-
-    return cal_polarity.to_dict()
+    return df_sentiment.to_dict()
