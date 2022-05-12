@@ -25,7 +25,7 @@ def get_tweets():
 
         #result = analyise_tweet_pipe(tweets)
 
-        return tweets
+        return jsonify(tweets)
 
 
 @data.route('/save_to_database/<result>', methods=["PUT"])
