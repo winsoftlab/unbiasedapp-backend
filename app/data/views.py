@@ -20,11 +20,18 @@ def get_tweets():
 
         item_data_count = 10
         
-        tweets = gettweets_pipeline(search_query, item_data_count)
+        try:
 
-        result = analyise_tweet_pipe(tweets)
+            tweets = gettweets_pipeline(search_query, item_data_count)
+        except:
+            "Error occured while fetching tweets"
 
-        
+        try:
+
+            result = analyise_tweet_pipe(tweets)
+
+        except:
+            "Error occured while analizing tweets"
         return result
 
 

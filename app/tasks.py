@@ -1,5 +1,5 @@
 from email import message
-import os
+import time
 from flask import current_app, render_template
 from flask_mail import Message
 from app import mail, celery_app
@@ -49,7 +49,7 @@ def authenticate():
 
 
 
-def search_tweet( twitter_api, search_query, item_data_count):
+def search_tweet(twitter_api, search_query, item_data_count):
 
     """
     An search function that takes search query and item count as parameter
@@ -141,6 +141,8 @@ def gettweets_pipeline(search_query, item_data_count):
 
     twitter_api = authenticate()
 
+    time.sleep(3)
+
     tweets_array = search_tweet(twitter_api, search_query, item_data_count)
 
     tweet_df = convert_to_dataframe(tweets_array, twitter_api)
@@ -152,6 +154,7 @@ def gettweets_pipeline(search_query, item_data_count):
     return final_value
 
 
+#--------------PORCESSESS TO ANALIZE TWEETS---------------------#
 
 def clean_tweet(main_value):
 
@@ -207,8 +210,6 @@ def calculate_polarity(df_data):
 
 
 def analyise_tweet_pipe(main_value):
-
-     #message to be displayed on processing information
 
     clean_tweets = clean_tweet(main_value)
     tweet_reg = tweet_regex(clean_tweets)
