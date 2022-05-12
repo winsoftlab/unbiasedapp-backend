@@ -49,7 +49,7 @@ def profile():
 
 
 @main.route('/<template>')
-#@login_required
+@login_required
 def route_template(template):
 
     try:
