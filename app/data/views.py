@@ -4,7 +4,7 @@ from numpy import cross
 from . import data
 from flask_cors import cross_origin
 from flask import jsonify, request, url_for
-from ..tasks import gettweets_pipeline, analyise_tweet_pipe
+from ..tasks import gettweets_pipeline
 
 
 
