@@ -68,24 +68,24 @@ def gettweets_pipeline(search_query, item_data_count):
             text = twitter_api.get_status(id=tweet.id, tweet_mode='extended').full_text
         except:
             pass
-        tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet.user.name, 
-                                                'user_location': tweet.user.location,\
-                                                'user_description': tweet.user.description,
-                                                'user_verified': tweet.user.verified,
-                                                'date': tweet.created_at,
-                                                'text': tweet.text, 
-                                                'hashtags': [hashtags if hashtags else None],
-                                                'source': tweet.source}))
-        tweets_df = tweets_df.reset_index(drop=True)
+    tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet.user.name, 
+                                            'user_location': tweet.user.location,\
+                                            'user_description': tweet.user.description,
+                                            'user_verified': tweet.user.verified,
+                                            'date': tweet.created_at,
+                                            'text': tweet.text, 
+                                            'hashtags': [hashtags if hashtags else None],
+                                            'source': tweet.source}))
+    tweets_df = tweets_df.reset_index(drop=True)
 
-        df_tweets = tweets_df[["date", "user_location", "text"]]
+    df_tweets = tweets_df[["date", "user_location", "text"]]
 
 #-------------CONVERTING TO JSON-------------------------------------
-        df_tweets["date"] = df_tweets["date"].astype("string")
-        df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
-        df_val = df_tweets.drop(["Date"], axis=1)
+    df_tweets["date"] = df_tweets["date"].astype("string")
+    df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
+    df_val = df_tweets.drop(["Date"], axis=1)
 
-        main_value = df_val.to_dict(orient="index")
+    main_value = df_val.to_dict(orient="index")
 
 #--------------PORCESSESS TO ANALIZE TWEETS---------------------#
 
