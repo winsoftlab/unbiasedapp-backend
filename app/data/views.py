@@ -23,9 +23,9 @@ def get_tweets():
 
         tweets = gettweets_pipeline(search_query, item_data_count)
 
-        result = analyise_tweet_pipe(tweets)
+        #result = analyise_tweet_pipe(tweets)
 
-        return result
+        return tweets
 
 
 @data.route('/save_to_database/<result>', methods=["PUT"])
