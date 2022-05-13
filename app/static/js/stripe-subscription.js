@@ -23,10 +23,12 @@ fetch("/stripy/config")
 .then((data) => {
   const stripe = Stripe(data.publicKey);
 
-  window.alert(data.publicKey)
+  
     
 
-    document.getElementById("checkout-basic").addEventListener("click", () => {
+    $("#checkout-basic").click (function(){
+
+        window.alert(data.publicKey)
 
         createCheckoutSession(BASIC_PRICE_ID).then((data) => {
             stripe.redirectToCheckout({ sessionId: data.sessionId })
