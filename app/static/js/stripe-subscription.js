@@ -18,31 +18,31 @@ const PREMIUM_PRICE_ID = "price_1KepM1HSCh2fFcDYEN6KDSXV";
 
 const BASIC_PRICE_ID = "price_1KddHBHSCh2fFcDYGd3kg9WU";
 
-fetch("/stripy/config")
-.then((result) => { return result.json(); })
-.then((data) => {
-  const stripe = Stripe(data.publicKey);
 
-    $("#checkout-basic").click(function(){
+$("#checkout-basic").click(function(){
+    $.ajax({
+        url : '/stripy/config',
+        type :'GET',
+        success: function(response){
+            const stripe = Stripe(response.publicKey)
 
-        window.alert(stripe)
+            createCheckoutSession(BASIC_PRICE_ID).then((data) => {
+                stripe.redirectToCheckout({ sessionId: data.sessionId })
+            });
+        }
+    })
+});
 
-        createCheckoutSession(BASIC_PRICE_ID).then((data) => {
-            stripe.redirectToCheckout({ sessionId: data.sessionId })
-        });
+$("#checkout-premium").click(function(){
+    $.ajax({
+        url : '/stripy/config',
+        type :'GET',
+        success: function(response){
+            const stripe = Stripe(response.publicKey)
 
-    });
-
-    document.getElementById("checkout-premium").addEventListener("click", () => {
-
-        createCheckoutSession(PREMIUM_PRICE_ID).then((data) => {
-            stripe.redirectToCheckout({ sessionId: data.sessionId })
-        });
-
-    });
-
-    
-})
-
-
-
+            createCheckoutSession(PREMIUM_PRICE_ID).then((data) => {
+                stripe.redirectToCheckout({ sessionId: data.sessionId })
+            });
+        }
+    })
+});
