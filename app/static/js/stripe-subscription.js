@@ -22,10 +22,9 @@ const BASIC_PRICE_ID = "price_1KddHBHSCh2fFcDYGd3kg9WU";
 $("#checkout-basic").click(function(){
     $.ajax({
         url : '/stripy/config',
-        type :'GET',
         success: function(response){
             const stripe = Stripe(response.publicKey)
-
+            window.alert(response.publicKey)
             createCheckoutSession(BASIC_PRICE_ID).then((data) => {
                 stripe.redirectToCheckout({ sessionId: data.sessionId })
             });
