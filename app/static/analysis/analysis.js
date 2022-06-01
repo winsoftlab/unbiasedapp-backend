@@ -566,13 +566,15 @@ analysisPlots = {
         // Specific ajax for the get tweets
         $('#searchBtn').click(function () {
 
+          const query = $('#inlineFormInputGroup').val()
+
           $.ajax({
             url: "data/get_tweets",
 
             type: "POST",
 
             data: { 
-              query: $('#inlineFormInputGroup').val()
+              query: query
               
             },
             beforeSend:function(){
@@ -625,6 +627,8 @@ analysisPlots = {
 
                 var chart_labels_bar = Object.values(location)
 
+                $("#graphTitle h3").text(query)
+
                 //updating the linegraph
 
                 var data = myChartData.config.data;
@@ -640,6 +644,8 @@ analysisPlots = {
                 BarData.labels = chart_labels_bar;
                 BarData.datasets[0].data = chart_data;
                 myChartBar.update();
+
+                
             }
 
         }

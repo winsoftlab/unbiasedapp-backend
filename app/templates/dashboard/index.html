@@ -5,9 +5,6 @@
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
 {% block javascript %}
-<script>
-   var term = $('#inlineFormInputGroup').val()
-</script>
 {% endblock javascript %}
 {% block content %}
 
@@ -17,9 +14,10 @@
         <div class="card card-chart">
           <div class="card-header ">
             <div class="row">
-              <div class="col-sm-6 text-left">
+              <div class="col-sm-6 text-left" id="graphTitle">
                 <h5 class="card-category">Twitter Analytics</h5>
-                <h2 class="card-title">Sentiment Performance {{ term }}</h2>
+                <h2 class="card-title">Sentiment Performance </h2>
+                <h3></h3>
               </div>
               <div class="col-sm-6">
                 <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
@@ -27,21 +25,21 @@
                     <input type="radio" name="options" checked>
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Twitter</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-single-02"></i>
+                      <i class="fab fa-twitter"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-primary btn-simple" id="1">
                     <input type="radio" class="d-none d-sm-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Facebook</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-gift-2"></i>
+                      <i class="fab fa-facebook"></i>
                     </span>
                   </label>
                   <label class="btn btn-sm btn-primary btn-simple" id="2">
                     <input type="radio" class="d-none" name="options">
                     <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Instagram</span>
                     <span class="d-block d-sm-none">
-                      <i class="tim-icons icon-tap-02"></i>
+                      <i class="fab fa-google-plus"></i>
                     </span>
                   </label>
                 </div>
@@ -62,7 +60,7 @@
         <div class="card card-chart">
           <div class="card-header">
             <h5 class="card-category">Bar chart</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i></h3>
+            <h3 class="card-title"><i class="tim-icons icon-chart-bar-32 text-info"></i></h3>
           </div>
           <div class="card-body">
             <div class="chart-area">

@@ -1,4 +1,5 @@
 var createCheckoutSession = function(priceId) {
+    
     return fetch("/stripy/create-checkout-session",{
         method: "POST",
         headers:{
@@ -19,9 +20,10 @@ const PREMIUM_PRICE_ID = "price_1KepM1HSCh2fFcDYEN6KDSXV";
 const BASIC_PRICE_ID = "price_1KddHBHSCh2fFcDYGd3kg9WU";
 
 
-$("#checkout-basic").click(function(){
+$("#checkoutbasic").click(function () {
     $.ajax({
-        url : '/stripy/config',
+        url : "/stripy/config",
+        type:"POST",
         success: function(response){
             const stripe = Stripe(response.publicKey)
             window.alert(response.publicKey)
@@ -32,10 +34,10 @@ $("#checkout-basic").click(function(){
     })
 });
 
-$("#checkout-premium").click(function(){
+$("#checkoutpremium").click(function () {
     $.ajax({
-        url : '/stripy/config',
-        type :'GET',
+        url : "/stripy/config",
+        type :"GET",
         success: function(response){
             const stripe = Stripe(response.publicKey)
 

@@ -147,5 +147,29 @@ def delete_account(id):
         db.session.commit()
         flash('Account deleted')
         return redirect(url_for('main.home'))
-    flash("incorrect input", message='warning')
+    flash("incorrect input")
     return render_template('auth/delete_account.html', form=form)
+
+
+@auth.route('/reset-password-mail')
+def reset_password_mail():
+
+    email = current_user.email
+    username = current_user.username
+
+    email_data={
+            "to":email,
+            "subject": 'Confirm Your Account',
+            "template": 'auth/email/confirm',
+            "username": username,
+            "token":token
+        }
+    send_async_email(email_data)
+
+    flash('An email with instructions to reset password has been sent to you!.')
+
+
+@auth.route('/reset-password', methods=["POST"])
+def reset_password():
+    
+    return redirect(url_for('main.home'))
