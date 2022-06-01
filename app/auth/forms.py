@@ -43,5 +43,5 @@ class SignUpForm(FlaskForm):
 
 
 class DeleteAccountForm(FlaskForm):
-    answer =StringField('Enter "Yes" to delete', validators=[DataRequired()])
+    answer =StringField('Enter "email" to delete', validators=[DataRequired()])
     submit =SubmitField("Delete account")

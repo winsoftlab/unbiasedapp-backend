@@ -141,7 +141,7 @@ def resend_confirmation():
 @login_required
 def delete_account(id):
     form = DeleteAccountForm()
-    if form.validate_on_submit() and form.answer.data=='Yes':
+    if form.validate_on_submit() and form.answer.data==current_user.email:
         user = User.query.get(id)
         db.session.delete(user)
         db.session.commit()
