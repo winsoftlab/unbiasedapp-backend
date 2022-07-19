@@ -7,3 +7,5 @@ def search_tweets(query, count):
     search_results = search_tweets(query, count)
 
     return jsonify(search_results)
+
+    
