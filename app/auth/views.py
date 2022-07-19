@@ -6,7 +6,7 @@ from flask_login import login_required, login_user, logout_user, current_user
 from . import auth
 from ..models import User
 from app import db
-from ..tasks import send_async_email
+from ..email import sendVerificationEmail
 from .forms import LoginForm, SignUpForm, DeleteAccountForm
 
 
@@ -91,7 +91,7 @@ def signup():
             "token":token
         }
 
-        send_async_email(email_data)
+        sendVerificationEmail(email_data)
 
         flash('Thank you for signing up, A confirmation email has been sent to you by email.')
 
@@ -130,7 +130,7 @@ def resend_confirmation():
             "username": username,
             "token":token
         }
-    send_async_email(email_data)#.apply_async(args=[email_data], countdown=5)
+    sendVerificationEmail(email_data)
 
     flash('A new confirmation email has been sent to you!.')
 
@@ -153,6 +153,7 @@ def delete_account(id):
 
 @auth.route('/reset-password-mail')
 def reset_password_mail():
+    token = current_user.generate_confirmation_token()
 
     email = current_user.email
     username = current_user.username
@@ -164,7 +165,7 @@ def reset_password_mail():
             "username": username,
             "token":token
         }
-    send_async_email(email_data)
+    sendVerificationEmail(email_data)
 
     flash('An email with instructions to reset password has been sent to you!.')
 

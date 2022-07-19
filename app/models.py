@@ -27,6 +27,13 @@ class User(UserMixin, db.Model):
     #postal_code = db.Column(db.Integer)
     #address = db.Column(db.String(255))
 
+    def to_json(self):
+        
+        {
+            "id":self.id,
+            "name":self.username,
+            "created_on" : self.created_on,
+        }
 
 
     @property

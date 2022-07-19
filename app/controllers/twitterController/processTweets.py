@@ -1,62 +1,21 @@
-from email import message
-import time
-from flask import current_app, render_template
-from flask_mail import Message
-from app import mail, celery_app
-from flask import current_app
-import tweepy as tw
-import pandas as pd
+from .searchTweets import search_tweets, twitterApi
 import re
-import os
 import pandas as pd
 import numpy as np
 from textblob import TextBlob
-from config import Config
 
 
+def process_tweets(query, count ):
 
-
-def send_async_email(email_data):
-    app = current_app._get_current_object()
-
-    msg = Message(app.config['MAIL_SUBJECT_PREFIX'] + email_data["subject"],
-                    sender=app.config['MAIL_SENDER'], recipients=[email_data['to']])
-
-    msg.body = render_template(email_data["template"] + '.txt', user=email_data["username"], token=email_data['token'])
-    msg.html = render_template(email_data["template"] + '.html', user=email_data["username"], token=email_data['token'])
-    
-    with app.app_context():
-        
-        mail.send(msg)
-
-
-
-def gettweets_pipeline(search_query, item_data_count):
-#-----------------AUTHENTICATION-----------------------------
-
-
-    api_key ='U7Ec18ZVElWd0tYnSosTsGUiB' #Config.TWITTER_KEY #os.environ.get("TWITTER_KEY")
-    api_secret ='ATmIUJQlEdTzIGif4L8ei6Bp64llWw7YWbc8dfQlmodnLzMMXO' #Config.TWITTER_SECRET #os.environ.get("TWITTER_SECRET")
-
-    auth = tw.OAuthHandler(api_key, api_secret)
-
-    twitter_api = tw.API(auth, wait_on_rate_limit=True)
-
-#------------------SEARCHING FOR TWEET----------------------
-    from_date = "2020-09-16"
-
-
-    tweets = tw.Cursor(twitter_api.search_tweets,
-                    q=search_query,
-                    lang="en",
-                    since=from_date).items(item_data_count)
+    tweets = search_tweets(query, count)
 
     tweets_array = []
 
     for tweet in tweets:
+
         tweets_array.append(tweet)
 
-#----------------CONVERTING TO DATA FRAME-----------------------
+    #----------------CONVERTING TO DATA FRAME-----------------------
     tweets_df = pd.DataFrame()
     # populate the dataframe
     for tweet in tweets_array:
@@ -65,7 +24,7 @@ def gettweets_pipeline(search_query, item_data_count):
         for hashtag in tweet.entities["hashtags"]:
             hashtags.append(hashtag["text"])
 
-        text = twitter_api.get_status(id=tweet.id, tweet_mode='extended').full_text
+        #text = twitterApi.get_status(id=tweet.id, tweet_mode='extended').full_text
 
         tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet.user.name, 
                                             'user_location': tweet.user.location,\
@@ -80,13 +39,16 @@ def gettweets_pipeline(search_query, item_data_count):
 
     df_tweets = tweets_df[["date", "user_location", "text"]]
 
-#-------------CONVERTING TO JSON-------------------------------------
+
+    #-------------CONVERTING TO JSON-------------------------------------
     df_tweets["date"] = df_tweets["date"].astype("string")
     df_tweets[['date','Date']] = df_tweets['date'].str.split(' ',expand=True)
 
     df_val = df_tweets.drop(["Date"], axis=1)
 
     main_value = df_val.to_dict(orient="index")
+
+
 
 #--------------PORCESSESS TO ANALIZE TWEETS---------------------#
 
