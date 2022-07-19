@@ -1,5 +1,5 @@
 import datetime
-from flask import current_app
+from flask import current_app, url_for
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask_login import UserMixin
 from .extensions import db, login_manger
@@ -28,13 +28,15 @@ class User(UserMixin, db.Model):
     #address = db.Column(db.String(255))
 
     def to_json(self):
-        
-        {
+
+        json_user = {
             "id":self.id,
-            "name":self.username,
-            "created_on" : self.created_on,
+            "username":self.username,
+            "email":self.email,
+            'url':url_for('api.get_user', id = self.id )
         }
 
+        return json_user
 
     @property
     def password(self):
@@ -64,6 +66,20 @@ class User(UserMixin, db.Model):
         self.confirmed = True
         db.session.add(self)
         return True
+    
+    def generate_auth_token(self, expiration):
+        s = Serializer(current_app.config['SECRET_KEY'],
+                            expires_in=expiration)
+        return s.dumps({'id':self.id}).decode('utf-8')
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except:
+            return None
+        return User.query.get(data['id'])
 
 @login_manger.user_loader
 def load_user(user_id):

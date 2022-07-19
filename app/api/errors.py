@@ -1,7 +1,10 @@
-from .. import main
-from flask import request, jsonify, render_template
 
-@main.app_errorhandler(404)
+from app.exceptions import ValidationError
+from flask import request, jsonify, render_template
+from . import api
+import app
+
+@app.errorhandler(404) #----probably problematic
 def page_not_found():
     if request.accept_mimetypes.accept_json and \
         not request.accept_mimetypes.accept_html:
@@ -15,3 +18,12 @@ def forbiden(message):
     response = jsonify({'error': 'forbidden', 'message': message})
     response.status_code = 403
     return response
+
+def unauthorized(message):
+    response = jsonify({'error':"unauthorized",'message':message})
+    response.status_code = 401
+    return response
+
+@api.errorhandler(ValidationError)
+def validation_error(e):
+    pass #bad_request(e.args[0])

@@ -69,6 +69,7 @@ flask-sslify = "*"
 gunicorn = "*"
 flask-script = "*"
 psycopg2 = "*"
+flask-httpauth = "*"
 
 [dev-packages]
 
