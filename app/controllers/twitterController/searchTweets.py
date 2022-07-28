@@ -1,9 +1,11 @@
 from .connectTwitter import connect_api
 import tweepy as tw
 
-twitterApi = connect_api()
 
-def search_tweets(search_query, count):
+
+def search_tweets(search_query, item_count):
+    
+    twitterApi = connect_api()
 
     from_date = "2020-09-16"
 
@@ -12,6 +14,6 @@ def search_tweets(search_query, count):
         q=search_query,
         lang="en",
         since=from_date
-        ).items(count)
+        ).items(item_count)
 
     return tweets

@@ -16,7 +16,7 @@ stripe_keys={
 
 
 @stripay.route('/subscription', methods=['GET','POST'])
-@login_required
+#@login_required
 def subscription():
     customer = StripeCustomer.query.filter_by(user_id=current_user.id).first()
     if customer:

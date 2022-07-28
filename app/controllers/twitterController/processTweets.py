@@ -1,4 +1,5 @@
-from .searchTweets import search_tweets, twitterApi
+from .searchTweets import search_tweets
+from .connectTwitter import connect_api
 import re
 import pandas as pd
 import numpy as np
@@ -6,6 +7,8 @@ from textblob import TextBlob
 
 
 def process_tweets(query, count ):
+
+    #twitterApi = connect_api()
 
     tweets = search_tweets(query, count)
 

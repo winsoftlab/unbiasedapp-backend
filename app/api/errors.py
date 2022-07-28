@@ -1,14 +1,26 @@
 
+
 from app.exceptions import ValidationError
 from flask import request, jsonify, render_template
 from . import api
-import app
+from ..main import main
 
-@app.errorhandler(404) #----probably problematic
-def page_not_found():
+
+@main.app_errorhandler(404) #----probably problematic
+def page_not_found(e):
     if request.accept_mimetypes.accept_json and \
         not request.accept_mimetypes.accept_html:
         response = jsonify({'error': 'not found'})
+        response.status_code = 404
+        return response
+    return render_template('404.html'), 404
+
+
+@main.app_errorhandler(500) #----probably problematic
+def internal_server_error(e):
+    if request.accept_mimetypes.accept_json and \
+        not request.accept_mimetypes.accept_html:
+        response = jsonify({'error': 'Internal Server error'})
         response.status_code = 404
         return response
     return render_template('404.html'), 404
@@ -19,8 +31,8 @@ def forbiden(message):
     response.status_code = 403
     return response
 
-def unauthorized(message):
-    response = jsonify({'error':"unauthorized",'message':message})
+def unauthenticated(message):
+    response = jsonify({'error':"unauthenticated",'message':message})
     response.status_code = 401
     return response
 

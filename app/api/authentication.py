@@ -1,10 +1,10 @@
 from flask_httpauth import HTTPBasicAuth
-from numpy import False_
-auth = HTTPBasicAuth()
 from ..models import User
 from flask import g, jsonify
-from errors import unauthorized, forbiden
+from .errors import unauthenticated, forbiden
 from . import api
+
+auth = HTTPBasicAuth()
 
 @api.before_request
 @auth.login_required
@@ -17,7 +17,8 @@ def before_request():
 @api.route('/token/', methods=['POST'])
 def get_token():
     if g.current_user.is_anonymous or g.token_used:
-        return unauthorized('Invalid credentials')
+        return unauthenticated('Invalid credentials')
+        
     return jsonify({'token': g.current_user.generate_auth_token(
         expiration=3600) ,'expiration':3600})
 
@@ -30,7 +31,7 @@ def verify_password(email_or_token, password):
         g.token_used = True
         return g.current_user is not None
 
-    user = User.query.filter_by(email = email_or_token).first()
+    user = User.query.filter_by(email=email_or_token).first()
 
     if not user:
         return False
@@ -42,4 +43,4 @@ def verify_password(email_or_token, password):
 
 @auth.error_handler
 def auth_error():
-    return unauthorized('Invalide credentials')
+    return unauthenticated('Invalid credentials')

@@ -70,6 +70,7 @@ gunicorn = "*"
 flask-script = "*"
 psycopg2 = "*"
 flask-httpauth = "*"
+httpie = "*"
 
 [dev-packages]
 
