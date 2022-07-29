@@ -1,4 +1,4 @@
-from flask import jsonify, g
+from flask import jsonify, g, request
 from . import api
 from ..controllers.twitterController.searchTweets import search_tweets
 from app.controllers.facebookController.facebook import scrape_facebook_post
