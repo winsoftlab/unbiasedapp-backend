@@ -4,5 +4,6 @@ __pycache__
 .env
 .flaskenv
 .sh
+.venv
 redis-stable
 unbiasedanalytics
