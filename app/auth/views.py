@@ -39,6 +39,7 @@ def login():
         password = form.password.data
         
         user=User.query.filter_by(email=email).first()
+        
         if user is not None and user.verify_password(password):
             login_user(user)
             next = request.args.get('next')

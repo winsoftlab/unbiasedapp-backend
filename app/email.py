@@ -11,7 +11,7 @@ async def sendVerificationEmail(email_data):
     msg = Message(app.config['MAIL_SUBJECT_PREFIX'] + email_data["subject"],
                     sender=app.config['MAIL_SENDER'], recipients=[email_data['to']])
 
-    msg.body = render_template(email_data["template"] + '.txt', user=email_data["username"], token=email_data['token'])
+    msg.body = render_template(email_data["template"] + '.txt', *email_data)
     msg.html = render_template(email_data["template"] + '.html', user=email_data["username"], token=email_data['token'])
     
     with app.app_context():
