@@ -52,8 +52,6 @@ humanize==4.1.0
 idna==3.3
 importlib-metadata==4.11.3
 importlib-resources==5.7.1
-instagram-explore==0.3.0
-instagram-scraper==1.11.0
 itsdangerous==2.0.1
 Jinja2==3.1.1
 joblib==1.1.0
