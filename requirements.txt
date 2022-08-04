@@ -6,7 +6,6 @@ backports.zoneinfo==0.2.1
 beautifulsoup4==4.11.1
 billiard==3.6.4.0
 blinker==1.4
-Brlapi==0.7.0
 browser-cookie3==0.16.1
 bs4==0.0.1
 celery==5.2.6
