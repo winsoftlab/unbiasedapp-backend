@@ -57,7 +57,7 @@ Jinja2==3.1.1
 joblib==1.1.0
 keyring==18.0.1
 kombu==5.2.4
-language-selector==0.1
+
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
@@ -98,12 +98,12 @@ pyparsing==3.0.7
 pyppeteer==1.0.2
 pyquery==1.4.3
 pyRFC3339==1.1
-python-apt==2.0.0+ubuntu0.20.4.7
+
 python-dateutil==2.8.2
-python-debian===0.1.36ubuntu1
+
 python-dotenv==0.20.0
 pytz==2022.1
-pytz-deprecation-shim==0.1.0.post0
+
 pyxdg==0.26
 PyYAML==5.3.1
 redis==4.2.2
@@ -130,8 +130,6 @@ tweepy==4.8.0
 typing_extensions==4.1.1
 tzdata==2022.1
 tzlocal==4.2
-ubuntu-advantage-tools==27.8
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.26.9
