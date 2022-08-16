@@ -21,11 +21,6 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=True)
-    #about_me = db.Column(db.String(255), unique=True)
-    #created_on = db.Column(db.DateTime, default=datetime.now(), nullable=False)
-    #country = db.Column(db.String(255))
-    #postal_code = db.Column(db.Integer)
-    #address = db.Column(db.String(255))
 
     def to_json(self):
 

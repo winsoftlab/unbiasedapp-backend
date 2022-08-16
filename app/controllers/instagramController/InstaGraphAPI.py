@@ -1,6 +1,6 @@
 import requests
 import json
-
+from instagramGetCredentials import getCredentials
 
 class InstagramGraphAPI:
 
@@ -38,7 +38,7 @@ class InstagramGraphAPI:
         url = params['endpoint_base'] + 'me/accounts'
 
         endpointParams = dict()
-        endpointParams['access_token'] = params['access_token']
+        #endpointParams['access_token'] = params['access_token']
 
         return self.makeApiCall(url, endpointParams)
 
@@ -60,7 +60,7 @@ class InstagramGraphAPI:
 
         endpointParams = dict()
 
-        endpointParams['access_token'] = params['access_token']
+        #endpointParams['access_token'] = params['access_token']
         endpointParams['fields'] = 'instagram_business_account'
         url = params['endpoint_base'] + params['page_id']
 
@@ -120,8 +120,7 @@ class InstagramGraphAPI:
 
         return self.makeApiCall(url, endpointParams)
 
-if __name__ =="__main__":
-    from .instagramGetCredentials import getCredentials
-    credentials = getCredentials()
-    InstagramGraphAPI(credentials)
-
+params = getCredentials()
+print(InstagramGraphAPI(**params).get_account_info())
+#page_id = InstagramGraphAPI(**params).get_account_info()['data'][0]['id']
+#print(f'Page Id is {page_id}')

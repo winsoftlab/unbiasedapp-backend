@@ -1,0 +1,12 @@
+{'data': 
+    [
+        {'access_token': 'EAAIGwAnPTmwBAIJrP9gCDgCvZCYGdr9dEqCLNGV8WvPEVQ7LA3flcFV70a7TqQYZATPuiddlWNhfIKoc8ZC1eGBqPU9z7ahzj4DQG0MfC6QC2jZAnm4X8R9BbUIcadkUgPHTlbVlozSO7yOP2jMOAjjb3D5qnXqhKLA5oh9EV1pz97xfyKlEQBD2czlWS1AZAMJlinwcVy1HbQR8taOBF', 
+        'category': 'Science, Technology & Engineering', 
+        'category_list': [{'id': '297544187300691', 'name': 'Science, Technology & Engineering'}], 
+        'name': 'Create_With_Akachi', 
+        'id': '106520682159644', 
+        'tasks': ['ANALYZE', 'ADVERTISE', 'MESSAGING', 'MODERATE', 'CREATE_CONTENT', 'MANAGE']
+        }
+    ], 
+    'paging': {'cursors': {'before': 'MTA2NTIwNjgyMTU5NjQ0', 'after': 'MTA2NTIwNjgyMTU5NjQ0'}}
+}

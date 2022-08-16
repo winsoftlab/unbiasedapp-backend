@@ -1,4 +1,4 @@
-from flask import jsonify, g, request
+from flask import jsonify, g, redirect, request
 from . import api
 from app.controllers.facebookController.facebook import scrape_facebook_post
 from app.controllers.others.htmlparse import html_parser
@@ -21,7 +21,7 @@ def search_tweet():
     Response:
         Object: Dict_str
     '''
-    q:str = request.args.get('q')
+    q = request.args.get('q')
     count= int(request.args.get('count'))
 
 
@@ -30,13 +30,13 @@ def search_tweet():
     return result
 
 
-@api.route('/amazon', methods=['POST'])
+@api.route('/amazon', methods=['GET'])
 def scrapping_bee_amazon():
 
     '''
     API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
 
-    http://localhost:500/api/v1/amazon?product-name={product-name}&product-id={product-id}&sub-domain={sub-domain}
+    http://localhost:5000/api/v1/amazon?product-name={product-name}&product-id={product-id}&sub-domain={sub-domain}
     
     '''
     product_name:str = request.args.get('product_name')
@@ -49,7 +49,7 @@ def scrapping_bee_amazon():
 
 
 
-@api.route('/facebook', methods=['POST'])
+@api.route('/facebook', methods=['GET'])
 def scrapping_bee_facebook():
     '''
     API Endpoint with query parameters query string(q) and page_num for
@@ -64,6 +64,20 @@ def scrapping_bee_facebook():
 
     return{'q':q, 'page_num':page_num} #jsonify(result)
 
-@api.route('/instagram/hashtag-search', methods=['POST'])
+
+
+@api.route('/instagram/token', methods=['POST'])
+def get_access_token():
+	access_token = request.form['access_token']
+	print(access_token)
+
+@api.route('/instagram/hashtag-search', methods=['GET'])
 def instagram_hashtag():
     return {'instagram'}
+
+@api.route('/instagram/comments', methods=['GET'])
+def instagram_comments():
+    comments = dict()
+    return comments
+    
+
