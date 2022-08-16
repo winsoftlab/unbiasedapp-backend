@@ -119,8 +119,3 @@ class InstagramGraphAPI:
         url = params['endpoint_base'] + params['ig_media_id'] + '/' + 'comments'
 
         return self.makeApiCall(url, endpointParams)
-
-params = getCredentials()
-print(InstagramGraphAPI(**params).get_account_info())
-#page_id = InstagramGraphAPI(**params).get_account_info()['data'][0]['id']
-#print(f'Page Id is {page_id}')
