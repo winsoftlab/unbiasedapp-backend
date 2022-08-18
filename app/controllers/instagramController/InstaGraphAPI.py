@@ -1,6 +1,6 @@
 import requests
 import json
-from instagramGetCredentials import getCredentials
+
 
 class InstagramGraphAPI:
 
@@ -23,7 +23,28 @@ class InstagramGraphAPI:
 
             return response
 
+    def debug_long_lived_token(self):
 
+        '''
+            API Endpoint:
+            For generating long lived token
+                https://graph.facebook.com/{graph-api-version}/oauth/access_token?grant_type=fb_exchange_token&client_id={app-id}&client_secret={app-secret}&fb_exchange_token={your-access-token}
+        '''
+        params = self.params
+
+        url = params['endpoint_base'] + 'oauth/access_token'
+
+        #defining the endpoint parameters
+        endpointParams= dict()
+
+        endpointParams['grant_type'] = 'fb_exchange_token'
+        endpointParams['client_id'] = params['client_id']
+        endpointParams['client_secret'] = params['client_secret']
+        endpointParams['fb_exchange_token'] = params['access_token']
+
+
+
+        return self.makeApiCall(url, endpointParams)
 
     def get_account_info(self):
 
@@ -38,7 +59,6 @@ class InstagramGraphAPI:
         url = params['endpoint_base'] + 'me/accounts'
 
         endpointParams = dict()
-        #endpointParams['access_token'] = params['access_token']
 
         return self.makeApiCall(url, endpointParams)
 

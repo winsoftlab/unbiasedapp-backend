@@ -1,9 +1,13 @@
-from flask import jsonify, g, redirect, request
+from re import A
+from flask import jsonify, g, redirect, request, session, url_for
+from .authentication import auth
+from app.api.errors import unauthenticated
 from . import api
 from app.controllers.facebookController.facebook import scrape_facebook_post
 from app.controllers.others.htmlparse import html_parser
-from . import api
 from ..controllers.twitterController.processTweets import process_tweets
+from ..controllers.instagramController.instagramGetCredentials import getCredentials
+from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
 
 
 @api.route('/')
@@ -64,14 +68,41 @@ def scrapping_bee_facebook():
 
     return{'q':q, 'page_num':page_num} #jsonify(result)
 
-
-
 @api.route('/instagram/token', methods=['POST'])
+@auth.login_required
 def get_access_token():
-	access_token = request.form['access_token']
-	print(access_token)
+    '''
+    Get access code and store it in session
+    '''
+
+    access_token = request.form.get('access_token')
+    session['short_access_token'] = access_token
+    print(session['short_access_token'])
+    #return redirect(url_for('api.debug_access_token'))
+    return{'msg':"access code retrieved succesfully"}
+
+
+@api.route('/instagram/debug-token')
+def debug_access_token():
+    '''
+        Debug access token and reassign
+    '''
+    access_token = session['short_access_token']
+
+    params = getCredentials()
+
+    params['access_token'] = access_token
+
+    data =InstagramGraphAPI(**params).debug_long_lived_token()
+
+    #session['fb_access_token'] = data['access_token']
+
+    return {'msg':'token retrived successfully' }
+       
+    
 
 @api.route('/instagram/hashtag-search', methods=['GET'])
+@auth.login_required
 def instagram_hashtag():
     return {'instagram'}
 
@@ -79,5 +110,12 @@ def instagram_hashtag():
 def instagram_comments():
     comments = dict()
     return comments
-    
 
+@api.route('/instagram/get-account-info')
+def get_account_info():
+    params = getCredentials()
+    params['access_token'] = str(session['short_access_token'])
+    data = InstagramGraphAPI(**params).get_account_info()
+    return{'data':data}
+    
+@api.route
