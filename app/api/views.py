@@ -64,9 +64,9 @@ def scrapping_bee_facebook():
     q= request.args.get('q')
     page_num= int(request.args.get('page_num'))
 
-    #result = scrape_facebook_post(q, page_num)
+    result = scrape_facebook_post(q, page_num)
 
-    return{'q':q, 'page_num':page_num} #jsonify(result)
+    return jsonify(result)
 
 @api.route('/instagram/token', methods=['POST'])
 @auth.login_required
@@ -118,4 +118,6 @@ def get_account_info():
     data = InstagramGraphAPI(**params).get_account_info()
     return{'data':data}
     
-@api.route
+@api.route('/instagram/process-comments')
+def process_instagram_comments():
+    comments= request.form.get('')
