@@ -55,10 +55,12 @@ class InstagramGraphAPI:
 
         """
         params = self.params
+        
 
         url = params['endpoint_base'] + 'me/accounts'
 
         endpointParams = dict()
+        endpointParams['access_token'] = params['access_token']
 
         return self.makeApiCall(url, endpointParams)
 
@@ -79,9 +81,8 @@ class InstagramGraphAPI:
         params = self.params
 
         endpointParams = dict()
-
-        #endpointParams['access_token'] = params['access_token']
         endpointParams['fields'] = 'instagram_business_account'
+        endpointParams['access_token'] = params['access_token']
         url = params['endpoint_base'] + params['page_id']
 
         return self.makeApiCall(url, endpointParams)
@@ -139,3 +140,49 @@ class InstagramGraphAPI:
         url = params['endpoint_base'] + params['ig_media_id'] + '/' + 'comments'
 
         return self.makeApiCall(url, endpointParams)
+
+
+    def get_hashtagsInfo(self):
+
+        """
+        API ENDPOINT:
+            https://graph.facebook.com/{grap-api-version}/ig_hastag_search?user_id={
+            user-id}&q={hastag-name}&fields={fields}&access_token={access_token}
+
+        Returns:
+            object: data from the endpoint
+        
+        """
+        params = self.params
+
+        endpointParams = dict()
+        endpointParams['user_id'] = params['instagram_account_id']
+        endpointParams['q'] = params['hashtag_name']
+        endpointParams['fields'] = 'id,name'
+        endpointParams['access_token'] = params['access_token']
+
+        url = params['endpoint_base'] + 'ig_hashtag_search'
+
+        return self.makeApiCall(url, endpointParams)
+
+
+    def get_hashtagMedia(self):
+        """
+        Get posts for a hashtag
+
+        API Endpoints:
+            https://graph.facebook.com/{graph-api-version}/{ig-hashtag-id}/top-media?u
+            ser_id={user-id}&fields={fields}
+
+            https://graph.facebook.com/{graph-api-version}/{ig-hashtag-id}/recent_medi
+            a?user_id={user-id}&fields={fields}
+        """
+        params = self.params
+        endpointParams = dict()
+        endpointParams['user_id'] = params['instagram_account_id']
+        endpointParams['fields'] = 'id,children,caption,comment_count,like_count,replies,media_type,media_url,permalink'
+        endpointParams['access_token'] = params['access_token']
+
+        url = params['endpoint_base'] + params['hashtag_id'] + '/' + params['type'] 
+        return self.makeApiCall(url, endpointParams)
+

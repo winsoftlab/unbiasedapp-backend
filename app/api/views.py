@@ -1,4 +1,3 @@
-from re import A
 from flask import jsonify, g, redirect, request, session, url_for
 from .authentication import auth
 from app.api.errors import unauthenticated
@@ -69,7 +68,6 @@ def scrapping_bee_facebook():
     return jsonify(result)
 
 @api.route('/instagram/token', methods=['POST'])
-@auth.login_required
 def get_access_token():
     '''
     Get access code and store it in session
@@ -77,9 +75,8 @@ def get_access_token():
 
     access_token = request.form.get('access_token')
     session['short_access_token'] = access_token
-    print(session['short_access_token'])
-    #return redirect(url_for('api.debug_access_token'))
-    return{'msg':"access code retrieved succesfully"}
+    return redirect(url_for('api.debug_access_token'))
+    #return{'msg':"access code retrieved succesfully"}
 
 
 @api.route('/instagram/debug-token')
@@ -93,31 +90,96 @@ def debug_access_token():
 
     params['access_token'] = access_token
 
-    data =InstagramGraphAPI(**params).debug_long_lived_token()
+    response =InstagramGraphAPI(**params).debug_long_lived_token()
 
-    #session['fb_access_token'] = data['access_token']
+    session['fb_access_token'] = response['access_token']
 
-    return {'msg':'token retrived successfully' }
+    return {'short':session['short_access_token'],'long':session['fb_access_token']}
        
-    
 
-@api.route('/instagram/hashtag-search', methods=['GET'])
-@auth.login_required
-def instagram_hashtag():
-    return {'instagram'}
 
-@api.route('/instagram/comments', methods=['GET'])
-def instagram_comments():
-    comments = dict()
-    return comments
 
 @api.route('/instagram/get-account-info')
 def get_account_info():
+
+    if not session['fb_access_token']:
+        return unauthenticated('Please log in to facebook')
+
     params = getCredentials()
-    params['access_token'] = str(session['short_access_token'])
-    data = InstagramGraphAPI(**params).get_account_info()
-    return{'data':data}
+    params['access_token'] = session['fb_access_token']
+    response = InstagramGraphAPI(**params).get_account_info()
+    page_id = response['data'][0]['id']
+    session['page_id'] = page_id
+
+    return {'page_id':page_id}
+
+
+@api.route('/instagram/hashtag-search/<string:q>', methods=['GET'])
+def instagram_hashtag(q):
+    if not session['fb_access_token']:
+        return unauthenticated('Please log in facebook')
+
+    params = getCredentials()
+
+    params['access_token'] = session['fb_access_token']
+    params['page_id'] = session['page_id']
+    ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
+ 
+    ig_user_id = ig_user_id_response['instagram_business_account']['id']
+    params['instagram_account_id'] = ig_user_id
+    params['hashtag_name'] = q
+
+    hashtag_search_response = InstagramGraphAPI(**params).get_hashtagsInfo()
+    hashtag_search_id = hashtag_search_response['data'][0]['id']
+
+    params['hashtag_id'] = hashtag_search_id
+
+    _type=request.args.get('type')
+
+    if _type not in ['top_media','recent_media']:
+        _type = 'recent_media'
+
+    params['type']= _type or 'recent_media'
+
+    hashtag_media_response = InstagramGraphAPI(**params).get_hashtagMedia()
+
+    return hashtag_media_response
+
+
+
+
+
+@api.route('/instagram/comments', methods=['GET'])
+def instagram_comments():
+
+    if not session['fb_access_token']:
+        return unauthenticated('Please log in facebook')
+
+    params = getCredentials()
+
+    params['access_token'] = session['fb_access_token']
+
+    params['page_id'] = session['page_id']
+
+    ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
+ 
+    ig_user_id = ig_user_id_response['instagram_business_account']['id']
+
+    params['instagram_account_id'] = ig_user_id
+
+
+    ig_user_media_response = InstagramGraphAPI(**params).get_user_media()
+    ig_user_media_id = ig_user_media_response[0]['data'][0]['id']
+
+    params['ig_media_id'] = ig_user_media_id
+
+    media_response = InstagramGraphAPI(**params).getComments()
+
+    return{'media_response': media_response}
+
+
     
 @api.route('/instagram/process-comments')
 def process_instagram_comments():
     comments= request.form.get('')
+    return{'msg':'process comment'}
