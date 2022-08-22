@@ -15,31 +15,31 @@ class StripeCustomer(db.Model):
 class TwitterAnalysis(db.Model):
     __tablename__ = 'twitter_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    query = db.Column(db.String(255), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    query = db.Column(db.String(255), nullable=False, unique=True)
     sentiments = db.Column(db.String)
 
 
 class FacebookAnalysis(db.Model):
     __tablename__ = 'facebook_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    query = db.Column(db.String(255), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    query = db.Column(db.String(255), nullable=False, unique=True)
     sentiments = db.Column(db.String)
 
 class AmazonAnalysis(db.Model):
     __tablename__ = 'amazon_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    product_info = db.Column(db.String(255), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    product_info = db.Column(db.String(255), nullable=False, unique=True)
     sentiments = db.Column(db.String)
 
 
 class InstagramAnalysis(db.Model):
     __tablename__ = 'instagram_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    query = db.Column(db.String(255), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    query = db.Column(db.String(255), nullable=False, unique=True)
     sentiments = db.Column(db.String)
 
 
@@ -50,17 +50,6 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=True)
-
-    def to_json(self):
-
-        json_user = {
-            "id":self.id,
-            "username":self.username,
-            "email":self.email,
-            'url':url_for('api.get_user', id = self.id )
-        }
-
-        return json_user
 
     @property
     def password(self):

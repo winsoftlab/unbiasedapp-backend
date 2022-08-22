@@ -30,8 +30,15 @@ def search_tweet(q, count=100):
 
 
 @auto.doc()
-@api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['GET'])
+@api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST'])
 def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
+
+    '''
+    API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
+
+    http://localhost:5000/api/v1/amazon/{product-name}/{product-id}/{sub-domain}
+    
+    '''
     return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
 
 

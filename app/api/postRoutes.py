@@ -7,7 +7,7 @@ from app.controllers.others.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
 from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
-from app.models import FacebookAnalysis
+from app.models import FacebookAnalysis, InstagramAnalysis, AmazonAnalysis, TwitterAnalysis
 from app import db
 
 
@@ -23,19 +23,32 @@ def search_tweet(q, count):
     q = request.args.get('q')
     count= int(request.args.get('count'))
     result = process_tweets(q, count)
+
+    new_twitter_analysis = TwitterAnalysis(
+        user_id=current_user.id,
+        query=q,
+        sentiment= str(result)
+    )
+
+    db.session.add(new_twitter_analysis)
+    db.session.commit()
+
+
     return result
 
 
 def scrapping_bee_amazon(product_name, product_id, sub_domain):
 
-    '''
-    API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
-
-    http://localhost:5000/api/v1/amazon/{product-name}/{product-id}/{sub-domain}
-    
-    '''
-
     review_data = html_parser(product_name, product_id, sub_domain)
+
+    new_amazon_analysis = AmazonAnalysis(
+        user_id=current_user.id,
+        product_info= '{}:{}'.format(product_id, product_id),
+        sentiment= str(review_data)
+    )
+
+    db.session.add(new_amazon_analysis)
+    db.session.commit()
 
     return jsonify(review_data)
 
@@ -47,7 +60,6 @@ def facebook(q, page_num):
 
 
     result = scrape_facebook_post(q, page_num)
-
     text = [i['text'] for i in result if 'text' in i.keys()]
     
     # Create an instance of the data and commit to database
