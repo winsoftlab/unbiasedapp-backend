@@ -3,6 +3,7 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from flask_cors import CORS
+from flask_autodoc.autodoc import Autodoc
 #from pymongo import MongoClient
 
 
@@ -11,6 +12,7 @@ from flask_cors import CORS
 cors = CORS() #Allows for javascript fetch api to access route
 mail=Mail() 
 db= SQLAlchemy()
+auto = Autodoc()
 
 #db2=client.get_database('test')
 

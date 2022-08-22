@@ -1,3 +1,4 @@
+from enum import auto
 from flask import jsonify, g, redirect, request, session, url_for
 from .authentication import auth
 from app.api.errors import unauthenticated
@@ -7,14 +8,24 @@ from app.controllers.others.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
 from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
+from app import auto
 
 
 @api.route('/')
 def api_home():
+
     user = g.current_user
     msg = f'Hello {user.username} welcome to unbiased api please read the docs  to get started'
-    return {'msg':msg}
+    return {'msg':msg, 'Documentation': url_for('api.documentation')}
 
+@api.route('/documentation')
+def documentation():
+    '''The endpoint for the Auto documentation of the API 
+        http://localhost:5000/api/v1/documentation
+     '''
+    return auto.html()
+
+@auto.doc()
 @api.route('/search-tweet', methods=['POST'])
 def search_tweet():
     '''
@@ -32,7 +43,7 @@ def search_tweet():
 
     return result
 
-
+@auto.doc()
 @api.route('/amazon', methods=['GET'])
 def scrapping_bee_amazon():
 
@@ -51,7 +62,7 @@ def scrapping_bee_amazon():
     return jsonify(review_data)
 
 
-
+@auto.doc()
 @api.route('/facebook', methods=['GET'])
 def scrapping_bee_facebook():
     '''
@@ -113,7 +124,7 @@ def get_account_info():
 
     return {'page_id':page_id}
 
-
+@auto.doc()
 @api.route('/instagram/hashtag-search/<string:q>', methods=['GET'])
 def instagram_hashtag(q):
     if not session['fb_access_token']:
@@ -148,7 +159,7 @@ def instagram_hashtag(q):
 
 
 
-
+@auto.doc()
 @api.route('/instagram/comments', methods=['GET'])
 def instagram_comments():
 

@@ -1,5 +1,5 @@
 from flask import Flask
-from .extensions import mail, login_manger, db, cors
+from .extensions import mail, login_manger, db, cors, auto
 from config import config
 from celery import Celery
 
@@ -30,6 +30,7 @@ def create_app(config_name):
     db.init_app(app)
     mail.init_app(app)
     cors.init_app(app)
+    auto.init_app(app)
     #mongo.init_app(app, )
 
     
