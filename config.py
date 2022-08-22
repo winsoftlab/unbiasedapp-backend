@@ -15,7 +15,7 @@ class Config:
     MONGO_URI = os.environ.get("MONGO_URI")
     SECRET_KEY = os.environ.get("SECRET_KEY")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    #SERVER_NAME='127.0.0.1:5000'
+    #SERVER_NAME='https://localhost:5000'
     TWITTER_SECRET = os.environ.get("TWITTER_SECRET")
     TWITTER_KEY = os.environ.get("TWITTER_KEY")
     FACEBOOK_APP_ID = os.environ.get('FACEBOOK_APP_ID')

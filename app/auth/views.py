@@ -2,10 +2,12 @@ from flask import flash, jsonify, render_template, redirect, request, url_for
 from flask_cors import cross_origin
 from flask_login import login_required, login_user, logout_user, current_user
 
+from config import Config
+
 
 from . import auth
 from ..models import User
-from app import db
+from app import db, oauth
 from ..email import sendVerificationEmail
 from .forms import LoginForm, SignUpForm, DeleteAccountForm
 
@@ -175,3 +177,40 @@ def reset_password_mail():
 def reset_password():
     
     return redirect(url_for('main.home'))
+
+
+@auth.route('/facebook')
+def facebook():
+
+    #FACEBOOK OAUTH CONFIG
+    FACEBOOK_CLIENT_ID = Config.FACEBOOK_APP_ID
+    FACEBOOK_CLIENT_SECRET = Config.FACEBOOK_APP_SECRET
+
+    oauth.register(
+        name='facebook',
+        client_id = FACEBOOK_CLIENT_ID,
+        client_secret = FACEBOOK_CLIENT_SECRET,
+        access_token_url ='https://graph.facebook/oauth/access_token',
+        access_token_params=None,
+        authorize_url = 'https://www.facebook.com/dialog/oauth',
+        authorize_params=None,
+        api_base_url ='https://graph.facebook.com/14.0',
+        client_kwargs={'scope':'public_profile,pages_show_list,business_management,user_posts,instagram_basic'}
+    )
+    redirect_uri = url_for('auth.facebook_auth', _external=True)
+    return oauth.facebook.authorize_redirect(redirect_uri)
+
+
+@auth.route('/facebook/auth/')
+def facebook_auth():
+    token = oauth.facebook.authorize_access_token()
+    resp = oauth.facebook.get(
+        'https://graph.facebook.com/14.0/me?fields=id,name,email,picture{url}'
+    )
+    profile = resp.json()
+    #TODO: Save the user to the database and the access_token
+    print('Fcebook User', profile)
+    flash('Login with Facebook successful')
+    return redirect(url_for('main.home'))
+
+    

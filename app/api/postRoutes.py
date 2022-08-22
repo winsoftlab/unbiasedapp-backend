@@ -20,8 +20,6 @@ def search_tweet(q, count):
     Response:
         Object: Dict_str
     '''
-    q = request.args.get('q')
-    count= int(request.args.get('count'))
     result = process_tweets(q, count)
 
     new_twitter_analysis = TwitterAnalysis(

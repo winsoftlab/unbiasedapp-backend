@@ -15,7 +15,6 @@ def api_home():
 
 
 @api.route('/documentation')
-@auth.login_required
 def documentation():
 
     '''The endpoint for the Auto documentation of the API 
