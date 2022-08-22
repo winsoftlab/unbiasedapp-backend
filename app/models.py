@@ -12,7 +12,36 @@ class StripeCustomer(db.Model):
     StripeCustomerId = db.Column(db.String(255), nullable=False)
     StripeSubscriptionId = db.Column(db.String(255), nullable = False, unique=True)
 
-        
+class TwitterAnalysis(db.Model):
+    __tablename__ = 'twitter_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    query = db.Column(db.String(255), nullable=False)
+    sentiments = db.Column(db.String)
+
+
+class FacebookAnalysis(db.Model):
+    __tablename__ = 'facebook_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    query = db.Column(db.String(255), nullable=False)
+    sentiments = db.Column(db.String)
+
+class AmazonAnalysis(db.Model):
+    __tablename__ = 'amazon_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    product_info = db.Column(db.String(255), nullable=False)
+    sentiments = db.Column(db.String)
+
+
+class InstagramAnalysis(db.Model):
+    __tablename__ = 'instagram_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    query = db.Column(db.String(255), nullable=False)
+    sentiments = db.Column(db.String)
+
 
 class User(UserMixin, db.Model):
     __tablename__='users'
