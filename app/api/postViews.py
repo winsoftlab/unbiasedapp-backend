@@ -1,8 +1,8 @@
 from flask import g,url_for
 from app.api import postRoutes
+from app.api.errors import forbiden
 from . import api
 from app import auto
-
 
 @api.route('/')
 def api_home():
@@ -43,7 +43,7 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
 
 
 @auto.doc()
-@api.route('/facebook/<string:q>/<int:page_num>', methods=['GET'])
+@api.route('/facebook/<string:q>/<int:page_num>', methods=['POST','PUT'])
 def facebook(q, page_num=2):
     '''
     API Endpoint with query parameters query string(q) and page_num for

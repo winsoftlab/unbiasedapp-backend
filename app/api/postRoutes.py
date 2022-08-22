@@ -25,9 +25,9 @@ def search_tweet(q, count):
     result = process_tweets(q, count)
 
     new_twitter_analysis = TwitterAnalysis(
-        user_id=current_user.id,
-        query=q,
-        sentiment= str(result)
+        user_id=g.current_user.id,
+        search_query=q,
+        sentiments= str(result)
     )
 
     db.session.add(new_twitter_analysis)
@@ -42,9 +42,9 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain):
     review_data = html_parser(product_name, product_id, sub_domain)
 
     new_amazon_analysis = AmazonAnalysis(
-        user_id=current_user.id,
+        user_id=g.current_user.id,
         product_info= '{}:{}'.format(product_id, product_id),
-        sentiment= str(review_data)
+        sentiments= str(review_data)
     )
 
     db.session.add(new_amazon_analysis)
@@ -63,7 +63,15 @@ def facebook(q, page_num):
     text = [i['text'] for i in result if 'text' in i.keys()]
     
     # Create an instance of the data and commit to database
-    new_analysis = FacebookAnalysis(user_id=current_user.id, query=q, sentiment=str(text))
+    
+    prev = FacebookAnalysis.query.filter_by(search_query=q).first()
+    #This logic here deletes the previous data if a paritcular search query was found
+    if prev:
+
+        db.session.delete(prev)
+        db.session.commit()
+
+    new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
 
     db.session.add(new_analysis)
     db.session.commit()
