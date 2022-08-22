@@ -3,6 +3,7 @@ from app.api import postRoutes
 from app.api.errors import forbiden
 from . import api
 from app import auto
+from app.api.authentication import auth
 
 @api.route('/')
 def api_home():
@@ -14,6 +15,7 @@ def api_home():
 
 
 @api.route('/documentation')
+@auth.login_required
 def documentation():
 
     '''The endpoint for the Auto documentation of the API 
