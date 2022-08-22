@@ -32,6 +32,8 @@ def create_app(config_name):
     cors.init_app(app)
     auto.init_app(app)
     oauth.init_app(app)
+
+    
     #mongo.init_app(app, )
 
     
