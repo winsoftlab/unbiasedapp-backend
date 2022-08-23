@@ -1,5 +1,5 @@
 from . import auth
-from app import oauth
+from app import oauth, db
 import os
 from flask import url_for, redirect
 
@@ -17,8 +17,8 @@ def facebook_login():
         access_token_params=None,
         authorize_url='https://www.facebook.com/dialog/oauth',
         authorize_params=None,
-        api_base_url='https://graph.facebook.com/',
-        client_kwargs={'scope': 'email,public_profile,pages_show_list,business_management,user_posts,instagram_basic'},
+        api_base_url='https://graph.facebook.com/v14.0',
+        client_kwargs={'scope': 'email business_management user_posts instagram_basic'},
     )
     redirect_uri = url_for('auth.facebook_auth', _external=True)
     return oauth.facebook.authorize_redirect(redirect_uri)
@@ -32,7 +32,7 @@ def facebook_auth():
     profile = resp.json()
     #TODO: Save the user to the database and the access_token
     print('Facebook User', profile)
-    return redirect(url_for('main.home'))
+    return redirect('/')
 
 
 @auth.route('/twitter/')
@@ -49,7 +49,7 @@ def twitter_login():
         access_token_params=None,
         authorize_url='https://api.twitter.com/oauth/authenticate',
         authorize_params=None,
-        api_base_url='https://api.twitter.com/1.1/',
+        api_base_url='https://api.twitter.com/2/',
         client_kwargs=None,
     )
     redirect_uri = url_for('auth.twitter_auth', _external=True)
