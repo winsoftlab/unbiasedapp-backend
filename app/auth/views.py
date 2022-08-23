@@ -2,33 +2,12 @@ from flask import flash, jsonify, render_template, redirect, request, url_for
 from flask_cors import cross_origin
 from flask_login import login_required, login_user, logout_user, current_user
 
-from config import Config
-
 from . import auth
 from ..models import User
-from app import db, oauth
+from app import db
 from ..email import sendVerificationEmail
 from .forms import LoginForm, SignUpForm, DeleteAccountForm
 
-    
-# oauth.register(
-#     name='facebook',
-#     client_id = Config.FACEBOOK_APP_ID,
-#     client_secret = Config.FACEBOOK_APP_SECRET,
-#     access_token_url ='https://graph.facebook/oauth/access_token',
-#     authorize_url = 'https://www.facebook.com/dialog/oauth',
-#     api_base_url ='https://graph.facebook.com/',
-#     client_kwargs={'scope':'email'},
-# )
-# oauth.register(
-#     name='twitter',
-#     client_id = Config.TWITTER_KEY,
-#     client_secret = Config.TWITTER_SECRET,
-#     api_base_url ='https://api.twitter.com/1.1/',
-#     request_token_url='https://api.twitter.com/oauth/request_token',
-#     access_token_url = 'https://api.twitter.com/oauth/access_token',
-#     authorize_url = 'https://api.twitter.com/oauth/authenticate',
-# )
 
 @auth.before_app_request
 def before_request():
@@ -193,48 +172,3 @@ def reset_password():
     
     return redirect(url_for('main.home'))
 
-
-@auth.route('/facebook_login/')
-def facebook_login():
-    #FACEBOOK OAUTH CONFIG
-
-
-    redirect_uri = url_for('auth.facebook_auth', _external=True )
-    return oauth.facebook.authorize_redirect(redirect_uri)
-
-
-@auth.route('/authorize_facebook/')
-def facebook_auth():
-    token = oauth.facebook.authorize_access_token()
-    resp =oauth.facebook.get(
-        'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
-    )
-    profile = resp.json()
-    #TODO: Save the user to the database and the access_token
-    print('Fcebook User', profile)
-    flash('Login with Facebook successful')
-    return redirect(url_for('main.home'))
-
-
-
-
-
-@auth.route('/twitter_login/')
-def twitter_login():
-    #FACEBOOK OAUTH CONFIG
-    redirect_uri = url_for('auth.twitter_auth', _external=True )
-    return oauth.twitter.authorize_redirect(redirect_uri)
-
-
-@auth.route('/authorize_twitter/')
-def twitter_auth():
-    token = oauth.twitter.authorize_access_token()
-    url = 'account/verify_credentials.json'
-    resp = oauth.twitter.get(url, params={'skip_status': True})
-    #resp =oauth.facebook.get(
-        #'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
-    #)
-    profile = resp.json()
-    #TODO: Save the user to the database and the access_token
-    print('twiiter', profile)
-    return redirect(url_for('main.home'))

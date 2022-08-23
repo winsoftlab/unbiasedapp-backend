@@ -1,5 +1,6 @@
-from flask import render_template
+from flask import render_template, render_template_string
 from . import main
+from authlib.integrations.flask_client import OAuthError
 
 @main.app_errorhandler(404)
 def page_not_found(e):
@@ -9,3 +10,8 @@ def page_not_found(e):
 @main.app_errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
+
+
+# @main.app_errorhandler(OAuthError)
+# def oauth_error(e):
+#     return render_template_string('<htm><body><h1>Oauth Error</h1><p>Error occured during authentication</p>')
