@@ -7,14 +7,12 @@ from flask import g, url_for
 
 @api.route('/')
 def api_home():
-
     user = g.current_user
     msg = f'Hello {user.username} welcome to unbiased api please read the docs  to get started'
     return {'msg':msg, 'Documentation': url_for('api.documentation', _external=True)}
 
 
-
-@api.route('/documentation')
+@api.route('/documentation/')
 def documentation():
 
     '''The endpoint for the Auto documentation of the API 
@@ -23,7 +21,7 @@ def documentation():
     return auto.html()
 
 
-@api.route('/facebook/', methods=['GET'])
+@api.route('/facebook/')
 @auto.doc()
 def get_all_facebook_analysis():
     '''
@@ -37,7 +35,7 @@ def get_all_facebook_analysis():
 
 
 @auto.doc()
-@api.route('/amazon')
+@api.route('/amazon/')
 @auth.login_required
 def get_amazon_analysis():
     '''
@@ -51,7 +49,7 @@ def get_amazon_analysis():
 
 
 @auto.doc()
-@api.route('/instagram')
+@api.route('/instagram/')
 @auth.login_required
 def get_instagram_analysis():
     '''
@@ -61,7 +59,7 @@ def get_instagram_analysis():
     return getRoutes.get_instagram_analysis()
 
 @auto.doc()
-@api.route('/twitter')
+@api.route('/twitter/')
 @auth.login_required
 def get_twitter_analysis():
     '''

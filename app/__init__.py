@@ -45,8 +45,8 @@ def create_app(config_name):
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
-    from .stripay import stripay as stripay_blueprint
-    app.register_blueprint(stripay_blueprint, url_prefix='/stripy')
+    from .stripe import stripe as stripe_blueprint
+    app.register_blueprint(stripe_blueprint, url_prefix='/stripe')
 
     from .paypal import paypal as paypal_blueprint
     app.register_blueprint(paypal_blueprint, url_prefix='/paypal')

@@ -12,6 +12,6 @@ def internal_server_error(e):
     return render_template('500.html'), 500
 
 
-# @main.app_errorhandler(OAuthError)
-# def oauth_error(e):
-#     return render_template_string('<htm><body><h1>Oauth Error</h1><p>Error occured during authentication</p>')
+@main.app_errorhandler(OAuthError)
+def oauth_error(e):
+    return render_template_string(f'<html><body><h1>Oauth Error</h1><p>Error {e} occured during authentication</p></body></html>')

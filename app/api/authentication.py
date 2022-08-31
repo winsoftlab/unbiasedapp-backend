@@ -74,22 +74,6 @@ def get_access_token():
 
     return{'msg':"access code retrieved succesfully"}
 
-
-# @api.route('/instagram/get-account-info')
-# def get_account_info():
-
-#     if not session['fb_access_token']:
-#         return unauthenticated('Please log in to facebook')
-
-#     params = getCredentials()
-#     params['access_token'] = session['fb_access_token']
-#     response = InstagramGraphAPI(**params).get_account_info()
-#     page_id = response['data'][0]['id']
-#     session['page_id'] = page_id
-
-#     return {'page_id':page_id}
-
-
 @auth.error_handler
 def auth_error():
     return unauthenticated('Invalid credentials')
