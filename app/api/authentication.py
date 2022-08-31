@@ -1,4 +1,6 @@
+from os import access
 from flask_httpauth import HTTPBasicAuth
+from app import db
 from ..models import User
 from flask import g, jsonify, session, redirect, url_for, request
 from .errors import unauthenticated, forbiden
@@ -45,45 +47,47 @@ def verify_password(email_or_token, password):
     return user.verify_password(password)
 
 
-@api.route('/instagram/token', methods=['POST'])
+@api.route('/instagram/token', methods=['POST','PUT'])
 def get_access_token():
     '''
     Get access code and store it in session
     '''
+    # user = User.query.filter_by(email=g.current_user.email).first()
+
+    # if not user:
+    #     return False
+
+    # g.current_user = user
+
     access_token = request.form.get('access_token')
-    session['short_access_token'] = access_token
-    return redirect(url_for('api.debug_access_token'))
-    #return{'msg':"access code retrieved succesfully"}
-
-
-@api.route('/instagram/debug-token')
-def debug_access_token():
-    '''
-        Debug access token and reassign
-    '''
-    access_token = session['short_access_token']
     params = getCredentials()
     params['access_token'] = access_token
-    response =InstagramGraphAPI(**params).debug_long_lived_token()
+    session['short_access_token'] = access_token
+
+    response = InstagramGraphAPI(**params).debug_long_lived_token()
     session['fb_access_token'] = response['access_token']
+    # response =InstagramGraphAPI(**params).debug_long_lived_token()
 
-    return {'short':session['short_access_token'],'long':session['fb_access_token']}
+    # new_token=User(fb_access_token=response['access_token'])
+    # db.session.add(new_token)
+    # db.session.commit()
+
+    return{'msg':"access code retrieved succesfully"}
 
 
+# @api.route('/instagram/get-account-info')
+# def get_account_info():
 
-@api.route('/instagram/get-account-info')
-def get_account_info():
+#     if not session['fb_access_token']:
+#         return unauthenticated('Please log in to facebook')
 
-    if not session['fb_access_token']:
-        return unauthenticated('Please log in to facebook')
+#     params = getCredentials()
+#     params['access_token'] = session['fb_access_token']
+#     response = InstagramGraphAPI(**params).get_account_info()
+#     page_id = response['data'][0]['id']
+#     session['page_id'] = page_id
 
-    params = getCredentials()
-    params['access_token'] = session['fb_access_token']
-    response = InstagramGraphAPI(**params).get_account_info()
-    page_id = response['data'][0]['id']
-    session['page_id'] = page_id
-
-    return {'page_id':page_id}
+#     return {'page_id':page_id}
 
 
 @auth.error_handler

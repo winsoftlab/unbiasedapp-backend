@@ -1,9 +1,17 @@
-from app.api.errors import page_not_found
-from flask import g
 from . import api
-from app import db
-from app.models import FacebookAnalysis, AmazonAnalysis, InstagramAnalysis,TwitterAnalysis
+
+from flask import g
 from flask_login import current_user
+
+from app import db
+from app.api.errors import page_not_found
+from app.models import (
+    FacebookAnalysis, 
+    AmazonAnalysis, 
+    InstagramAnalysis,
+    TwitterAnalysis,
+    )
+
 
 
 def get_all_facebook_analysis():

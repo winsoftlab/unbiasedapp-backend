@@ -1,26 +1,8 @@
-from flask import g,url_for
+from flask import g,url_for, session
 from app.api import postRoutes
-from app.api.errors import forbiden
 from . import api
 from app import auto
 from app.api.authentication import auth
-
-@api.route('/')
-def api_home():
-
-    user = g.current_user
-    msg = f'Hello {user.username} welcome to unbiased api please read the docs  to get started'
-    return {'msg':msg, 'Documentation': url_for('api.documentation')}
-
-
-
-@api.route('/documentation')
-def documentation():
-
-    '''The endpoint for the Auto documentation of the API 
-        http://localhost:5000/api/v1/documentation
-     '''
-    return auto.html()
 
 
 
@@ -56,13 +38,13 @@ def facebook(q, page_num=2):
 
 
 @auto.doc()
-@api.route('/instagram/hashtag-search/<string:q>', methods=['POST'])
+@api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
 def instagram_hashtag(q):
     return postRoutes.instagram_hashtag(q)
 
 
 @auto.doc()
-@api.route('/instagram/comments', methods=['POST'])
+@api.route('/instagram/comments', methods=['GET'])
 def instagram_comments():
     return postRoutes.instagram_comments()
 

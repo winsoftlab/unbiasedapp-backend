@@ -7,7 +7,7 @@ from app.controllers.others.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
 from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
-from app.models import FacebookAnalysis, InstagramAnalysis, AmazonAnalysis, TwitterAnalysis
+from app.models import (FacebookAnalysis, InstagramAnalysis, AmazonAnalysis, TwitterAnalysis )
 from app import db
 
 
@@ -58,36 +58,42 @@ def facebook(q, page_num):
 
 
     result = scrape_facebook_post(q, page_num)
-    text = [i['text'] for i in result if 'text' in i.keys()]
+    # text = [i['text'] for i in result if 'text' in i.keys()]
     
-    # Create an instance of the data and commit to database
+    # # Create an instance of the data and commit to database
     
-    prev = FacebookAnalysis.query.filter_by(search_query=q).first()
-    #This logic here deletes the previous data if a paritcular search query was found
-    if prev:
+    # prev = FacebookAnalysis.query.filter_by(search_query=q).first()
+    # #This logic here deletes the previous data if a paritcular search query was found
+    # if prev:
 
-        db.session.delete(prev)
-        db.session.commit()
+    #     db.session.delete(prev)
+    #     db.session.commit()
 
-    new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
+    # new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
 
-    db.session.add(new_analysis)
-    db.session.commit()
+    # db.session.add(new_analysis)
+    # db.session.commit()
 
-    return  jsonify(text)
+    return  jsonify(result)
 
 
 def instagram_comments():
 
-    if not session['fb_access_token']:
-        return unauthenticated('Please log in facebook')
+    # if not User.fb_access_token:
+    #     return unauthenticated('Please log in facebook from home page')
 
     params = getCredentials()
 
+    # user = User.query.get(g.current_user.id)
+    
     params['access_token'] = session['fb_access_token']
 
-    params['page_id'] = session['page_id']
+    response = InstagramGraphAPI(**params).get_account_info()
+    print(response)
+    page_id = response['data'][0]['id']
 
+    params['page_id'] = page_id
+    session['page_id'] = page_id
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
  
     ig_user_id = ig_user_id_response['instagram_business_account']['id']
@@ -101,6 +107,14 @@ def instagram_comments():
     params['ig_media_id'] = ig_user_media_id
 
     media_response = InstagramGraphAPI(**params).getComments()
+    # new_instagram_data = TwitterAnalysis(
+    #     user_id=g.current_user.id,
+    #     #search_query=q,
+    #     sentiments= str(media_response)
+    # )
+
+    # db.session.add(new_instagram_data)
+    # db.session.commit()
 
     return{'media_response': media_response}
 

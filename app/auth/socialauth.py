@@ -1,7 +1,7 @@
 from . import auth
 from app import oauth, db
 import os
-from flask import url_for, redirect
+from flask import url_for, redirect, session
 
 
 @auth.route('/facebook/')
@@ -26,14 +26,14 @@ def facebook_login():
 @auth.route('/authorize/facebook/')
 def facebook_auth():
     token = oauth.facebook.authorize_access_token()
-    resp =oauth.facebook.get(
-        'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
-    )
-    profile = resp.json()
-    #TODO: Save the user to the database and the access_token
-    print('Facebook User', profile)
+    # resp =oauth.facebook.get(
+    #     'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
+    # )
+    # profile = resp.json()
+    # #TODO: Save the user to the database and the access_token
+    # print('Facebook User', profile)
     return redirect('/')
-
+    
 
 @auth.route('/twitter/')
 def twitter_login():

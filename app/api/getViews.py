@@ -2,6 +2,25 @@ from . import api
 from app import auto
 from app.api import getRoutes
 from app.api.authentication import auth
+from flask import g, url_for
+
+
+@api.route('/')
+def api_home():
+
+    user = g.current_user
+    msg = f'Hello {user.username} welcome to unbiased api please read the docs  to get started'
+    return {'msg':msg, 'Documentation': url_for('api.documentation', _external=True)}
+
+
+
+@api.route('/documentation')
+def documentation():
+
+    '''The endpoint for the Auto documentation of the API 
+        http://localhost:5000/api/v1/documentation
+     '''
+    return auto.html()
 
 
 @api.route('/facebook/', methods=['GET'])
@@ -16,9 +35,10 @@ def get_all_facebook_analysis():
   
 
 
-@auth.login_required
+
 @auto.doc()
 @api.route('/amazon')
+@auth.login_required
 def get_amazon_analysis():
     '''
     API endpoint to Get all Amazon processed data
@@ -29,9 +49,10 @@ def get_amazon_analysis():
 
 
 
-@auth.login_required
+
 @auto.doc()
 @api.route('/instagram')
+@auth.login_required
 def get_instagram_analysis():
     '''
     API endpoint to Get all Instagram processed data
@@ -39,11 +60,9 @@ def get_instagram_analysis():
     '''
     return getRoutes.get_instagram_analysis()
 
-
-
-@auth.login_required
 @auto.doc()
 @api.route('/twitter')
+@auth.login_required
 def get_twitter_analysis():
     '''
     API endpoint to Get all Amazon processed data

@@ -7,9 +7,9 @@ from ..main import main
 
 
 @main.app_errorhandler(404) #----probably problematic
-def page_not_found(e):
+def page_not_found(e='Not found'):
     if request.accept_mimetypes.accept_json:
-        response = jsonify({'error': 'not found'})
+        response = jsonify({'error':e})
         response.status_code = 404
         return response
     return render_template('404.html'), 404

@@ -39,7 +39,7 @@ class InstagramAnalysis(db.Model):
     __tablename__ = 'instagram_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    search_query = db.Column(db.String(255), nullable=False, unique=True)
+    search_query = db.Column(db.String(255), nullable=False, unique=True, default='comments')
     sentiments = db.Column(db.String)
 
 
@@ -50,6 +50,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=True)
+    fb_access_token = db.Column(db.String)
 
     @property
     def password(self):
