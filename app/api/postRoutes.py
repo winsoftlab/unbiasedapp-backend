@@ -2,7 +2,7 @@ from flask import jsonify, g, request, session
 from flask_login import current_user
 from app.api.errors import unauthenticated
 from . import api
-from app.controllers.facebookController.facebook import scrape_facebook_post
+from app.controllers.facebookController.facebook import search_facebook, scrape_facebook_page
 from app.controllers.others.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
@@ -52,12 +52,12 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain):
 
 
 
-def facebook(q, page_num):
+def facebook_search(q, page_num):
 
     '''Route for scrapping facebook based on search keyword and page number'''
 
 
-    result = scrape_facebook_post(q, page_num)
+    result = search_facebook(q, page_num)
     # text = [i['text'] for i in result if 'text' in i.keys()]
     
     # # Create an instance of the data and commit to database
@@ -75,6 +75,14 @@ def facebook(q, page_num):
     # db.session.commit()
 
     return  jsonify(result)
+
+
+
+def facebook_page(page_name, page_num):
+
+    result = scrape_facebook_page(page_name, page_num)
+    
+    return jsonify(result)
 
 
 def instagram_comments():

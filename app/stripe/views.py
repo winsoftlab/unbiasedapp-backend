@@ -2,7 +2,7 @@ import json
 import os
 from ..models import StripeCustomer
 from flask_login import current_user, login_required
-from . import stripay
+from . import stripe as str
 import stripe
 from flask import flash, jsonify, render_template, render_template_string, request, url_for, redirect
 from flask_cors import cross_origin
@@ -15,7 +15,7 @@ stripe_keys={
             }
 
 
-@stripay.route('/subscription', methods=['GET','POST'])
+@str.route('/subscription', methods=['GET','POST'])
 #@login_required
 def subscription():
     customer = StripeCustomer.query.filter_by(user_id=current_user.id).first()
@@ -56,7 +56,7 @@ def index():
 
 
 
-@stripay.route("/config")
+@str.route("/config")
 @cross_origin()
 def get_publishabel_key():
     stripe_config = {'publicKey':stripe_keys["publishable_key"]}
@@ -64,7 +64,7 @@ def get_publishabel_key():
     return stripe_config
 
 
-@stripay.route('/create-checkout-session', methods=["GET", "POST"])
+@str.route('/create-checkout-session', methods=["GET", "POST"])
 @cross_origin()
 def create_checkout_session():
 
@@ -100,7 +100,7 @@ def create_checkout_session():
         return error, 403
 
 
-@stripay.route('/webhook', methods=["POST"])
+@str.route('/webhook', methods=["POST"])
 def stripe_webhook():
 
     payload = request.get_data(as_text=True)
@@ -162,7 +162,7 @@ def handle_checkout_session(session):
 
 
 
-@stripay.route('/order/success', methods=["GET"])
+@str.route('/order/success', methods=["GET"])
 def success():
 
     sess = stripe.checkout.Session.retrieve(request.args.get('session_id'))
@@ -174,7 +174,7 @@ def success():
 
 
 
-@stripay.route('/order/cancel', methods=["GET"])
+@str.route('/order/cancel', methods=["GET"])
 def cancel():
     flash("Subscription cancelled")
     return redirect(url_for('main.home'))
@@ -185,7 +185,7 @@ def cancel():
 
 
 
-@stripay.route('/change-subscription', methods=["POST"])
+@str.route('/change-subscription', methods=["POST"])
 def change_subscription():
     stripe.api_key = stripe_keys["secret_key"]
 

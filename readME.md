@@ -16,3 +16,7 @@ execute ''flask db migrate''
 execute "flask db upgrade"
 
 execute "flask run --cert=adhoc" for localhost
+
+ISSUE:facebook_scraper module has been disabled. This a general problem.
+    Consequence: Reimplemantation of Facebook Graph API for page acess_token to get comments made on page
+    

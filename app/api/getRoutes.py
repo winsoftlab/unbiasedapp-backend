@@ -34,8 +34,11 @@ def get_twitter_analysis():
     twitter_analysis =TwitterAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if  twitter_analysis  !=[]:
-        return {'Data':  twitter_analysis }
-    
+        data = dict()
+        for i in range(0, len(twitter_analysis)):
+            data[i] =  {'query':twitter_analysis[i].search_query, 'sentiment': twitter_analysis[i].sentiments}
+        return data
+
     return page_not_found('No analysis has been made yet')
 
 
@@ -45,7 +48,10 @@ def get_amazon_analysis():
     amazon_analysis = AmazonAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if  amazon_analysis !=[]:
-        return {'Data':  amazon_analysis}
+        data = dict()
+        for i in range(0, len(amazon_analysis)):
+            data[i] =  {'query':amazon_analysis[i].product_info, 'sentiment': amazon_analysis[i].sentiments}
+        return data
     
     return page_not_found('No analysis has been made yet')
 

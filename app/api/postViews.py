@@ -5,7 +5,6 @@ from app import auto
 from app.api.authentication import auth
 
 
-
 @auto.doc()
 @api.route('/search-tweet/<string:q>/<int:count>', methods=['POST'])
 def search_tweet(q, count=100):
@@ -13,7 +12,7 @@ def search_tweet(q, count=100):
 
 
 @auto.doc()
-@api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST'])
+@api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST','GET'])
 def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
 
     '''
@@ -26,16 +25,26 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
 
 
 @auto.doc()
-@api.route('/facebook/<string:q>/<int:page_num>', methods=['POST','PUT'])
-def facebook(q, page_num=2):
+@api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
+def facebook_search(q, page_num=2):
     '''
     API Endpoint with query parameters query string(q) and page_num for
         searching facebook data.
         http://localhost:5000/api/v1/facebook/{query-string}/{page-num}
 
     '''
-    return postRoutes.facebook(q, page_num)
+    return postRoutes.facebook_search(q, page_num)
 
+@auto.doc()
+@api.route('/facebook/posts/<string:page_name>/<int:page_num>', methods=['POST','PUT', 'GET'])
+def facebook_page(page_name='bbcnews', page_num=2):
+    '''
+    API Endpoint with query parameters query string(q) and page_num for
+        searching facebook data.
+        http://localhost:5000/api/v1/facebook/posts/{facebook-page}/{page-num}
+
+    '''
+    return postRoutes.scrape_facebook_page(page_name, page_num)
 
 @auto.doc()
 @api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
