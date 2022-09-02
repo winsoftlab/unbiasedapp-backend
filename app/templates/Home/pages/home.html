@@ -22,15 +22,15 @@
                                  <input type="search" class="form-control" />
                               </div-->
                               <div class="col-auto">
-                                 <a href="{{ url_for('stripay.subscription')}}">
+                                 <a href="{{ url_for('stripe.subscription')}}">
                                     <button class="btn btn-success " id="DEMO">DEMO</button>
                                  </a>
                               </div>
                               <div>
-                              <!---{% include 'Home/components/socialLoginButtons.html' %}--->
+                              {% include 'Home/components/socialLoginButtons.html' %}
                               </div>
                               <div>
-                                {% include 'Home/components/fb_login.html' %}
+                                <!---{% include 'Home/components/fb_login.html' %}--->
                               </div>
                      </div>
                   </div>

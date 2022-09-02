@@ -1,3 +1,5 @@
+from app.controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
+from app.controllers.instagramController.instagramGetCredentials import getCredentials
 from . import auth
 from app import oauth, db
 import os
@@ -18,7 +20,7 @@ def facebook_login():
         authorize_url='https://www.facebook.com/dialog/oauth',
         authorize_params=None,
         api_base_url='https://graph.facebook.com/v14.0',
-        client_kwargs={'scope': 'email business_management user_posts instagram_basic'},
+        client_kwargs={'scope': 'public_profile email business_management instagram_basic'}, # email business_management instagram_basic page_read_engagement page_manage_posts page_manage_engagement
     )
     redirect_uri = url_for('auth.facebook_auth', _external=True)
     return oauth.facebook.authorize_redirect(redirect_uri)
@@ -26,6 +28,17 @@ def facebook_login():
 @auth.route('/authorize/facebook/')
 def facebook_auth():
     token = oauth.facebook.authorize_access_token()
+
+    access_token = token['access_token']
+
+    params = getCredentials()
+    params['access_token'] = access_token
+     #session['fb_access_token'] = access_token
+
+    response = InstagramGraphAPI(**params).debug_long_lived_token()
+    
+    session['fb_access_token'] = response['access_token']
+    print(session)
     # resp =oauth.facebook.get(
     #     'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
     # )

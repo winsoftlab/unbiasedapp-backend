@@ -1,13 +1,26 @@
+from os import access
 from flask import jsonify, g, request, session
 from flask_login import current_user
 from app.api.errors import unauthenticated
 from . import api
 from app.controllers.facebookController.facebook import search_facebook, scrape_facebook_page
+
 from app.controllers.others.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
 from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
-from app.models import (FacebookAnalysis, InstagramAnalysis, AmazonAnalysis, TwitterAnalysis )
+
+from app.controllers.facebookController.facebookGraphAPI import( page_posts_id, 
+                                                                get_page_access_token, 
+                                                                get_page_post_comments,
+                                                                get_page_post_comments_reply)
+from app.models import (
+    FacebookAnalysis, 
+    InstagramAnalysis, 
+    AmazonAnalysis, 
+    TwitterAnalysis)
+
+
 from app import db
 
 
@@ -97,12 +110,17 @@ def instagram_comments():
     params['access_token'] = session['fb_access_token']
 
     response = InstagramGraphAPI(**params).get_account_info()
+    print('################################################')
     print(response)
     page_id = response['data'][0]['id']
 
     params['page_id'] = page_id
+    
     session['page_id'] = page_id
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
+
+    print('###############################################')
+    print(ig_user_id_response)
  
     ig_user_id = ig_user_id_response['instagram_business_account']['id']
 
@@ -157,3 +175,50 @@ def instagram_hashtag(q):
     hashtag_media_response = InstagramGraphAPI(**params).get_hashtagMedia()
 
     return hashtag_media_response
+
+def facebook_page_post_comments():
+    params = getCredentials()
+
+    params['access_token'] = session['fb_access_token']  #User access token
+
+    params['page_id'] = session['page_id']
+
+    response = get_page_access_token(**params)
+
+    # print('#############################################################')
+
+    # print(response)
+
+    page_access_token = response['access_token'] #Page access token
+
+    params['page_access_token'] = page_access_token
+
+
+    page_response= page_posts_id(**params)
+
+    # print('#########################################')
+    # print(page_response)
+
+    page_post_id  = page_response['posts']['data'][1]['id']
+
+    params['page_post_id'] = page_post_id
+
+    page_post_response = get_page_post_comments(**params)
+
+    # print('#########################################')
+    # print(page_response)
+
+    post_comments = page_post_response['data']
+    data = dict()
+    for i in range(len(post_comments)):
+        comment = post_comments[i]['message']
+
+        comment_id = post_comments[i]['id']
+
+        params['comment_id'] = comment_id
+
+        page_post_comment_reply = get_page_post_comments_reply(**params)
+
+        data[i] = {'comment':comment, 'comment_id':comment_id,'replies': page_post_comment_reply}
+
+    return data

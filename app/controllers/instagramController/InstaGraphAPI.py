@@ -1,3 +1,4 @@
+from app import oauth
 import requests
 import json
 
@@ -17,9 +18,9 @@ class InstagramGraphAPI:
                 endpointParams = API endpoint parameters for the target endpoint.
             '''
 
-            data  = requests.get(url, endpointParams)
+            data  = requests.get(url, endpointParams) #oauth.facebook.get(url, endpointParams)
 
-            response = json.loads(data.content)
+            response =  json.loads(data.content) #data.json()
 
             return response
 

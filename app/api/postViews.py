@@ -1,3 +1,4 @@
+
 from flask import g,url_for, session
 from app.api import postRoutes
 from . import api
@@ -50,6 +51,12 @@ def facebook_page(page_name='bbcnews', page_num=2):
 @api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
 def instagram_hashtag(q):
     return postRoutes.instagram_hashtag(q)
+
+
+@auto.doc()
+@api.route('/facebook/page-post-comments')
+def facebook_page_post():
+    return postRoutes.facebook_page_post_comments()
 
 
 @auto.doc()
