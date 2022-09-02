@@ -1,5 +1,22 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from waitress import serve
 from bs4 import BeautifulSoup
-from  .scrapeBee import scraping_bee_api
+
+
+def get_page_source(url):
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("enable-automation")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(options=options)
+    driver.get(url)
+    element_text = driver.page_source
+    driver.quit()
+    return element_text
 
 
 def html_parser(product_name, product_id, sub_domain):
@@ -21,7 +38,7 @@ def html_parser(product_name, product_id, sub_domain):
         A recursive search of the web page for next page parameter to scrape reviews
         """
         data_str = ""
-        resp = scraping_bee_api(url)
+        resp = get_page_source(url)
 
         soup = BeautifulSoup(resp, 'html.parser')
 
@@ -58,6 +75,4 @@ def html_parser(product_name, product_id, sub_domain):
 
     recursive_search(url=init_url, page_num=page_num)
 
-    return rev_result        
-
-        
+    return rev_result   

@@ -52,14 +52,14 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain):
 
     review_data = html_parser(product_name, product_id, sub_domain)
 
-    new_amazon_analysis = AmazonAnalysis(
-        user_id=g.current_user.id,
-        product_info= '{}:{}'.format(product_id, product_id),
-        sentiments= str(review_data)
-    )
+    # new_amazon_analysis = AmazonAnalysis(
+    #     user_id=g.current_user.id,
+    #     product_info= '{}:{}'.format(product_id, product_id),
+    #     sentiments= str(review_data)
+    # )
 
-    db.session.add(new_amazon_analysis)
-    db.session.commit()
+    # db.session.add(new_amazon_analysis)
+    # db.session.commit()
 
     return jsonify(review_data)
 
