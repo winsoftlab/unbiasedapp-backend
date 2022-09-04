@@ -19,4 +19,11 @@ execute "flask run --cert=adhoc" for localhost
 
 technical ISSUE :facebook_scraper module has been disabled. This a general problem.
     Consequence: Reimplemantation of Facebook Graph API for page acess_token to get comments made on page
+fixed issue
+
+built the selenium scrapper for Amazon and Jumia
+
+download webdrivers for the OS and add to path
+
+
 

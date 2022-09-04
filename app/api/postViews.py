@@ -11,6 +11,12 @@ from app.api.authentication import auth
 def search_tweet(q, count=100):
     return postRoutes.search_tweet(q, count)
 
+@auto.doc()
+@api.route('/amazon/<string:product_name>/<string:product_id>', methods=['POST','GET'])
+def amazon_search(product_name, product_id):
+
+    return postRoutes.selenium_amazon(product_name, product_id)
+
 
 @auto.doc()
 @api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST','GET'])
@@ -24,6 +30,12 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
     '''
     return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
 
+
+@auto.doc()
+@api.route('/jumia/<string:product_id>', methods=['POST','GET'])
+def jumia_search(product_id):
+
+    return postRoutes.selenium_jumia(product_id)
 
 @auto.doc()
 @api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])

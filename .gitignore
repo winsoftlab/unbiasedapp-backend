@@ -8,3 +8,4 @@ __pycache__
 redis-stable
 unbiasedanalytics
 .unbiasedvenv
+geckodriver.log

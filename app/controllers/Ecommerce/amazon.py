@@ -1,0 +1,46 @@
+#!C:/bin
+from selenium.webdriver.common.by import By
+from app.controllers.Ecommerce.driverConfig import set_driver_config
+#from waitress import serve
+from bs4 import BeautifulSoup
+
+#url = 'https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+
+def begin_amazon_search(url):
+    """Takes the url of the product review page and recursively get the review"""
+    search_result =[]
+    driver = set_driver_config() #get the driver from the config 
+    def get_page_source(url):
+        print(url)
+        driver.get(url)
+
+        element_text = driver.page_source
+
+        result = amazon_beautiful_soup_search(element_text) #calling the beautifulsoup method to extract the text 
+
+        search_result.append(result) #appending the result to the initial value
+
+        try:
+            next_page = driver.find_element(By.PARTIAL_LINK_TEXT,'Next')
+        except:
+            driver.quit()
+            return search_result
+
+        if next_page is not None:
+            value= next_page.get_attribute('href')
+            url = value
+            get_page_source(url) #calling the function in it self until the if condition fails
+        driver.quit()
+    get_page_source(url)
+    return search_result
+
+def amazon_beautiful_soup_search(resp):
+
+    data_str =""
+
+    soup = BeautifulSoup(resp, 'html.parser')
+    for item in soup.findAll("span", class_="a-size-base review-text review-text-content"):
+        data_str = data_str + item.get_text()
+    result = data_str.split('\n')
+
+    return result

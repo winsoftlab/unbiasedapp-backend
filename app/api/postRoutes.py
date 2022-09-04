@@ -1,11 +1,12 @@
-from os import access
 from flask import jsonify, g, request, session
 from flask_login import current_user
 from app.api.errors import unauthenticated
+from app.controllers.Ecommerce.amazon import begin_amazon_search
+from app.controllers.Ecommerce.jumia import begin_jumia_search
 from . import api
 from app.controllers.facebookController.facebook import search_facebook, scrape_facebook_page
 
-from app.controllers.others.htmlparse import html_parser
+from app.controllers.Ecommerce.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
 from ..controllers.instagramController.instagramGetCredentials import getCredentials
 from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
@@ -63,6 +64,28 @@ def scrapping_bee_amazon(product_name, product_id, sub_domain):
 
     return jsonify(review_data)
 
+def selenium_amazon(product_name, product_id):
+    result = dict()
+    url = f'https://www.amazon.com/{product_name}/product-reviews/{product_id}/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+    search_result = begin_amazon_search(url)
+
+    for i in range(0, len(search_result)):
+        result[i] = search_result[i]
+
+    return jsonify(result)
+
+
+def selenium_jumia(product_id):
+
+    result = dict()
+    url = f'https://www.jumia.com.ng/catalog/productratingsreviews/sku/{product_id}/'
+
+    search_result = begin_jumia_search(url)
+
+    for i in range(0, len(search_result)):
+        result[i] = search_result[i]
+
+    return jsonify(result)
 
 
 def facebook_search(q, page_num):
