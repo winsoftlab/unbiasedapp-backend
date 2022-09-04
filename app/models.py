@@ -51,6 +51,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean, default=True)
     fb_access_token = db.Column(db.String)
+    fb_page_id = db.Column(db.String(128))
 
     @property
     def password(self):

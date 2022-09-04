@@ -4,7 +4,7 @@ from app.api.errors import unauthenticated
 from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
 from . import api
-from app.controllers.facebookController.facebook import search_facebook, scrape_facebook_page
+from app.controllers.facebookController.facebookScraper import search_facebook, scrape_facebook_page
 
 from app.controllers.Ecommerce.htmlparse import html_parser
 from ..controllers.twitterController.processTweets import process_tweets
@@ -94,7 +94,7 @@ def facebook_search(q, page_num):
 
 
     result = search_facebook(q, page_num)
-    # text = [i['text'] for i in result if 'text' in i.keys()]
+    text = [i['text'] for i in result if 'text' in i.keys()]
     
     # # Create an instance of the data and commit to database
     
