@@ -1903,3 +1903,426 @@ JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-r
 JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_118?ie=UTF8&pageNumber=118&reviewerType=all_reviews line 2875 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_119?ie=UTF8&pageNumber=119&reviewerType=all_reviews line 2559 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1662326933896	Marionette	INFO	Stopped listening on port 55921
+1662379732295	geckodriver	INFO	Listening on 127.0.0.1:50753
+1662379735319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "50754" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileDK1rUO"
+*** You are running in headless mode.
+1662379741052	Marionette	INFO	Marionette enabled
+1662379741065	Marionette	INFO	Listening on port 50769
+WebDriver BiDi listening on ws://localhost:50754
+Read port: 50769
+Read port: 50769
+Read port: 50769
+Read port: 50769
+Read port: 50769
+1662379748895	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists,1662379753293	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbDevTools listening on ws://localhost:50754/devtools/browser/cf54136e-dd8b-497b-be5b-62af756dd954
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "F*** You are running in headless mode.
+1662379754956	Marionette	INFO	Marionette enabled
+1662379754966	Marionette	INFO	Listening on port 50800
+WebDriver BiDi listening on ws://localhost:50782
+Read port: 50800
+1662379755872	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebu1662379759972	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "-DevTools listening on ws://localhost:50782/devtools/browser/0527f671-0c00-4090-a385-ec61212cff7d
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component ret1662379761155	Marionette	INFO	Marionette enabled
+1662379761173	Marionette	INFO	Listening on port 50843
+WebDriver BiDi listening on ws://localhost:508141662379763911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--[GFX1-]: RenderCompositorSWGL failed mapping default framebu1662379766560	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "-DevTools listening on ws://localhost:50814/devtools/browser/0b585a5c-6787-4443-97be-5ad70959ff05
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gr[GFX1-]: RenderCompositorSWGL console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+1662379961202	Marionette	INFO	Stopped listening on port 50843
+gent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile2rQEpF\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching regiJavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3404 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3102 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3107 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 3201 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2992 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 3019 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 3095 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2986 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2992 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_10?ie=UTF8&pageNumber=10&reviewerType=all_reviews line 3094 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_11?ie=UTF8&pageNumber=11&reviewerType=all_reviews line 3109 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_12?ie=UTF8&pageNumber=12&reviewerType=all_reviews line 2999 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_13?ie=UTF8&pageNumber=13&reviewerType=all_reviews line 3084 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_14?ie=UTF8&pageNumber=14&reviewerType=all_reviews line 3011 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 2999 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_16?ie=UTF8&pageNumber=16&reviewerType=all_reviews line 2903 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewerType=all_reviews line 2903 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerType=all_reviews line 2920 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_19?ie=UTF8&pageNumber=19&reviewerType=all_reviews line 3000 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=all_reviews line 3004 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_21?ie=UTF8&pageNumber=21&reviewerType=all_reviews line 2890 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_22?ie=UTF8&pageNumber=22&reviewerType=all_reviews line 3100 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_23?ie=UTF8&pageNumber=23&reviewerType=all_reviews line 3004 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_24?ie=UTF8&pageNumber=24&reviewerType=all_reviews line 3390 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_25?ie=UTF8&pageNumber=25&reviewerType=all_reviews line 3074 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_26?ie=UTF8&pageNumber=26&reviewerType=all_reviews line 2935 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_27?ie=UTF8&pageNumber=27&reviewerType=all_reviews line 2854 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_28?ie=UTF8&pageNumber=28&reviewerType=all_reviews line 2847 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_29?ie=UTF8&pageNumber=29&reviewerType=all_reviews line 2945 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662380009203	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_30?ie=UTF8&pageNumber=30&reviewerType=all_reviews line 2964 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_31?ie=UTF8&pageNumber=31&reviewerType=all_reviews line 3147 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662380015754	Marionette	INFO	Stopped listening on port 50872
+ER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_33?ie=UTF8&pageNumber=33&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_34?ie=UTF8&pageNumber=34&reviewerType=all_reviews line 3173 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_35?ie=UTF8&pageNumber=35&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_36?ie=UTF8&pageNumber=36&reviewerType=all_reviews line 2897 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_37?ie=UTF8&pageNumber=37&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_38?ie=UTF8&pageNumber=38&reviewerType=all_reviews line 2925 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_39?ie=UTF8&pageNumber=39&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_40?ie=UTF8&pageNumber=40&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_41?ie=UTF8&pageNumber=41&reviewerType=all_reviews line 2914 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_42?ie=UTF8&pageNumber=42&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_43?ie=UTF8&pageNumber=43&reviewerType=all_reviews line 3073 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_44?ie=UTF8&pageNumber=44&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_45?ie=UTF8&pageNumber=45&reviewerType=all_reviews line 3007 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_46?ie=UTF8&pageNumber=46&reviewerType=all_reviews line 3071 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_47?ie=UTF8&pageNumber=47&reviewerType=all_reviews line 2987 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_48?ie=UTF8&pageNumber=48&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_49?ie=UTF8&pageNumber=49&reviewerType=all_reviews line 2981 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_50?ie=UTF8&pageNumber=50&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_51?ie=UTF8&pageNumber=51&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_52?ie=UTF8&pageNumber=52&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_53?ie=UTF8&pageNumber=53&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_54?ie=UTF8&pageNumber=54&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_55?ie=UTF8&pageNumber=55&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_56?ie=UTF8&pageNumber=56&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_57?ie=UTF8&pageNumber=57&reviewerType=all_reviews line 2977 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_58?ie=UTF8&pageNumber=58&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_59?ie=UTF8&pageNumber=59&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_60?ie=UTF8&pageNumber=60&reviewerType=all_reviews line 3071 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662380089406	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_61?ie=UTF8&pageNumber=61&reviewerType=all_reviews line 3073 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_62?ie=UTF8&pageNumber=62&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_63?ie=UTF8&pageNumber=63&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_64?ie=UTF8&pageNumber=64&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_65?ie=UTF8&pageNumber=65&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_66?ie=UTF8&pageNumber=66&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_67?ie=UTF8&pageNumber=67&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_68?ie=UTF8&pageNumber=68&reviewerType=all_reviews line 2891 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_69?ie=UTF8&pageNumber=69&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_70?ie=UTF8&pageNumber=70&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_71?ie=UTF8&pageNumber=71&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_72?ie=UTF8&pageNumber=72&reviewerType=all_reviews line 2993 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_73?ie=UTF8&pageNumber=73&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_74?ie=UTF8&pageNumber=74&reviewerType=all_reviews line 3088 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_75?ie=UTF8&pageNumber=75&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_76?ie=UTF8&pageNumber=76&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_77?ie=UTF8&pageNumber=77&reviewerType=all_reviews line 2977 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_78?ie=UTF8&pageNumber=78&reviewerType=all_reviews line 3169 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_79?ie=UTF8&pageNumber=79&reviewerType=all_reviews line 3215 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_80?ie=UTF8&pageNumber=80&reviewerType=all_reviews line 3330 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_81?ie=UTF8&pageNumber=81&reviewerType=all_reviews line 3317 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_82?ie=UTF8&pageNumber=82&reviewerType=all_reviews line 3071 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_83?ie=UTF8&pageNumber=83&reviewerType=all_reviews line 3167 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_84?ie=UTF8&pageNumber=84&reviewerType=all_reviews line 3172 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_85?ie=UTF8&pageNumber=85&reviewerType=all_reviews line 3243 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/query-stripping)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_86?ie=UTF8&pageNumber=86&reviewerType=all_reviews line 3169 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_87?ie=UTF8&pageNumber=87&reviewerType=all_reviews line 2963 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_88?ie=UTF8&pageNumber=88&reviewerType=all_reviews line 3215 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_89?ie=UTF8&pageNumber=89&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_90?ie=UTF8&pageNumber=90&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662380197864	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_91?ie=UTF8&pageNumber=91&reviewerType=all_reviews line 3177 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_92?ie=UTF8&pageNumber=92&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_93?ie=UTF8&pageNumber=93&reviewerType=all_reviews line 2897 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_94?ie=UTF8&pageNumber=94&reviewerType=all_reviews line 2897 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_95?ie=UTF8&pageNumber=95&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_96?ie=UTF8&pageNumber=96&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_97?ie=UTF8&pageNumber=97&reviewerType=all_reviews line 2975 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_98?ie=UTF8&pageNumber=98&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_99?ie=UTF8&pageNumber=99&reviewerType=all_reviews line 2977 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_100?ie=UTF8&pageNumber=100&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_101?ie=UTF8&pageNumber=101&reviewerType=all_reviews line 3118 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_102?ie=UTF8&pageNumber=102&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_103?ie=UTF8&pageNumber=103&reviewerType=all_reviews line 2913 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_104?ie=UTF8&pageNumber=104&reviewerType=all_reviews line 2891 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_105?ie=UTF8&pageNumber=105&reviewerType=all_reviews line 2979 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_106?ie=UTF8&pageNumber=106&reviewerType=all_reviews line 2926 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_107?ie=UTF8&pageNumber=107&reviewerType=all_reviews line 2913 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_108?ie=UTF8&pageNumber=108&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_109?ie=UTF8&pageNumber=109&reviewerType=all_reviews line 3027 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_110?ie=UTF8&pageNumber=110&reviewerType=all_reviews line 3009 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_111?ie=UTF8&pageNumber=111&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_112?ie=UTF8&pageNumber=112&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_113?ie=UTF8&pageNumber=113&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_114?ie=UTF8&pageNumber=114&reviewerType=all_reviews line 2981 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_115?ie=UTF8&pageNumber=115&reviewerType=all_reviews line 3071 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_116?ie=UTF8&pageNumber=116&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_117?ie=UTF8&pageNumber=117&reviewerType=all_reviews line 2987 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Dove-Body-Wash-Variety-Pack/product-reviews/B07VCVDRKG/ref=cm_cr_arp_d_paging_btm_118?ie=UTF8&pageNumber=118&reviewerType=all_reviews line 2798 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1662380278704	Marionette	INFO	Stopped listening on port 50899
+1662380279020	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+!!! error running onStopped callback: TypeError: callback is not a function
+1662382691245	geckodriver	INFO	Listening on 127.0.0.1:54764
+1662382694101	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "54765" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileBpqCBo"
+*** You are running in headless mode.
+1662382703229	Marionette	INFO	Marionette enabled
+1662382703271	Marionette	INFO	Listening on port 54793
+Read port: 54793
+WebDriver BiDi listening on ws://localhost:54765
+1662382705107	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileBpqCBo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54765/devtools/browser/a1672cbb-a458-4339-909b-2a373aef9321
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662382729068	Marionette	INFO	Stopped listening on port 54793
+1662382896508	geckodriver	INFO	Listening on 127.0.0.1:54938
+1662382899549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "54939" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile7dqLIl"
+*** You are running in headless mode.
+1662382906158	Marionette	INFO	Marionette enabled
+1662382906214	Marionette	INFO	Listening on port 54955
+WebDriver BiDi listening on ws://localhost:54939
+Read port: 54955
+1662382907873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile7dqLIl\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:54939/devtools/browser/bf8d93fd-6976-4e69-966e-ecb790ca94eb
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662382926220	Marionette	INFO	Stopped listening on port 54955
+1662383135661	geckodriver	INFO	Listening on 127.0.0.1:55148
+1662383138654	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "55149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile4NxUke"
+*** You are running in headless mode.
+1662383147098	Marionette	INFO	Marionette enabled
+1662383147219	Marionette	INFO	Listening on port 55163
+WebDriver BiDi listening on ws://localhost:55149
+Read port: 55163
+Read port: 55163
+1662383149565	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile4NxUke\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55149/devtools/browser/576029bb-fbbb-4dcc-9f17-5d85604a0f04
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662383166979	Marionette	INFO	Stopped listening on port 55163
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"TelemetryController: shutting down","state":{"initialized":true,"initStarted":true,"haveDelayedInitTask":false,"shutdownBarrier":"Not started","connectionsBarrier":"Not started","sendModule":{"sendingEnabled":true,"pendingPingRequestCount":0,"pendingPingActivityCount":0,"unpersistedPingCount":0,"persistedPingCount":0,"schedulerState":{"shutdown":false,"hasSendTask":false,"sendsFailed":false,"sendTaskState":"bail out - no pings to send","backoffDelay":60000}},"haveDelayedNewProfileTask":true,"shutdownStep":"awaiting delayed new ping task 0"},"filename":"resource://gre/modules/TelemetryControllerParent.jsm","lineNumber":914,"stack":["resource://gre/modules/TelemetryController[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilecH1Uav\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:55202/devtools/browser/255e8cf9-3a70-4c17-8e3d-2e0c1e5da1d1
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662383204988	Marionette	INFO	Stopped listening on port 55216
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"TelemetryController: shutting down","state":{"initialized":true,"initStarted":true,"haveDelayedInitTask":true,"shutdownBarrier":"Not started","connectionsBarrier":"Not started","sendModule":{"sendingEnabled":true,"pendingPingRequestCount":0,"pendingPingActivityCount":0,"unpersistedPingCount":0,"persistedPingCount":0,"schedulerState":{"shutdown":false,"hasSendTask":false,"sendsFailed":false,"sendTaskState":null,"backoffDelay":60000}},"haveDelayedNewProfileTask":false},"filename":"resource://gre/modules/TelemetryControllerParent.jsm","lineNumber":914,"stack":["resource://gre/modules/TelemetryControllerParent.jsm:setupTelemetry:914","resource://gre/modules/TelemetryControllerParent.jsm:observe:1048","resource://gre/modules/TelemetryControllerParent.jsm:observe:150","resource://gre/modules/TelemetryStartup.jsm:TelemetryStartup.prototype.observe:33"]}] Barrier: profile-before-change-telemetry
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+1662383349113	geckodriver	INFO	Listening on 127.0.0.1:55350
+1662383352119	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "55351" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilezZyIiS"
+*** You are running in headless mode.
+1662383354375	Marionette	INFO	Marionette enabled
+1662383354393	Marionette	INFO	Listening on port 55362
+WebDriver BiDi listening on ws://localhost:55351
+Read port: 55362
+1662383355194	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebu1662383359468	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "-console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/mod1662383363200	Marionette	DevTools listening on ws://localhost:55351/devtools/browser/0079db3a-29af-4bf2-b598-dbd6f50bb3bb
+console.error: services.settings: 
+  main/query-stripping Signatu1662383367863	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileek6uTL\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:55366/devtools/browser/fe2c7404-dcd3-4137-b257-dfd57e10dcc7
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scraconsole.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+WARNING: At least one completion condition is taki1662383390778	Marionette	INFO	Stopped listening on port 55391
+console.error: "Could not load engine bing@search.mozilla.org: Error: Data is not ready."
+console.error: "Could not load engine ddg@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.warn: SearchService: "#init: abandoning init due to shutting down"
+[Parent 22152, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+1662383766935	geckodriver	INFO	Listening on 127.0.0.1:55543
+1662383770038	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "55544" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileJoJr6D"
+*** You are running in headless mode.
+1662383775850	Marionette	INFO	Marionette enabled
+1662383775894	Marionette	INFO	Listening on port 55555
+Read port: 55555
+WebDriver BiDi listening on ws://localhost:55544
+Read port: 55555
+1662383777565	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileJoJr6D\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:55544/devtools/browser/25e90db8-c2f6-4e11-8435-d48b22de045f
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.konga.com."
+JavaScript warning: https://webchat.ebanqo.io/static/js/2.388c09c1.chunk.js, line 2: asm.js type error: var 't' initializer must be literal or const literal
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/query-stripping)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+chSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileR6e2Sk\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:55729/devtools/browser/8237e637-b238-438b-aac4-131b9567d30c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.konga.com."
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript warning: https://webchat.ebanqo.io/static/js/2.388c09c1.chunk.js, line 2: asm.js type error: var 't' initializer must be literal or const literal
+JavaScript error: , line 0: TypeError: Failed to update the ServiceWorker for scope https://www.konga.com/ because the registration has been uninstalled since the update was scheduled.
+JavaScript error: , line 0: TypeError: Failed to update the ServiceWorker for scope https://www.konga.com/ because the registration has been uninstalled since the update was scheduled.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:55945
+1662383935542	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "55946" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXicvPS"
+*** You are running in headless mode.
+1662383946608	Marionette	INFO	Marionette enabled
+1662383946624	Marionette	INFO	Listening on port 55979
+WebDriver BiDi listening on ws://localhost:55946
+Read port: 55979
+Read port: 55979
+1662383949305	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXicvPS\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:55946/devtools/browser/293f3de7-38ec-46ae-a097-e67cec997685
+1662383986039	Marionette	INFO	Stopped listening on port 55979
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+[Parent 25108, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+1662384061296	geckodriver	INFO	Listening on 127.0.0.1:56119
+1662384064350	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--remote-debugging-port" "56120" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6XWNVW"
+*** You are running in headless mode.
+1662384071472	Marionette	INFO	Marionette enabled
+1662384071489	Marionette	INFO	Listening on port 56140
+WebDriver BiDi listening on ws://localhost:56120
+Read port: 56140
+1662384073285	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6XWNVW\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:56120/devtools/browser/0c684997-2d8e-4847-b580-ac957147f4d9
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662384097944	Marionette	INFO	Stopped listening on port 56140
+console.warn: SearchService: "#init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/SearchService.sys.mjs, line 317: NS_ERROR_ABORT: SearchService initialization failed
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined

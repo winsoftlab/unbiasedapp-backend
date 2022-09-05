@@ -3,6 +3,7 @@ from flask_login import current_user
 from app.api.errors import unauthenticated
 from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
+from app.controllers.Ecommerce.konga import begin_konga_search
 from . import api
 from app.controllers.facebookController.facebookScraper import search_facebook, scrape_facebook_page
 
@@ -86,6 +87,16 @@ def selenium_jumia(product_id):
         result[i] = search_result[i]
 
     return jsonify(result)
+
+
+def selenium_konga(product_name_code_url):
+
+    url = f'https://www.konga.com/product/{product_name_code_url}'
+
+    search_result = begin_konga_search(url)
+
+    return {'data': search_result}
+
 
 
 def facebook_search(q, page_num):
