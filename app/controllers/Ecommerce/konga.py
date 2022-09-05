@@ -13,9 +13,10 @@ def begin_konga_search(url):
     driver = set_driver_config() #get the driver from the config 
     driver.get(url)
 
-    driver.find_element(By.LINK_TEXT,'Reviews').click()
+    driver.find_element(By.CSS_SELECTOR,"a[onclick^='Reviews']").click()
 
-    element = WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.CLASS_NAME, "cfc8e_RM54f")))
+    #element = WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.CLASS_NAME, "cfc8e_RM54f")))
+
     element_text = driver.page_source
 
     print('------------------------------------------------------------------')
