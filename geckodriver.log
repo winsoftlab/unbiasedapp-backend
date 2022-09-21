@@ -2594,8 +2594,10 @@ console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "res
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.warn: SearchSettings: "get: No settings file exists,console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\TeDevTools listening on ws://localhost:54288/devtools/browser/DevTools listening on ws://localhost:51663728027585	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
 1663728540802	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: timeout
- Error: Failed downloading XML, status: 0, reason: timeout
-ogram Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "54378" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileKV9bXn"
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+imeout
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+ette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "54378" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileKV9bXn"
 *** You are running in headless mode.
 1663728390571	Marionette	INFO	Marionette enabled
 16637283901663728393376	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infoba[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
@@ -2614,9 +2616,8 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
-m", 420))
-DevTools listening on ws://localhost:54474/devtools/browser/c80f48ea-c440-464d-899d-59ce1529511d
-1663728489987	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+1663728925053	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: timeout
+7	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
 TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
 TimedPromise@chrome://remote/content/marionette/sync.js:221:10
 interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
@@ -2624,3 +2625,525 @@ webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
 1663728490566	Marionette	INFO	Stopped listening on port 54505
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.konga.com."
 JavaScript error: , line 0: TypeError: Failed to update the ServiceWorker for scope https://www.konga.com/ because the registration has been uninstalled since the update was scheduled.
+1663729538409	geckodriver	INFO	Listening on 127.0.0.1:56110
+1663729541195	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "56111" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEQKHUb"
+*** You are running in headless mode.
+1663729548128	Marionette	INFO	Marionette enabled
+1663729548136	Marionette	INFO	Listening on port 56141
+WebDriver BiDi listening on ws://localhost:56111
+Read port: 56141
+1663729548999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEQKHUb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56111/devtools/browser/a2a17082-78d7-450b-98aa-1b41a1e94032
+1663729557551	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 2900 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 2983 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2908 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 2958 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2886 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2972 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_10?ie=UTF8&pageNumber=10&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_11?ie=UTF8&pageNumber=11&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_12?ie=UTF8&pageNumber=12&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_13?ie=UTF8&pageNumber=13&reviewerType=all_reviews line 2887 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_14?ie=UTF8&pageNumber=14&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 3127 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_16?ie=UTF8&pageNumber=16&reviewerType=all_reviews line 2887 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerType=all_reviews line 2873 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_19?ie=UTF8&pageNumber=19&reviewerType=all_reviews line 2821 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=all_reviews line 2954 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_21?ie=UTF8&pageNumber=21&reviewerType=all_reviews line 2989 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_22?ie=UTF8&pageNumber=22&reviewerType=all_reviews line 2990 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_23?ie=UTF8&pageNumber=23&reviewerType=all_reviews line 2841 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_24?ie=UTF8&pageNumber=24&reviewerType=all_reviews line 2846 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_25?ie=UTF8&pageNumber=25&reviewerType=all_reviews line 2551 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663729660649	Marionette	INFO	Stopped listening on port 56141
+1663729688532	geckodriver	INFO	Listening on 127.0.0.1:56411
+1663729691552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "56412" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3UOovo"
+*** You are running in headless mode.
+1663729692921	Marionette	INFO	Marionette enabled
+1663729692932	Marionette	INFO	Listening on port 56425
+WebDriver BiDi listening on ws://localhost:56412
+Read port: 56425
+1663729693730	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3UOovo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56412/devtools/browser/395686a9-0a09-4283-b5dc-246f5e01ccf9
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663729703576	geckodriver	INFO	Listening on 127.0.0.1:56456
+1663729706620	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "56457" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilelqQ64k"
+*** You are running in headless mode.
+1663729707339	Marionette	INFO	Marionette enabled
+1663729707351	Marionette	INFO	Listening on port 56468
+WebDriver BiDi listening on ws://localhost:56457
+Read port: 56468
+1663729708081	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilelqQ64k\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56457/devtools/browser/56e1343c-ffb0-4ecc-9cf6-aefc3db6e8ff
+1663729714628	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663729717943	Marionette	INFO	Stopped listening on port 56468
+1663729857163	geckodriver	INFO	Listening on 127.0.0.1:56578
+1663729860196	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "56579" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile8AOYT4"
+*** You are running in headless mode.
+1663729867532	Marionette	INFO	Marionette enabled
+1663729867545	Marionette	INFO	Listening on port 56606
+WebDriver BiDi listening on ws://localhost:56579
+Read port: 56606
+1663729868967	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile8AOYT4\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+1663729883657	geckodriver	INFO	Listening on 127.0.0.1:56632
+1663729886363	mozrunner::runner	INFO	RJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 2899 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 2873 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 2982 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2907 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 2873 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 2957 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2885 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2971 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+ype=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 2958 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2972 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_10?ie=UTF8&pageNumber=10&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_11?ie=UTF8&pageNumber=11&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_12?ie=UTF8&pageNumber=12&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_13?ie=UTF8&pageNumber=13&reviewerType=all_reviews line 2887 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_14?ie=UTF8&pageNumber=14&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 3127 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_16?ie=UTF8&pageNumber=16&reviewerType=all_reviews line 2887 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewerType=all_reviews line 2874 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerType=all_reviews line 2873 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be reJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=all_reviews line 2954 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_21?ie=UJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_22?iJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerTJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_2JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_19?ie=UTF8&pageNumber=19&reviewerTypeJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=alJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_pagingJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_21?ie=UTF8&pageNumber=21&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_22?ie=UTF8&pageNumber=22&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_23?ie=UTF8&pageNumber=23&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_24?ie=UTF8&pageNumber=24&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_25?ie=UTF8&pageNumber=25&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663730246980	Marionette	INFO	Stopped listening on port 56918
+1663730280653	geckodriver	INFO	Listening on 127.0.0.1:57324
+1663730283716	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "57325" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilejThLg4"
+*** You are running in headless mode.
+1663730284591	Marionette	INFO	Marionette enabled
+1663730284599	Marionette	INFO	Listening on port 57339
+Read port: 57339
+WebDriver BiDi listening on ws://localhost:57325
+1663730285423	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebu1663730289645	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "-console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:57325/devtools/browser/bbe0c55f-08c9-45e7-9341-6e45ab1cd735
+1663730292375	Marionette	WARN	Ignoring event 'pageshow' becau1663730292916	RemoteAgent	WARN	TLS certificate errors will 1663730301174	Marionette	INFO	Stopped listening on port 57339
+ed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilen5xDYf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57348/devtools/browser/f21a920f-f547-4880-946f-4d64b2dff35b
+1663730301242	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663730328807	Marionette	INFO	Stopped listening on port 57373
+1663730557894	geckodriver	INFO	Listening on 127.0.0.1:57790
+1663730560954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "57791" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileILxn6L"
+*** You are running in headless mode.
+1663730561893	Marionette	INFO	Marionette enabled
+1663730561903	Marionette	INFO	Listening on port 57805
+WebDriver BiDi listening on ws://localhost:57791
+Read port: 57805
+1663730562846	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileILxn6L\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57791/devtools/browser/7ee04b9c-a6e6-45d9-9e7c-8a4ec1b690d6
+1663730569105	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663730573675	Marionette	INFO	Stopped listening on port 57805
+1663730779120	geckodriver	INFO	Listening on 127.0.0.1:57952
+1663730782130	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "57953" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3S67yW"
+*** You are running in headless mode.
+1663730783003	Marionette	INFO	Marionette enabled
+1663730783010	Marionette	INFO	Listening on port 57964
+WebDriver BiDi listening on ws://localhost:57953
+Read port: 57964
+1663730784419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3S67yW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57953/devtools/browser/139ba07c-8097-4451-a1eb-2e5db4277aa6
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663730798872	geckodriver	INFO	Listening on 127.0.0.1:57991
+1663730801863	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "57992" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileQPLbKK"
+*** You are running in headless mode.
+1663730804190	Marionette	INFO	Marionette enabled
+1663730804198	Marionette	INFO	Listening on port 58001
+WebDriver BiDi listening on ws://localhost:57992
+Read port: 58001
+1663730804837	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileQPLbKK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57992/devtools/browser/477c94cc-7ba7-4000-9cf5-b4b893082773
+1663730811139	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663730814428	Marionette	INFO	Stopped listening on port 58001
+!!! error running onStopped callback: TypeError: callback is not a function
+[Parent 9224, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1663730977518	geckodriver	INFO	Listening on 127.0.0.1:58058
+1663730980544	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58059" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileL3grjG"
+*** You are running in headless mode.
+1663730983042	Marionette	INFO	Marionette enabled
+1663730983051	Marionette	INFO	Listening on port 58069
+WebDriver BiDi listening on ws://localhost:58059
+Read port: 58069
+1663730983980	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileL3grjG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58059/devtools/browser/4a0f4539-16fe-4e6c-a63a-1f2b7207bc35
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663730993391	geckodriver	INFO	Listening on 127.0.0.1:58095
+1663730996444	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58096" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIT0sOj"
+*** You are running in headless mode.
+1663730997383	Marionette	INFO	Marionette enabled
+1663730997394	Marionette	INFO	Listening on port 58106
+WebDriver BiDi listening on ws://localhost:58096
+Read port: 58106
+1663730998027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIT0sOj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58096/devtools/browser/22682b36-5ad3-43fc-ad6f-4bf8b350fed3
+1663731004661	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663731010737	Marionette	INFO	Stopped listening on port 58106
+1663731160703	geckodriver	INFO	Listening on 127.0.0.1:58180
+1663731163791	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileMKkNE7"
+*** You are running in headless mode.
+1663731165026	Marionette	INFO	Marionette enabled
+1663731165049	Marionette	INFO	Listening on port 58191
+WebDriver BiDi listening on ws://localhost:58181
+Read port: 58191
+1663731166027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileMKkNE7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58181/devtools/browser/53ea0840-bf4c-4139-8174-caf6121832a1
+1663731172616	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663731178357	Marionette	INFO	Stopped listening on port 58191
+!!! error running onStopped callback: TypeError: callback is not a function
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 905: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1663731358853	geckodriver	INFO	Listening on 127.0.0.1:58268
+1663731361869	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58269" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilepNVCNo"
+*** You are running in headless mode.
+1663731363101	Marionette	INFO	Marionette enabled
+1663731363107	Marionette	INFO	Listening on port 58276
+WebDriver BiDi listening on ws://localhost:58269
+Read port: 58276
+1663731365151	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilepNVCNo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58269/devtools/browser/1b9f8b6f-ffbd-4edf-a23d-a0a87050d506
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731375699	geckodriver	INFO	Listening on 127.0.0.1:58304
+1663731378750	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58305" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiles3JtOb"
+*** You are running in headless mode.
+1663731379768	Marionette	INFO	Marionette enabled
+1663731379780	Marionette	INFO	Listening on port 58315
+WebDriver BiDi listening on ws://localhost:58305
+Read port: 58315
+1663731380670	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiles3JtOb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58305/devtools/browser/8c686bf9-4846-41cf-bdd1-b3039c3e965c
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731392342	geckodriver	INFO	Listening on 127.0.0.1:58340
+1663731395391	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58341" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile8KUD4N"
+*** You are running in headless mode.
+1663731396295	Marionette	INFO	Marionette enabled
+1663731396305	Marionette	INFO	Listening on port 58351
+WebDriver BiDi listening on ws://localhost:58341
+Read port: 58351
+1663731396782	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile8KUD4N\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58341/devtools/browser/b13f0423-08c3-48ac-8c07-5f0cc49ffcef
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731408521	geckodriver	INFO	Listening on 127.0.0.1:58376
+1663731411570	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58377" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilewxqkZM"
+*** You are running in headless mode.
+1663731412270	Marionette	INFO	Marionette enabled
+1663731412280	Marionette	INFO	Listening on port 58387
+WebDriver BiDi listening on ws://localhost:58377
+Read port: 58387
+1663731413386	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilewxqkZM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58377/devtools/browser/7d2d1ee5-5f53-4ccf-a736-f2aa8c52a9be
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731879159	geckodriver	INFO	Listening on 127.0.0.1:58454
+1663731882190	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58455" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileAfHmdN"
+*** You are running in headless mode.
+1663731882772	Marionette	INFO	Marionette enabled
+1663731882778	Marionette	INFO	Listening on port 58464
+WebDriver BiDi listening on ws://localhost:58455
+Read port: 58464
+1663731883770	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileAfHmdN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58455/devtools/browser/73e379dc-436c-4b26-9d4d-e4c98b3e52d1
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731911629	geckodriver	INFO	Listening on 127.0.0.1:58477
+1663731914674	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58478" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileChyfhS"
+*** You are running in headless mode.
+1663731915446	Marionette	INFO	Marionette enabled
+1663731915457	Marionette	INFO	Listening on port 58488
+WebDriver BiDi listening on ws://localhost:58478
+Read port: 58488
+1663731916033	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileChyfhS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58478/devtools/browser/75bf7342-2923-4738-9e27-a944882e7ef6
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663731965879	geckodriver	INFO	Listening on 127.0.0.1:58513
+1663731968906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58514" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileoI1dsP"
+*** You are running in headless mode.
+1663731969499	Marionette	INFO	Marionette enabled
+1663731969508	Marionette	INFO	Listening on port 58523
+WebDriver BiDi listening on ws://localhost:58514
+Read port: 58523
+1663731970471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileoI1dsP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58514/devtools/browser/acdaad18-1eff-47c6-a1c1-0ba49e5a8cbe
+1663732029396	geckodriver	INFO	Listening on 127.0.0.1:58553
+1663732032441	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58554" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileHpXrJr"
+*** You are running in headless mode.
+1663732033208	Marionette	INFO	Marionette enabled
+1663732033217	Marionette	INFO	Listening on port 58565
+WebDriver BiDi listening on ws://localhost:58554
+Read port: 58565
+1663732033860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists,1663732038572	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" 1663732040386	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663732050389	Marionette	INFO	Stopped listening on port 58565
+adless mode.
+1663732039746	Marionette	INFO	Marionette enabled
+1663732039758	Marionette	INFO	Listening on port 58592
+WebDriver BiDi listening on ws://localhost:58572
+Read port: 58592
+Read port: 58592
+Read port: 58592
+1663732044060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6kt3x9\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Erro1663732050181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58630" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\r1663732063673	Marionette	INFO	Stopped listening on port 58592
+63732052446	Marionette	INFO	Marionette enabled
+1663732052463	Marionette	INFO	Listening on port 58670
+WebDriver BiDi listening on ws://localhost:58630
+Read port: 58670
+Read port: 58670
+1663732055917	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile4rQ9Er\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:58630/devtools/browser/6106dc86-e8cc-4833-ae22-18b55ffa7822
+1663732073907	Marionette	INFO	Stopped listening on port 58670
+[Parent 20644, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1663732181942	geckodriver	INFO	Listening on 127.0.0.1:58813
+1663732184987	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58814" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilemEtXli"
+*** You are running in headless mode.
+1663732185829	Marionette	INFO	Marionette enabled
+1663732185837	Marionette	INFO	Listening on port 58823
+WebDriver BiDi listening on ws://localhost:58814
+Read port: 58823
+1663732186470	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilemEtXli\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58814/devtools/browser/8bd72789-5de7-4b59-a781-924b3bab5983
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663732300210	geckodriver	INFO	Listening on 127.0.0.1:58847
+1663732303247	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58848" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileQlVtRE"
+*** You are running in headless mode.
+1663732304267	Marionette	INFO	Marionette enabled
+1663732304280	Marionette	INFO	Listening on port 58857
+WebDriver BiDi listening on ws://localhost:58848
+Read port: 58857
+1663732305326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileQlVtRE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58848/devtools/browser/db9c5207-e727-42f6-afc6-0ef80e41ec95
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663732309705	geckodriver	INFO	Listening on 127.0.0.1:58872
+1663732312941	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "58873" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiletF3RCT"
+*** You are running in headless mode.
+1663732313876	Marionette	INFO	Marionette enabled
+1663732313885	Marionette	INFO	Listening on port 58882
+WebDriver BiDi listening on ws://localhost:58873
+Read port: 58882
+1663732315093	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiletF3RCT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58873/devtools/browser/acf2b7b8-774b-40de-a40a-6971efdccf70
+1663732321470	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663732343293	Marionette	INFO	Stopped listening on port 58882
+!!! error running onStopped callback: TypeError: callback is not a function
+1663734215444	geckodriver	INFO	Listening on 127.0.0.1:50496
+1663734220883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "50497" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiledourDO"
+*** You are running in headless mode.
+1663734236847	Marionette	INFO	Marionette enabled
+1663734236933	Marionette	INFO	Listening on port 50509
+WebDriver BiDi listening on ws://localhost:50497
+Read port: 50509
+1663734238727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiledourDO\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://localhost:50497/devtools/browser/08e870ba-e051-411d-8fb2-7f41aa63bb14
+1663734299469	Marionette	INFO	Stopped listening on port 50509
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1663734408214	geckodriver	INFO	Listening on 127.0.0.1:50627
+1663734411268	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "50628" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileh9bLNl"
+*** You are running in headless mode.
+1663734430532	Marionette	INFO	Marionette enabled
+1663734430688	Marionette	INFO	Listening on port 50648
+WebDriver BiDi listening on ws://localhost:50628
+Read port: 50648
+Read port: 50648
+Read port: 50648
+Read port: 50648
+Read port: 50648
+Read port: 50648
+Read port: 50648
+1663734446319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileh9bLNl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50628/devtools/browser/e84d6b54-6cca-4bd6-8d89-b4c699920f67
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 2906 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663734733371	geckodriver	INFO	Listening on 127.0.0.1:50978
+1663734736971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "50977" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3UIY4l"
+*** You are running in headless mode.
+1663734745875	Marionette	INFO	Marionette enabled
+1663734746078	Marionette	INFO	Listening on port 51034
+WebDriver BiDi listening on ws://localhost:50975
+Read port: 51034
+Read port: 51031
+1663734752492	RemoteAgent	WARN	TLS certificate errors will be ignored f[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: Seaconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3UIY4l\\search.json.mozlconsole.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listeninDevTools listening on ws://localhost:50977/devtools/browser/c03a77df-794d-41fe-bd1663734835258	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionet1663734895797	Marionette	INFO	Stopped listening on port 51031
+ontent/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1663734838380	Marionette	INFO	Stopped listening on port 51034
+[Parent 8528, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 8528, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chroJavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 2885 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2913 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 2963 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663734898585	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2977 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_10?ie=UTF8&pageNumber=10&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_11?ie=UTF8&pageNumber=11&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_12?ie=UTF8&pageNumber=12&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_13?ie=UTF8&pageNumber=13&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663734911267	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_14?ie=UTF8&pageNumber=14&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 3132 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_16?ie=UTF8&pageNumber=16&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewerType=all_reviews line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerType=all_reviews line 2878 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_19?ie=UTF8&pageNumber=19&reviewerType=all_reviews line 2826 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=all_reviews line 2959 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_21?ie=UTF8&pageNumber=21&reviewerType=all_reviews line 2982 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_22?ie=UTF8&pageNumber=22&reviewerType=all_reviews line 2995 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_23?ie=UTF8&pageNumber=23&reviewerType=all_reviews line 2846 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_24?ie=UTF8&pageNumber=24&reviewerType=all_reviews line 2851 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Rowenta-DG8624U1-Perfect-Advanced-Technology/product-reviews/B084JBZPLG/ref=cm_cr_arp_d_paging_btm_25?ie=UTF8&pageNumber=25&reviewerType=all_reviews line 2556 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663734944952	Marionette	INFO	Stopped listening on port 51030
+!!! error running onStopped callback: TypeError: callback is not a function
+1663735473219	geckodriver	INFO	Listening on 127.0.0.1:51620
+1663735476217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "51621" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLhI2ME"
+*** You are running in headless mode.
+1663735479850	Marionette	INFO	Marionette enabled
+1663735479905	Marionette	INFO	Listening on port 51630
+WebDriver BiDi listening on ws://localhost:51621
+Read port: 51630
+1663735480836	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLhI2ME\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51621/devtools/browser/5b81214e-be88-48bd-9dfe-a3f4a89890cb
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1663735493080	geckodriver	INFO	Listening on 127.0.0.1:51652
+1663735496138	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en" "--remote-debugging-port" "51653" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileFtJUrP"
+*** You are running in headless mode.
+1663735496783	Marionette	INFO	Marionette enabled
+1663735496795	Marionette	INFO	Listening on port 51663
+WebDriver BiDi listening on ws://localhost:51653
+Read port: 51663
+1663735497931	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileFtJUrP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51653/devtools/browser/43f3a996-2b1e-47bc-ab51-aa9b90a3d649
+1663735504371	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 183: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1663735528775	Marionette	INFO	Stopped listening on port 51663
+1663736133819	geckodriver	INFO	Listening on 127.0.0.1:51815
+1663736136995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "51816" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileZ91qhB"
+*** You are running in headless mode.
+1663736139330	Marionette	INFO	Marionette enabled
+1663736139344	Marionette	INFO	Listening on port 51829
+WebDriver BiDi listening on ws://localhost:51816
+Read port: 51829
+1663736142778	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileZ91qhB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51816/devtools/browser/4b0f9bb9-dd21-4c06-b3c8-2f591a81fd39
+1663736149374	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663736174085	Marionette	INFO	Stopped listening on port 51829

@@ -1,5 +1,6 @@
 #!C:/bin
 from selenium.webdriver.common.by import By
+from app.api.errors import internal_server_error
 from app.controllers.Ecommerce.driverConfig import set_driver_config
 from bs4 import BeautifulSoup
 import time
@@ -8,7 +9,8 @@ import time
 
 def begin_konga_search(url):
     """Takes the url of the product review page and recursively get the review"""
-    driver = set_driver_config() #get the driver from the config 
+    driver = set_driver_config() #get the driver from the config
+
     driver.get(url)
 
     time.sleep(1)
@@ -27,7 +29,7 @@ def konga_beautiful_soup_search(resp):
 
     soup = BeautifulSoup(resp, 'html.parser')
     for item in soup.findAll("p", class_="a397c_2uBaY"):
-        data_str = data_str + item.get_text()
+        data_str = data_str + item.get_text() + '\n'
     result = data_str.split('\n')
 
     return result

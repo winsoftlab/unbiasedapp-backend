@@ -1,9 +1,6 @@
-
-from flask import g,url_for, session
 from app.api import postRoutes
 from . import api
 from app import auto
-from app.api.authentication import auth
 
 
 @auto.doc()
@@ -18,17 +15,17 @@ def amazon_search(product_name, product_id):
     return postRoutes.selenium_amazon(product_name, product_id)
 
 
-@auto.doc()
-@api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST','GET'])
-def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
+# @auto.doc()
+# @api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST','GET'])
+# def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
 
-    '''
-    API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
+#     '''
+#     API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
 
-    http://localhost:5000/api/v1/amazon/{product-name}/{product-id}/{sub-domain}
+#     http://localhost:5000/api/v1/amazon/{product-name}/{product-id}/{sub-domain}
     
-    '''
-    return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
+#     '''
+#     return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
 
 
 @auto.doc()
@@ -43,27 +40,27 @@ def konga_search(product_name_code_url):
 
     return postRoutes.selenium_konga(product_name_code_url)
 
-@auto.doc()
-@api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
-def facebook_search(q, page_num=2):
-    '''
-    API Endpoint with query parameters query string(q) and page_num for
-        searching facebook data.
-        http://localhost:5000/api/v1/facebook/{query-string}/{page-num}
+# @auto.doc()
+# @api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
+# def facebook_search(q, page_num=2):
+#     '''
+#     API Endpoint with query parameters query string(q) and page_num for
+#         searching facebook data.
+#         http://localhost:5000/api/v1/facebook/{query-string}/{page-num}
 
-    '''
-    return postRoutes.facebook_search(q, page_num)
+#     '''
+#     return postRoutes.facebook_search(q, page_num)
 
-@auto.doc()
-@api.route('/facebook/posts/<string:page_name>/<int:page_num>', methods=['POST','PUT', 'GET'])
-def facebook_page(page_name='bbcnews', page_num=2):
-    '''
-    API Endpoint with query parameters query string(q) and page_num for
-        searching facebook data.
-        http://localhost:5000/api/v1/facebook/posts/{facebook-page}/{page-num}
+# @auto.doc()
+# @api.route('/facebook/posts/<string:page_name>/<int:page_num>', methods=['POST','PUT', 'GET'])
+# def facebook_page(page_name='bbcnews', page_num=2):
+#     '''
+#     API Endpoint with query parameters query string(q) and page_num for
+#         searching facebook data.
+#         http://localhost:5000/api/v1/facebook/posts/{facebook-page}/{page-num}
 
-    '''
-    return postRoutes.scrape_facebook_page(page_name, page_num)
+#     '''
+#     return postRoutes.scrape_facebook_page(page_name, page_num)
 
 @auto.doc()
 @api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])

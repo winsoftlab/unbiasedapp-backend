@@ -39,7 +39,7 @@ def jumia_beautiful_soup_search(resp):
 
     soup = BeautifulSoup(resp, 'html.parser')
     for item in soup.findAll("article", class_="-pvs -hr _bet"): #Has class -pvs -hr _bet from jumia with the aritcle tag
-        data_str = data_str + item.get_text()
+        data_str = data_str + item.get_text() + '\n'
     result = data_str.split('\n')
     
     return result

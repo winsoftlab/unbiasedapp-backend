@@ -16,12 +16,12 @@ def page_not_found(e='Not found'):
 
 
 @main.app_errorhandler(500) #----probably problematic
-def internal_server_error(e):
+def internal_server_error(e=None):
     if request.accept_mimetypes.accept_json and not request.accept_mimetypes.accept_html:
         response = jsonify({'error': 'Internal Server error'})
-        response.status_code = 404
+        response.status_code = 500
         return response
-    return render_template('404.html'), 404
+    return render_template('500.html'), 500
 
 
 def forbiden(message):

@@ -1,6 +1,6 @@
 from flask import jsonify, g, request, session
 from flask_login import current_user
-from app.api.errors import unauthenticated
+from app.api.errors import internal_server_error, unauthenticated
 from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
 from app.controllers.Ecommerce.konga import begin_konga_search
@@ -50,25 +50,28 @@ def search_tweet(q, count):
     return result
 
 
-def scrapping_bee_amazon(product_name, product_id, sub_domain):
+# def scrapping_bee_amazon(product_name, product_id, sub_domain):
 
-    review_data = html_parser(product_name, product_id, sub_domain)
+#     review_data = html_parser(product_name, product_id, sub_domain)
 
-    # new_amazon_analysis = AmazonAnalysis(
-    #     user_id=g.current_user.id,
-    #     product_info= '{}:{}'.format(product_id, product_id),
-    #     sentiments= str(review_data)
-    # )
+#     # new_amazon_analysis = AmazonAnalysis(
+#     #     user_id=g.current_user.id,
+#     #     product_info= '{}:{}'.format(product_id, product_id),
+#     #     sentiments= str(review_data)
+#     # )
 
-    # db.session.add(new_amazon_analysis)
-    # db.session.commit()
+#     # db.session.add(new_amazon_analysis)
+#     # db.session.commit()
 
-    return jsonify(review_data)
+#     return jsonify(review_data)
 
 def selenium_amazon(product_name, product_id):
     result = dict()
     url = f'https://www.amazon.com/{product_name}/product-reviews/{product_id}/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+
+
     search_result = begin_amazon_search(url)
+
 
     for i in range(0, len(search_result)):
         result[i] = search_result[i]
@@ -81,7 +84,9 @@ def selenium_jumia(product_id):
     result = dict()
     url = f'https://www.jumia.com.ng/catalog/productratingsreviews/sku/{product_id}/'
 
+
     search_result = begin_jumia_search(url)
+
 
     for i in range(0, len(search_result)):
         result[i] = search_result[i]
@@ -92,44 +97,46 @@ def selenium_jumia(product_id):
 def selenium_konga(product_name_code_url):
 
     url = f'https://www.konga.com/product/{product_name_code_url}'
-
+    
+ 
     search_result = begin_konga_search(url)
+
 
     return {'data': search_result}
 
 
 
-def facebook_search(q, page_num):
+# def facebook_search(q, page_num):
 
-    '''Route for scrapping facebook based on search keyword and page number'''
+#     '''Route for scrapping facebook based on search keyword and page number'''
 
 
-    result = search_facebook(q, page_num)
-    text = [i['text'] for i in result if 'text' in i.keys()]
+#     result = search_facebook(q, page_num)
+#     text = [i['text'] for i in result if 'text' in i.keys()]
     
-    # # Create an instance of the data and commit to database
+#     # # Create an instance of the data and commit to database
     
-    # prev = FacebookAnalysis.query.filter_by(search_query=q).first()
-    # #This logic here deletes the previous data if a paritcular search query was found
-    # if prev:
+#     # prev = FacebookAnalysis.query.filter_by(search_query=q).first()
+#     # #This logic here deletes the previous data if a paritcular search query was found
+#     # if prev:
 
-    #     db.session.delete(prev)
-    #     db.session.commit()
+#     #     db.session.delete(prev)
+#     #     db.session.commit()
 
-    # new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
+#     # new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
 
-    # db.session.add(new_analysis)
-    # db.session.commit()
+#     # db.session.add(new_analysis)
+#     # db.session.commit()
 
-    return  jsonify(result)
+#     return  jsonify(result)
 
 
 
-def facebook_page(page_name, page_num):
+# def facebook_page(page_name, page_num):
 
-    result = scrape_facebook_page(page_name, page_num)
+#     result = scrape_facebook_page(page_name, page_num)
     
-    return jsonify(result)
+#     return jsonify(result)
 
 
 def instagram_comments():
@@ -188,7 +195,8 @@ def instagram_hashtag(q):
     params['hashtag_name'] = q
 
     hashtag_search_response = InstagramGraphAPI(**params).get_hashtagsInfo()
-    if not hashtag_search_response['data']:
+    key = 'data'
+    if  key not in hashtag_search_response.keys():
         return {'msg': f'No data found for hashtag {q}'}
 
     hashtag_search_id = hashtag_search_response['data'][0]['id']

@@ -11,7 +11,7 @@ def begin_amazon_search(url):
     search_result =[]
     driver = set_driver_config() #get the driver from the config 
     def get_page_source(url):
-        print(url)
+        #print(url)
         driver.get(url)
 
         element_text = driver.page_source
