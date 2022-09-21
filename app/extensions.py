@@ -2,7 +2,7 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from flask_cors import CORS
-from flask_autodoc.autodoc import Autodoc
+from flask_autodoc import Autodoc
 from authlib.integrations.flask_client import OAuth
 
 
