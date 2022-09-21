@@ -84,8 +84,8 @@ def twitter_login():
 @auth.route('/authorize/twitter/')
 def twitter_auth():
     token = oauth.twitter.authorize_access_token()
-    resp = oauth.twitter.get('account/verify_credentials.json')
-    profile = resp.json()
-    print(" Twitter User", profile)
+    # resp = oauth.twitter.get('account/verify_credentials.json')
+    # profile = resp.json()
+    # print(" Twitter User", profile)
     return redirect('/')
   
