@@ -20,7 +20,8 @@ from app.models import (
     FacebookAnalysis, 
     InstagramAnalysis, 
     AmazonAnalysis, 
-    TwitterAnalysis)
+    TwitterAnalysis,
+    User)
 
 
 from app import db
@@ -146,18 +147,16 @@ def instagram_comments():
 
     params = getCredentials()
 
-    # user = User.query.get(g.current_user.id)
-    
-    params['access_token'] = session['fb_access_token']
+    user = User.query.get(g.current_user.id)
 
-    response = InstagramGraphAPI(**params).get_account_info()
-    # print('################################################')
-    # print(response)
-    page_id = response['data'][0]['id']
-
-    params['page_id'] = page_id
+    if user is None or user.fb_access_token=="":
+        return unauthenticated("Please Login facebook to access api")
     
-    session['page_id'] = page_id
+    params['access_token'] = user.fb_access_token
+
+    params['page_id'] = user.fb_page_id
+    
+    #session['page_id'] = page_id
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
 
     # print('###############################################')
@@ -181,13 +180,19 @@ def instagram_comments():
 
 
 def instagram_hashtag(q):
-    if not session['fb_access_token']:
-        return unauthenticated('Please log in facebook')
+
+    user = User.query.get(g.current_user.id)
+
+    if user is None and user.fb_access_token is None:
+        return unauthenticated("Please Login facebook to access api")
+
 
     params = getCredentials()
 
     params['access_token'] = session['fb_access_token']
-    params['page_id'] = session['page_id']
+    params['access_token'] = user.fb_access_token
+    params['page_id'] = user.fb_page_id
+
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
  
     ig_user_id = ig_user_id_response['instagram_business_account']['id']

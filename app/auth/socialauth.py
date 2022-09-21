@@ -37,8 +37,10 @@ def facebook_auth():
      #session['fb_access_token'] = access_token
 
     response = InstagramGraphAPI(**params).debug_long_lived_token()
+    page_response = InstagramGraphAPI(**params).get_account_info()
+
+    page_id = page_response['data'][0]['id']
     
-    session['fb_access_token'] = response['access_token']
   
     resp =oauth.facebook.get(
         'https://graph.facebook.com/v14.0/me?fields=email,name'
@@ -50,9 +52,8 @@ def facebook_auth():
     password = profile['email']
 
     user = User.query.filter_by(email=email).first()
-
     if user is None:
-        new_user = User(email, username=username, fb_access_token=fb_access_token, password=password)
+        new_user = User(email, username=username, fb_access_token=fb_access_token, fb_page_id=page_id, password=password)
         db.session.add(new_user)
         db.session.commit()
         flash('Registration successful')
