@@ -10,5 +10,7 @@ def set_driver_config():
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument('--incoginito')
+    options.add_argument('--lang=en')
     driver = webdriver.Firefox(options=options)
     return driver
+

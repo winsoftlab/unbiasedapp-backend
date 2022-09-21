@@ -144,8 +144,8 @@ def instagram_comments():
     params['access_token'] = session['fb_access_token']
 
     response = InstagramGraphAPI(**params).get_account_info()
-    print('################################################')
-    print(response)
+    # print('################################################')
+    # print(response)
     page_id = response['data'][0]['id']
 
     params['page_id'] = page_id
@@ -153,8 +153,8 @@ def instagram_comments():
     session['page_id'] = page_id
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
 
-    print('###############################################')
-    print(ig_user_id_response)
+    # print('###############################################')
+    # print(ig_user_id_response)
  
     ig_user_id = ig_user_id_response['instagram_business_account']['id']
 
@@ -167,14 +167,7 @@ def instagram_comments():
     params['ig_media_id'] = ig_user_media_id
 
     media_response = InstagramGraphAPI(**params).getComments()
-    # new_instagram_data = TwitterAnalysis(
-    #     user_id=g.current_user.id,
-    #     #search_query=q,
-    #     sentiments= str(media_response)
-    # )
 
-    # db.session.add(new_instagram_data)
-    # db.session.commit()
 
     return{'media_response': media_response}
 
@@ -195,6 +188,9 @@ def instagram_hashtag(q):
     params['hashtag_name'] = q
 
     hashtag_search_response = InstagramGraphAPI(**params).get_hashtagsInfo()
+    if not hashtag_search_response['data']:
+        return {'msg': f'No data found for hashtag {q}'}
+
     hashtag_search_id = hashtag_search_response['data'][0]['id']
 
     params['hashtag_id'] = hashtag_search_id

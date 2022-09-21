@@ -1,10 +1,8 @@
 #!C:/bin
 from selenium.webdriver.common.by import By
 from app.controllers.Ecommerce.driverConfig import set_driver_config
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-#from waitress import serve
 from bs4 import BeautifulSoup
+import time
 
 #url = 'https://www.konga.com/product/samsung-galaxy-a03-core-6-5-32gb-rom-2gb-ram-dual-sim-4g-lte-5000mah-black-5577143'
 
@@ -13,14 +11,11 @@ def begin_konga_search(url):
     driver = set_driver_config() #get the driver from the config 
     driver.get(url)
 
-    driver.find_element(By.CSS_SELECTOR,"a[onclick^='Reviews']").click()
+    time.sleep(1)
 
-    #element = WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.CLASS_NAME, "cfc8e_RM54f")))
+    driver.find_element(By.XPATH,"// h3[contains(text(),\'Reviews')]").click()
 
     element_text = driver.page_source
-
-    print('------------------------------------------------------------------')
-    print(element_text)
 
     result = konga_beautiful_soup_search(element_text) #calling the beautifulsoup method to extract the text 
     driver.quit()

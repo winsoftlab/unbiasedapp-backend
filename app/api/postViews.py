@@ -41,7 +41,7 @@ def jumia_search(product_id):
 @api.route('/konga/<string:product_name_code_url>', methods=['POST','GET'])
 def konga_search(product_name_code_url):
 
-    return postRoutes.selenium_jumia(product_name_code_url)
+    return postRoutes.selenium_konga(product_name_code_url)
 
 @auto.doc()
 @api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
