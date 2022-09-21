@@ -1,5 +1,4 @@
-import os
-from flask import jsonify, render_template, request, session
+from flask import render_template, request, session
 from flask_cors import cross_origin
 from . import main
 from app import db
@@ -20,23 +19,24 @@ def home():
 #@login_required
 #@subscription_required #New subscription required decorator
 def dashboard():
-    try:
+    # try:
 
-        stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+    #     stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
         
-        customer = StripeCustomer.query.filter_by(user_id=current_user.id).first()
+    #     customer = StripeCustomer.query.filter_by(user_id=current_user.id).first()
 
-        subscription = stripe.Subscription.retrieve(customer.StripeSubscriptionId)
-        product = stripe.Product.retrieve(subscription.plan.product)
+    #     subscription = stripe.Subscription.retrieve(customer.StripeSubscriptionId)
+    #     product = stripe.Product.retrieve(subscription.plan.product)
 
-        context ={
-            "subscription":subscription,
-            "product":product,
-        }
-    except:
-        return render_template('dashboard/index.html', segment='index')
-        
-    return render_template('dashboard/index.html', segment='index', **context)
+    #     context ={
+    #         "subscription":subscription,
+    #         "product":product,
+    #     }
+    # except:
+    #     return render_template('dashboard/index.html', segment='index')
+
+    return render_template('dashboard/index.html', segment='index')
+    #return render_template('dashboard/index.html', segment='index', **context)
 
     
 

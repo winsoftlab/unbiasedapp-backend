@@ -1,3 +1,4 @@
+import time
 from app.controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
 from app.controllers.instagramController.instagramGetCredentials import getCredentials
 from app.models import User
@@ -21,7 +22,7 @@ def facebook_login():
         authorize_url='https://www.facebook.com/dialog/oauth',
         authorize_params=None,
         api_base_url='https://graph.facebook.com/v14.0',
-        client_kwargs={'scope': 'email business_management instagram_basic public_profile '}, # email business_management instagram_basic page_read_engagement page_manage_posts page_manage_engagement
+        client_kwargs={'scope': 'email business_management instagram_basic public_profile pages_show_list pages_read_engagement pages_read_user_content'}, # email business_management instagram_basic page_read_engagement page_manage_posts page_manage_engagement
     )
     redirect_uri = url_for('auth.facebook_auth', _external=True)
     return oauth.facebook.authorize_redirect(redirect_uri)
@@ -37,6 +38,7 @@ def facebook_auth():
      #session['fb_access_token'] = access_token
 
     response = InstagramGraphAPI(**params).debug_long_lived_token()
+
     page_response = InstagramGraphAPI(**params).get_account_info()
 
     page_id = page_response['data'][0]['id']
@@ -52,12 +54,21 @@ def facebook_auth():
     password = profile['email']
 
     user = User.query.filter_by(email=email).first()
+    
     if user is None:
-        new_user = User(email, username=username, fb_access_token=fb_access_token, fb_page_id=page_id, password=password)
+        new_user = User(email=email, username=username, fb_access_token=fb_access_token, fb_page_id=page_id, password=password)
         db.session.add(new_user)
         db.session.commit()
         flash('Registration successful')
         return redirect('/')
+    
+    if user:
+        user.fb_access_token = fb_access_token
+        user.fb_page_id = page_id
+        db.session.commit()
+        flash('login with facebook successfull')
+        return redirect('/')
+    
     flash('Email already in use')
     return redirect('/')
     

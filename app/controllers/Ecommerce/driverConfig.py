@@ -14,9 +14,9 @@ def set_driver_config():
     options.add_argument('--incoginito')
     options.add_argument('-lang=en-US')
 
-    binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
+    
 
-    driver = webdriver.Firefox(options=options, executable_path=os.environ.get('GECKODRIVER_PATH'),firefox_binary=binary)
+    driver = webdriver.Firefox(options=options,firefox_binary=FirefoxBinary())
     return driver
 
 #, 

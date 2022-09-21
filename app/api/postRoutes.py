@@ -145,13 +145,14 @@ def instagram_comments():
     # if not User.fb_access_token:
     #     return unauthenticated('Please log in facebook from home page')
 
-    params = getCredentials()
 
     user = User.query.get(g.current_user.id)
 
-    if user is None or user.fb_access_token=="":
+    if user is None or user.fb_access_token is None:
         return unauthenticated("Please Login facebook to access api")
-    
+
+    params = getCredentials()
+
     params['access_token'] = user.fb_access_token
 
     params['page_id'] = user.fb_page_id
@@ -220,27 +221,31 @@ def instagram_hashtag(q):
     return hashtag_media_response
 
 def facebook_page_post_comments():
+
+    user = User.query.get(g.current_user.id)
+
+    if user is None or user.fb_access_token is None:
+        return unauthenticated("Please Login facebook to access api")
+
     params = getCredentials()
 
-    params['access_token'] = session['fb_access_token']  #User access token
+    params['access_token'] = user.fb_access_token  #User access token
 
-    params['page_id'] = session['page_id']
+    params['page_id'] = user.fb_page_id
+
+    print(user.fb_page_id)
 
     response = get_page_access_token(**params)
 
-    # print('#############################################################')
-
-    # print(response)
-
     page_access_token = response['access_token'] #Page access token
+
 
     params['page_access_token'] = page_access_token
 
 
     page_response= page_posts_id(**params)
 
-    # print('#########################################')
-    # print(page_response)
+
 
     page_post_id  = page_response['posts']['data'][1]['id']
 
@@ -248,8 +253,7 @@ def facebook_page_post_comments():
 
     page_post_response = get_page_post_comments(**params)
 
-    # print('#########################################')
-    # print(page_response)
+    print(page_post_response)
 
     post_comments = page_post_response['data']
     data = dict()

@@ -3171,3 +3171,55 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1663736372516	Marionette	INFO	Stopped listening on port 51937
 JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1663799912511	geckodriver	INFO	Listening on 127.0.0.1:60930
+1663799915452	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "60931" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileUanNDz"
+*** You are running in headless mode.
+1663799924212	Marionette	INFO	Marionette enabled
+1663799924291	Marionette	INFO	Listening on port 60942
+Read port: 60942
+WebDriver BiDi listening on ws://127.0.0.1:60931
+1663799925300	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileUanNDz\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:60931/devtools/browser/87d76f5a-0394-4775-a6b2-66aa39439f20
+1663799933906	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663799958812	Marionette	INFO	Stopped listening on port 60942
+1663800003076	geckodriver	INFO	Listening on 127.0.0.1:61044
+1663800006106	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "61045" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileYw0hzs"
+*** You are running in headless mode.
+1663800007251	Marionette	INFO	Marionette enabled
+1663800007260	Marionette	INFO	Listening on port 61056
+Read port: 61056
+WebDriver BiDi listening on ws://127.0.0.1:61045
+1663800008163	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileYw0hzs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61045/devtools/browser/09c24e9f-fb3c-4b35-a5f0-8dbbd0d1c444
+1663800019799	geckodriver	INFO	Listening on 127.0.0.1:61095
+1663800022898	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "61096" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilebFz5x6"
+*** You are running in headless mode.
+1663800023820	Marionette	INFO	Marionette enabled
+1663800023832	Marionette	INFO	Listening on port 61106
+Read port: 61106
+WebDriver BiDi listening on ws://127.0.0.1:61096
+1663800024603	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilebFz5x6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61096/devtools/browser/cefa3675-44a5-4636-833b-50b3bbd53c50
+1663800033684	geckodriver	INFO	Listening on 127.0.0.1:61155
+1663800036678	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "61156" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilegzAkE6"
+*** You are running in headless mode.
+1663800037725	Marionette	INFO	Marionette enabled
+1663800037735	Marionette	INFO	Listening on port 61165
+Read port: 61165
+WebDriver BiDi listening on ws://127.0.0.1:61156
+1663800037971	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilegzAkE6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61156/devtools/browser/7940163b-01b8-4f4e-9d0f-4c6bcac285fe
+1663800045584	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663800050721	Marionette	INFO	Stopped listening on port 61165
+[Parent 16556, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:554
