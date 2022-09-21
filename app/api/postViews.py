@@ -1,14 +1,13 @@
 from app.api import postRoutes
 from . import api
-from app import auto
 
 
-@auto.doc()
+
 @api.route('/search-tweet/<string:q>/<int:count>', methods=['POST'])
 def search_tweet(q, count=100):
     return postRoutes.search_tweet(q, count)
 
-@auto.doc()
+
 @api.route('/amazon/<string:product_name>/<string:product_id>', methods=['POST','GET'])
 def amazon_search(product_name, product_id):
 
@@ -28,13 +27,13 @@ def amazon_search(product_name, product_id):
 #     return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
 
 
-@auto.doc()
+
 @api.route('/jumia/<string:product_id>', methods=['POST','GET'])
 def jumia_search(product_id):
 
     return postRoutes.selenium_jumia(product_id)
 
-@auto.doc()
+
 @api.route('/konga/<string:product_name_code_url>', methods=['POST','GET'])
 def konga_search(product_name_code_url):
 

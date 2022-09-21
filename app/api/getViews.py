@@ -1,5 +1,4 @@
 from . import api
-from app import auto
 from app.api import getRoutes
 from app.api.authentication import auth
 from flask import g, url_for
@@ -12,13 +11,13 @@ def api_home():
     return {'msg':msg, 'Documentation': url_for('api.documentation', _external=True)}
 
 
-@api.route('/documentation/')
-def documentation():
+# @api.route('/documentation/')
+# def documentation():
 
-    '''The endpoint for the Auto documentation of the API 
-        http://localhost:5000/api/v1/documentation
-     '''
-    return auto.html()
+#     '''The endpoint for the Auto documentation of the API 
+#         http://localhost:5000/api/v1/documentation
+#      '''
+#     return auto.html()
 
 
 @api.route('/facebook/')
