@@ -13,6 +13,7 @@ def set_driver_config():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument('--incoginito')
     options.add_argument('-lang=en-US')
-    driver = webdriver.Firefox(options=options, executable_path=Config.GECKODRIVER_PATH,firefox_binary=FirefoxBinary(Config.FIREFOX_BIN))
+    driver = webdriver.Firefox(options=options)
     return driver
 
+#, executable_path=Config.GECKODRIVER_PATH,firefox_binary=FirefoxBinary(Config.FIREFOX_BIN)
