@@ -1,4 +1,3 @@
-from config import Config
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
@@ -14,7 +13,10 @@ def set_driver_config():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument('--incoginito')
     options.add_argument('-lang=en-US')
-    driver = webdriver.Firefox(options=options, executable_path=os.environ.get('GECKODRIVER_PATH'),firefox_binary=FirefoxBinary(os.environ.get('FIREFOX_BIN')))
+
+    binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
+
+    driver = webdriver.Firefox(options=options, executable_path=os.environ.get('GECKODRIVER_PATH'),firefox_binary=binary)
     return driver
 
 #, 
