@@ -40,24 +40,24 @@ def facebook_auth():
     
     session['fb_access_token'] = response['access_token']
   
-    # resp =oauth.facebook.get(
-    #     'https://graph.facebook.com/v14.0/me?fields=email,name'
-    # )
-    # profile = resp.json()
-    # email = profile['email']
-    # username = profile['name']
-    # fb_access_token = response['access_token']
+    resp =oauth.facebook.get(
+        'https://graph.facebook.com/v14.0/me?fields=email,name'
+    )
+    profile = resp.json()
+    email = profile['email']
+    username = profile['name']
+    fb_access_token = response['access_token']
+    password = profile['email']
 
-    # user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).first()
 
-    # if user is None:
-    #     request.method == 'PUT'
-    #     new_user = User(email, username=username, fb_access_token=fb_access_token, password=)
-    #     db.session.add(new_user)
-    #     db.session.commit()
-    #     flash('Registration successful')
-    #     return redirect('/')
-    # flash('Email already in use')
+    if user is None:
+        new_user = User(email, username=username, fb_access_token=fb_access_token, password=password)
+        db.session.add(new_user)
+        db.session.commit()
+        flash('Registration successful')
+        return redirect('/')
+    flash('Email already in use')
     return redirect('/')
     
 
