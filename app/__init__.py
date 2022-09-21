@@ -30,7 +30,7 @@ def create_app(config_name):
     db.init_app(app)
     mail.init_app(app)
     cors.init_app(app)
-    auto.init_app(app)
+    #auto.init_app(app)
     oauth.init_app(app)
 
     
