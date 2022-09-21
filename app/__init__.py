@@ -1,5 +1,5 @@
 from flask import Flask
-from .extensions import mail, login_manger, db, cors, auto, oauth
+from .extensions import mail, login_manger, db, cors, oauth
 from config import config
 from celery import Celery
 

@@ -62,19 +62,19 @@ def konga_search(product_name_code_url):
 #     '''
 #     return postRoutes.scrape_facebook_page(page_name, page_num)
 
-@auto.doc()
+
 @api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
 def instagram_hashtag(q):
     return postRoutes.instagram_hashtag(q)
 
 
-@auto.doc()
+
 @api.route('/facebook/page-post-comments')
 def facebook_page_post():
     return postRoutes.facebook_page_post_comments()
 
 
-@auto.doc()
+
 @api.route('/instagram/comments', methods=['GET'])
 def instagram_comments():
     return postRoutes.instagram_comments()

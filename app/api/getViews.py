@@ -22,7 +22,6 @@ def documentation():
 
 
 @api.route('/facebook/')
-@auto.doc()
 def get_all_facebook_analysis():
     '''
     API Endpoint to Get all the Facebook analysis by a user
@@ -34,7 +33,7 @@ def get_all_facebook_analysis():
 
 
 
-@auto.doc()
+
 @api.route('/amazon/')
 @auth.login_required
 def get_amazon_analysis():
@@ -48,7 +47,7 @@ def get_amazon_analysis():
 
 
 
-@auto.doc()
+
 @api.route('/instagram/')
 @auth.login_required
 def get_instagram_analysis():
@@ -58,7 +57,7 @@ def get_instagram_analysis():
     '''
     return getRoutes.get_instagram_analysis()
 
-@auto.doc()
+
 @api.route('/twitter/')
 @auth.login_required
 def get_twitter_analysis():
