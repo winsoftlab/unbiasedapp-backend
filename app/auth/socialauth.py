@@ -1,9 +1,10 @@
 from app.controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
 from app.controllers.instagramController.instagramGetCredentials import getCredentials
+from app.models import User
 from . import auth
 from app import oauth, db
 import os
-from flask import url_for, redirect, session
+from flask import url_for, redirect, session, flash
 
 
 @auth.route('/facebook/')
@@ -20,7 +21,7 @@ def facebook_login():
         authorize_url='https://www.facebook.com/dialog/oauth',
         authorize_params=None,
         api_base_url='https://graph.facebook.com/v14.0',
-        client_kwargs={'scope': 'public_profile email business_management instagram_basic'}, # email business_management instagram_basic page_read_engagement page_manage_posts page_manage_engagement
+        client_kwargs={'scope': 'email business_management instagram_basic public_profile '}, # email business_management instagram_basic page_read_engagement page_manage_posts page_manage_engagement
     )
     redirect_uri = url_for('auth.facebook_auth', _external=True)
     return oauth.facebook.authorize_redirect(redirect_uri)
@@ -38,13 +39,25 @@ def facebook_auth():
     response = InstagramGraphAPI(**params).debug_long_lived_token()
     
     session['fb_access_token'] = response['access_token']
-    print(session)
+  
     # resp =oauth.facebook.get(
-    #     'https://graph.facebook.com/v14.0/me?fields=id,name,email,picture{url}'
+    #     'https://graph.facebook.com/v14.0/me?fields=email,name'
     # )
     # profile = resp.json()
-    # #TODO: Save the user to the database and the access_token
-    # print('Facebook User', profile)
+    # email = profile['email']
+    # username = profile['name']
+    # fb_access_token = response['access_token']
+
+    # user = User.query.filter_by(email=email).first()
+
+    # if user is None:
+    #     request.method == 'PUT'
+    #     new_user = User(email, username=username, fb_access_token=fb_access_token, password=)
+    #     db.session.add(new_user)
+    #     db.session.commit()
+    #     flash('Registration successful')
+    #     return redirect('/')
+    # flash('Email already in use')
     return redirect('/')
     
 

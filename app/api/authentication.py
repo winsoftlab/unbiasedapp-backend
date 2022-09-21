@@ -1,12 +1,8 @@
-from os import access
 from flask_httpauth import HTTPBasicAuth
-from app import db
 from ..models import User
-from flask import g, jsonify, session, redirect, url_for, request
+from flask import g, jsonify
 from .errors import unauthenticated, forbiden
 from . import api
-from ..controllers.instagramController.instagramGetCredentials import getCredentials
-from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
 
 
 auth = HTTPBasicAuth()
@@ -46,33 +42,6 @@ def verify_password(email_or_token, password):
 
     return user.verify_password(password)
 
-
-@api.route('/instagram/token', methods=['POST','PUT'])
-def get_access_token():
-    '''
-    Get access code and store it in session
-    '''
-    # user = User.query.filter_by(email=g.current_user.email).first()
-
-    # if not user:
-    #     return False
-
-    # g.current_user = user
-
-    access_token = request.form.get('access_token')
-    params = getCredentials()
-    params['access_token'] = access_token
-    session['short_access_token'] = access_token
-
-    response = InstagramGraphAPI(**params).debug_long_lived_token()
-    session['fb_access_token'] = response['access_token']
-    # response =InstagramGraphAPI(**params).debug_long_lived_token()
-
-    # new_token=User(fb_access_token=response['access_token'])
-    # db.session.add(new_token)
-    # db.session.commit()
-
-    return{'msg':"access code retrieved succesfully"}
 
 @auth.error_handler
 def auth_error():
