@@ -16,7 +16,7 @@ def set_driver_config():
 
     
 
-    driver = webdriver.Firefox(options=options,firefox_binary=FirefoxBinary())
+    driver = webdriver.Firefox(options=options,executable_path=os.environ.get("GECKODRIVER_PATH"), firefox_binary=FirefoxBinary())
     return driver
 
 #, 
