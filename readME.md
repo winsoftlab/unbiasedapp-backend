@@ -38,3 +38,9 @@ COMMON ERRORS: SessionNotCreatedException
                 with the msg "SessionNotCreatedException.msg"
 
                 If you come across this kindly reload the page.
+
+NETFLIX
+YOUTUBE
+IMBD
+PLAYSTORE
+NEWS MEDIA ***

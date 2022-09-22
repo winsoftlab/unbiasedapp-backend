@@ -3943,3 +3943,14 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2899 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1663816212599	Marionette	INFO	Stopped listening on port 57857
+1663816462298	geckodriver	INFO	Listening on 127.0.0.1:57987
+1663816465360	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57988" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile5lyu67"
+*** You are running in headless mode.
+1663816466031	Marionette	INFO	Marionette enabled
+1663816466038	Marionette	INFO	Listening on port 57998
+Read port: 57998
+WebDriver BiDi listening on ws://127.0.0.1:57988
+1663816467607	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile5lyu67\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57988/devtools/browser/9371835b-243f-44d8-a765-f8f4c621a9f3

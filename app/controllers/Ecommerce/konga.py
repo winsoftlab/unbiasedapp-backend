@@ -10,7 +10,6 @@ import time
 def begin_konga_search(url):
     """Takes the url of the product review page and recursively get the review"""
     driver = set_driver_config() #get the driver from the config
-
     driver.get(url)
 
     time.sleep(1)

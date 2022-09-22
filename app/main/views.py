@@ -1,4 +1,4 @@
-from flask import render_template, request, session
+from flask import render_template, request, session, flash, redirect
 from flask_cors import cross_origin
 from . import main
 from app import db
@@ -84,3 +84,18 @@ def get_segment(request):
 
     except:
         return None
+
+
+@main.route('/admin', methods=["GET"])
+@login_required
+def admin():
+    #check permission
+    user = User.query.filter_by(email=current_user.email).first()
+
+    if user.email== 'anabantiakachi1@gmail.com':
+
+        users = User.query.all()
+
+        return render_template('Home/admin.html', users=users )
+    flash("unauthorized")
+    return redirect('/')
