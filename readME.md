@@ -32,3 +32,9 @@ https://unbiasedanalytics.herokuapp.com/api/v1/instagram/hashtag-search/peterobi
 NOTE: For users with multiple facebook pages, only the most recent page will be interacted with.
 	current API version does not provide options for multi-page/ multi-post interaction
 
+COMMON ERRORS: SessionNotCreatedException
+                from selenium.common.exceptions import SessionNotCreatedException
+
+                with the msg "SessionNotCreatedException.msg"
+
+                If you come across this kindly reload the page.
