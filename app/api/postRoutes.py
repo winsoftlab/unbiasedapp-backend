@@ -68,12 +68,12 @@ def search_tweet(q, count):
 
 def selenium_amazon(product_name, product_id):
     result = dict()
-    url = f'https://www.amazon.com/{product_name}/product-reviews/{product_id}/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+    url = f'https://www.amazon.com/{product_name}/product-reviews/{product_id}/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent'
 
+    #cm_cr_dp_d_show_all_btm?
 
     search_result = begin_amazon_search(url)
-
-
+    
     for i in range(0, len(search_result)):
         result[i] = search_result[i]
 

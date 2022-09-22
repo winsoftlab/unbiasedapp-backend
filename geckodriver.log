@@ -3363,3 +3363,583 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 1663807228077	Marionette	INFO	Stopped listening on port 56077
 [Parent 23068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
 [Parent 23068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1663812429605	geckodriver	INFO	Listening on 127.0.0.1:57242
+1663812432487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57243" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileuiDxKp"
+*** You are running in headless mode.
+1663812440376	Marionette	INFO	Marionette enabled
+1663812440405	Marionette	INFO	Listening on port 57254
+Read port: 57254
+WebDriver BiDi listening on ws://127.0.0.1:57243
+1663812442880	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileuiDxKp\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57243/devtools/browser/221cb5c3-2d64-4ec0-a312-e41c1e26ca12
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 2976 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_7?ie=UTF8&pageNumber=7&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_8?ie=UTF8&pageNumber=8&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_9?ie=UTF8&pageNumber=9&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_10?ie=UTF8&pageNumber=10&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_11?ie=UTF8&pageNumber=11&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_12?ie=UTF8&pageNumber=12&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_13?ie=UTF8&pageNumber=13&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_14?ie=UTF8&pageNumber=14&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_15?ie=UTF8&pageNumber=15&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_16?ie=UTF8&pageNumber=16&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_17?ie=UTF8&pageNumber=17&reviewerType=all_reviews line 3024 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_18?ie=UTF8&pageNumber=18&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_19?ie=UTF8&pageNumber=19&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_20?ie=UTF8&pageNumber=20&reviewerType=all_reviews line 2980 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_21?ie=UTF8&pageNumber=21&reviewerType=all_reviews line 2898 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812541794	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_22?ie=UTF8&pageNumber=22&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-De1663812546988	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57444" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileR459fn"
+*** You are running in headless mode.
+1663812552836	Marionette	INFO	Marionette enabled
+1663812552848	Marionette	INFO	Listening on port 57476
+Read port: 57476
+WebDriver BiDi listening on ws://127.0.0.1:57444
+Read port: 57476
+1663812555543	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileR459fn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57444/devtools/browser/9ca3f883-6a8b-487f-909e-bc2cff42f240
+rer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_27?ie=UTF8&pageNumber=27&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_28?ie=UTF8&pageNumber=28&reviewerType=all_reviews line 2991 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_29?ie=UTF8&pageNumber=29&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_30?ie=UTF8&pageNumber=30&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812563932	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_31?ie=UTF8&pageNumber=31&reviewerType=all_reviews line 3085 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_32?ie=UTF8&pageNumber=32&reviewerType=all_reviews line 2905 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_33?ie=UTF8&pageNumber=33&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_34?ie=UTF8&pageNumber=34&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_35?ie=UTF8&pageNumber=35&reviewerType=all_reviews line 2926 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_36?ie=UTF8&pageNumber=36&reviewerType=all_reviews line 2982 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_37?ie=UTF8&pageNumber=37&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_38?ie=UTF8&pageNumber=38&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_39?ie=UTF8&pageNumber=39&reviewerType=all_reviews line 2977 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_40?ie=UTF8&pageNumber=40&reviewerType=all_reviews line 2966 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_41?ie=UTF8&pageNumber=41&reviewerType=all_reviews line 2899 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_42?ie=UTF8&pageNumber=42&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_43?ie=UTF8&pageNumber=43&reviewerType=all_reviews line 2976 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_44?ie=UTF8&pageNumber=44&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_45?ie=UTF8&pageNumber=45&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812599846	geckodriver	INFO	Listening on 127.0.0.1:57553
+1663812602443	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57554" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileSFGQ4i"
+*** You are running in headless mode.
+1663812609372	Marionette	INFO	Marionette enabled
+1663812609383	Marionette	INFO	Listening on port 57579
+Read port: 57579
+WebDriver BiDi listening on ws://127.0.0.1:57554
+Read port: 57579
+Read port: 57579
+1663812613118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileSFGQ4i\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57554/devtools/browser/572d1e80-da5e-415b-bd36-7da6c1ea76ce
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 2895 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 2978 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 2978 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 2882 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_5?ie=UTF8&pageNumber=5&reviewerType=all_reviews line 2882 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_6?ie=UTF8&pageNumber=6&reviewerType=all_reviews line 2882 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812959721	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663813266484	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+&pageNumber=57&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_58?ie=UTF8&pageNumber=58&reviewerType=all_reviews line 2988 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812634400	geckodriver	INFO	Listening on 127.0.0.1:57638
+1663812638948	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57639" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileacMXSK"
+*** You are running in headless mode.
+1663812656645	Marionette	INFO	Marionette enabled
+1663812656654	Marionette	INFO	Listening on port 57683
+WebDriver BiDi listening on ws://127.0.0.1:57639
+Read port: 57683
+Read port: 57683
+Read port: 57683
+Read port: 57683
+1663812672058	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileacMXSK\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57639/devtools/browser/cc3de52f-43fa-4786-96fb-3dc6eecb439b
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812751789	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_4?ie=UTF8&pageNumber=4&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812946507	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663813224812	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+XZC/ref=cm_cr_arp_d_paging_btm_69?ie=UTF8&pageNumber=69&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_70?ie=UTF8&pageNumber=70&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_71?ie=UTF8&pageNumber=71&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_72?ie=UTF8&pageNumber=72&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_73?ie=UTF8&pageNumber=73&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_74?ie=UTF8&pageNumber=74&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_75?ie=UTF8&pageNumber=75&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_76?ie=UTF8&pageNumber=76&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_77?ie=UTF8&pageNumber=77&reviewerType=all_reviews line 2903 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_78?ie=UTF8&pageNumber=78&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_79?ie=UTF8&pageNumber=79&reviewerType=all_reviews line 2905 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_80?ie=UTF8&pageNumber=80&reviewerType=all_reviews line 2905 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_81?ie=UTF8&pageNumber=81&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_82?ie=UTF8&pageNumber=82&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_83?ie=UTF8&pageNumber=83&reviewerType=all_reviews line 2898 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_84?ie=UTF8&pageNumber=84&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_85?ie=UTF8&pageNumber=85&reviewerType=all_reviews line 2989 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_86?ie=UTF8&pageNumber=86&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_87?ie=UTF8&pageNumber=87&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_88?ie=UTF8&pageNumber=88&reviewerType=all_reviews line 2905 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_89?ie=UTF8&pageNumber=89&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_90?ie=UTF8&pageNumber=90&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_91?ie=UTF8&pageNumber=91&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_92?ie=UTF8&pageNumber=92&reviewerType=all_reviews line 2899 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_93?ie=UTF8&pageNumber=93&reviewerType=all_reviews line 2898 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_94?ie=UTF8&pageNumber=94&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_95?ie=UTF8&pageNumber=95&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_96?ie=UTF8&pageNumber=96&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_97?ie=UTF8&pageNumber=97&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_98?ie=UTF8&pageNumber=98&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_99?ie=UTF8&pageNumber=99&reviewerType=all_reviews line 2903 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_100?ie=UTF8&pageNumber=100&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_101?ie=UTF8&pageNumber=101&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_102?ie=UTF8&pageNumber=102&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_103?ie=UTF8&pageNumber=103&reviewerType=all_reviews line 3090 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_104?ie=UTF8&pageNumber=104&reviewerType=all_reviews line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_105?ie=UTF8&pageNumber=105&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_106?ie=UTF8&pageNumber=106&reviewerType=all_reviews line 2978 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_107?ie=UTF8&pageNumber=107&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_108?ie=UTF8&pageNumber=108&reviewerType=all_reviews line 2893 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_109?ie=UTF8&pageNumber=109&reviewerType=all_reviews line 2898 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_110?ie=UTF8&pageNumber=110&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_111?ie=UTF8&pageNumber=111&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_112?ie=UTF8&pageNumber=112&reviewerType=all_reviews line 2898 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkError@resource://services-settings/RemoteSettingsClient.jsm:120:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.jsm:869:14
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:774:38
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+console.error: services.settings: 
+  Message: NetworkOfflineError: Network is offline
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.jsm:116:1
+NetworkOfflineError@resource://services-settings/RemoteSettingsClient.jsm:127:5
+maybeSync@resource://services-settings/RemoteSettingsClient.jsm:639:15
+remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:393:22
+
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_113?ie=UTF8&pageNumber=113&reviewerType=all_reviews line 2880 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663812947587	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1663812954258	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1663814469524	geckodriver	INFO	Listening on 127.0.0.1:56260
+1663814472483	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "56261" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileUU7Ef7"
+*** You are running in headless mode.
+1663814476412	Marionette	INFO	Marionette enabled
+1663814476430	Marionette	INFO	Listening on port 56271
+Read port: 56271
+WebDriver BiDi listening on ws://127.0.0.1:56261
+1663814478856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileUU7Ef7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56261/devtools/browser/1663814487921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandJavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2918 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2891 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663814545948	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663814587808	Marionette	INFO	Stopped listening on port 56271
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+O	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disableJavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: N1663814511676	mozrunner::runner	INFO	Running comJavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2814 > injecJavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=c1663814576768	Marionette	INFO	Stopped listening on port 56310
+[Parent 23868, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+LE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2906 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned faiJavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recentJavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_1663814612791	Marionette	INFO	Stopped listening on port 56437
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+ Please use RENDERER.
+1663814617289	Marionette	INFO	Stopped listening on port 56457
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+ss_util_win.cc:167
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"TelemetryController: shutting down","state":{"initialized":true,"initStarted":true,"haveDelayedInitTask":false,"shutdownBarrier":"Not started","connectionsBarrier":"Not started","sendModule":{"sendingEnabled":false,"pendingPingRequestCount":0,"pendingPingActivityCount":0,"unpersistedPingCount":0,"persistedPingCount":0,"schedulerState":{"shutdown":true,"hasSendTask":false,"sendsFailed":false,"sendTaskState":"bail out - no pings to send","backoffDelay":60000}},"haveDelayedNewProfileTask":false},"filename":"resource://gre/modules/TelemetryControllerParent.jsm","lineNumber":914,"stack":["resource://gre/modules/TelemetryControllerParent.jsm:setupTelemetry:914","resource://gre/modules/TelemetryControllerParent.jsm:observe:1029","resource://gre/modules/TelemetryControllerParent.jsm:observe:150","resource://gre/modules/TelemetryStartup.jsm:TelemetryStartup.prototype.observe:33"]}] Barrier: profile-before-change-telemetry
+on
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile70Ll5l\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:56880/devtools/browser/23e7324c-dc63-445d-a511-4d2259fe300f
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2906 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663814671772	Marionette	WARN	Ignoring event 'DOMContentLoad1663814674751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57007" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileUOmFXv"
+*** You are running in headless mode.
+1663814676555	Marionette	INFO	Marionette enabled
+1663814676563	Marionette	INFO	Listening on port 57025
+Read 1663814680213	Marionette	INFO	Stopped listening on port 56923
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 905: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"TelemetryController: shutting down","state":{"initialized":true,"initStarted":true,"haveDelayedInitTask":true,"shutdownBarrier":"Not started","connectionsBarrier":"Not started","sendModule":{"sendingEnabled":true,"pendingPingRequestCount":0,"pendingPingActivityCount":0,"unpersistedPingCount":0,"persistedPingCount":0,"schedulerState":{"shutdown":false,"hasSendTask":false,"sendsFailed":false,"sendTaskState":null,"backoffDelay":60000}},"haveDelayedNewProfileTask":false},"filename":"resource://gre/modules/TelemetryControllerParent.jsm","lineNumber":914,"stack":["resource://gre/modules/TelemetryControllerParent.jsm:setupTelemetry:914","resource://gre/modules/TelemetryControllerParent.jsm:observe:1029","resource://gre/modules/TelemetryControllerParent.jsm:observe:150","resource://gre/modules/TelemetryStartup.jsm:TelemetryStartup.prototype.observe:33"]}] Barrier: profile-before-change-telemetry
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+RER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2891 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663814698468	Marionette	INFO	Stopped listening on port 57025
+!!! error running onStopped callback: TypeError: callback is not a function
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1663814965883	geckodriver	INFO	Listening on 127.0.0.1:57248
+1663814968944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57249" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXkkXYy"
+*** You are running in headless mode.
+1663814969404	Marionette	INFO	Marionette enabled
+1663814969410	Marionette	INFO	Listening on port 57259
+Read port: 57259
+WebDriver BiDi listening on ws://127.0.0.1:57249
+1663814974244	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXkkXYy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57249/devtools/browser/caece1ff-ff5a-4803-93a9-d2e218574622
+1663814987173	geckodriver	INFO	Listening on 127.0.0.1:57286
+1663814990220	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57287" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilezE1LY2"
+*** You are running in headless mode.
+1663814990927	Marionette	INFO	Marionette enabled
+1663814990934	Marionette	INFO	Listening on port 57297
+Read port: 57297
+WebDriver BiDi listening on ws://127.0.0.1:57287
+1663814992128	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilezE1LY2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57287/devtools/browser/021009b5-26ea-48ed-9df8-3e2c5b1eaec0
+1663815006399	geckodriver	INFO	Listening on 127.0.0.1:57331
+1663815009450	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57332" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilem8s67O"
+*** You are running in headless mode.
+1663815010001	Marionette	INFO	Marionette enabled
+1663815010006	Marionette	INFO	Listening on port 57342
+Read port: 57342
+WebDriver BiDi listening on ws://127.0.0.1:57332
+1663815010248	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilem8s67O\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57332/devtools/browser/89180218-e74b-44d6-9255-ec8685bff82d
+1663815489183	geckodriver	INFO	Listening on 127.0.0.1:57404
+1663815492258	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57405" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiled1WMkA"
+*** You are running in headless mode.
+1663815492901	Marionette	INFO	Marionette enabled
+1663815492907	Marionette	INFO	Listening on port 57414
+Read port: 57414
+WebDriver BiDi listening on ws://127.0.0.1:57405
+1663815494942	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiled1WMkA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57405/devtools/browser/7b152f3e-3d70-42b6-a40e-85fb0afa3fcb
+1663815504769	geckodriver	INFO	Listening on 127.0.0.1:57444
+1663815507733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57445" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileGaSVaj"
+*** You are running in headless mode.
+1663815508378	Marionette	INFO	Marionette enabled
+1663815508384	Marionette	INFO	Listening on port 57455
+Read port: 57455
+WebDriver BiDi listening on ws://127.0.0.1:57445
+1663815510456	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileGaSVaj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57445/devtools/browser/910c6263-c214-4da2-a3cb-17785aa26e0b
+1663815519235	geckodriver	INFO	Listening on 127.0.0.1:57488
+1663815522127	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57489" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilexCYaiq"
+*** You are running in headless mode.
+1663815522853	Marionette	INFO	Marionette enabled
+1663815522865	Marionette	INFO	Listening on port 57499
+Read port: 57499
+WebDriver BiDi listening on ws://127.0.0.1:57489
+Read port: 57499
+1663815525083	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilexCYaiq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57489/devtools/browser/2bb067ae-6355-4a81-96b0-c4584a96a4a1
+1663815530501	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2906 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2879 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2892 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663815547748	Marionette	INFO	Stopped listening on port 57499
+[Parent 14740, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 14740, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1663815731646	geckodriver	INFO	Listening on 127.0.0.1:57611
+1663815734655	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57612" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilelaYsmg"
+*** You are running in headless mode.
+1663815737726	Marionette	INFO	Marionette enabled
+1663815737732	Marionette	INFO	Listening on port 57624
+Read port: 57624
+WebDriver BiDi listening on ws://127.0.0.1:57612
+1663815739296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilelaYsmg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57612/devtools/browser/cbfd1ac1-c5b9-41d2-8be3-c7a324db7d11
+1663815986065	geckodriver	INFO	Listening on 127.0.0.1:57682
+1663815989097	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57683" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilersB73W"
+*** You are running in headless mode.
+1663815990131	Marionette	INFO	Marionette enabled
+1663815990139	Marionette	INFO	Listening on port 57693
+Read port: 57693
+WebDriver BiDi listening on ws://127.0.0.1:57683
+1663815992053	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilersB73W\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57683/devtools/browser/97c391b8-e917-442a-bcd2-c2cbe63aebb8
+1663816099663	geckodriver	INFO	Listening on 127.0.0.1:57738
+1663816102718	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57739" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileACd6Wt"
+*** You are running in headless mode.
+1663816103240	Marionette	INFO	Marionette enabled
+1663816103246	Marionette	INFO	Listening on port 57748
+Read port: 57748
+WebDriver BiDi listening on ws://127.0.0.1:57739
+1663816104526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileACd6Wt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57739/devtools/browser/ff7d5a2d-9760-4efe-b01f-6faeaa5656da
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1663816111256	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2905 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2890 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2891 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663816131042	Marionette	INFO	Stopped listening on port 57748
+!!! error running onStopped callback: TypeError: callback is not a function
+1663816189635	geckodriver	INFO	Listening on 127.0.0.1:57846
+1663816192663	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "57847" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileWbbda1"
+*** You are running in headless mode.
+1663816193485	Marionette	INFO	Marionette enabled
+1663816193491	Marionette	INFO	Listening on port 57857
+Read port: 57857
+WebDriver BiDi listening on ws://127.0.0.1:57847
+1663816195180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileWbbda1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57847/devtools/browser/77138b20-9b67-4946-b3fe-b2356004ba17
+1663816200689	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2913 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2886 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2899 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663816212599	Marionette	INFO	Stopped listening on port 57857
