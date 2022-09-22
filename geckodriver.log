@@ -3335,3 +3335,31 @@ JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693:
 [Parent 19112, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
 [Parent 19112, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
 console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+1663807098022	geckodriver	INFO	Listening on 127.0.0.1:56009
+1663807101065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "56010" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilefDXDUa"
+*** You are running in headless mode.
+1663807104496	Marionette	INFO	Marionette enabled
+1663807104505	Marionette	INFO	Listening on port 56022
+Read port: 56022
+WebDriver BiDi listening on ws://127.0.0.1:56010
+1663807106209	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilefDXDUa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56010/devtools/browser/074a6687-0294-4dd9-9966-acf139833749
+1663807177664	geckodriver	INFO	Listening on 127.0.0.1:56064
+1663807180613	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "-lang=en-US" "--remote-debugging-port" "56065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileyWkiXV"
+*** You are running in headless mode.
+1663807182215	Marionette	INFO	Marionette enabled
+1663807182224	Marionette	INFO	Listening on port 56077
+Read port: 56077
+WebDriver BiDi listening on ws://127.0.0.1:56065
+1663807184990	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileyWkiXV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56065/devtools/browser/53beeba8-7d2e-4496-a278-df9e3d83612e
+1663807190542	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663807228077	Marionette	INFO	Stopped listening on port 56077
+[Parent 23068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 23068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
