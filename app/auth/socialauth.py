@@ -42,7 +42,7 @@ def facebook_auth():
     page_response = InstagramGraphAPI(**params).get_account_info()
 
     if page_response['data'] == []:
-        flash("Please register your account as a business, create a page and linkto use unbiased analytics", category="info")
+        flash("Please register your account as a business, create a page and link instagram to use unbiased analytics", category="info")
         return redirect('/')
     page_id = page_response['data'][0]['id']
     
