@@ -78,7 +78,7 @@ def get_segment(request):
         segment = request.path.split('/')[-1]
 
         if segment == '':
-            segment = 'home'
+            segment = 'index'
 
         return segment
 

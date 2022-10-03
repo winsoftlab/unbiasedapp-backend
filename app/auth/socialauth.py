@@ -1,6 +1,6 @@
 import time
-from app.controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
-from app.controllers.instagramController.instagramGetCredentials import getCredentials
+from app.controllers.instagramController.Insta_graph_api import InstagramGraphAPI
+from app.controllers.instagramController.instagram_get_credentials import getCredentials
 from app.models import User
 from . import auth
 from app import oauth, db

@@ -1,7 +1,7 @@
 #!C:/bin
 from selenium.webdriver.common.by import By
 from app.api.errors import internal_server_error
-from app.controllers.Ecommerce.driverConfig import set_driver_config
+from app.controllers.Ecommerce.driver_config import set_driver_config
 from bs4 import BeautifulSoup
 import time
 

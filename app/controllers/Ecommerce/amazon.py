@@ -1,7 +1,7 @@
 #!C:/bin
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import SessionNotCreatedException
-from app.controllers.Ecommerce.driverConfig import set_driver_config
+from app.controllers.Ecommerce.driver_config import set_driver_config
 #from waitress import serve
 from bs4 import BeautifulSoup
 

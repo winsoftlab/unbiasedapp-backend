@@ -5,14 +5,14 @@ from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
 from app.controllers.Ecommerce.konga import begin_konga_search
 from . import api
-from app.controllers.facebookController.facebookScraper import search_facebook, scrape_facebook_page
+from app.controllers.facebookController.facebook_scraper import search_facebook, scrape_facebook_page
 
 from app.controllers.Ecommerce.htmlparse import html_parser
-from ..controllers.twitterController.processTweets import process_tweets
-from ..controllers.instagramController.instagramGetCredentials import getCredentials
-from ..controllers.instagramController.InstaGraphAPI import InstagramGraphAPI
+from ..controllers.twitterController.process_tweets import process_tweets
+from ..controllers.instagramController.instagram_get_credentials import getCredentials
+from ..controllers.instagramController.Insta_graph_api import InstagramGraphAPI
 
-from app.controllers.facebookController.facebookGraphAPI import( page_posts_id, 
+from app.controllers.facebookController.facebook_graph_api import( page_posts_id, 
                                                                 get_page_access_token, 
                                                                 get_page_post_comments,
                                                                 get_page_post_comments_reply)

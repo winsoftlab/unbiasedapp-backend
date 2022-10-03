@@ -1,17 +1,17 @@
-from app.api import postRoutes
+from app.api import post_routes
 from . import api
 
 
 
 @api.route('/search-tweet/<string:q>/<int:count>', methods=['POST'])
 def search_tweet(q, count=100):
-    return postRoutes.search_tweet(q, count)
+    return post_routes.search_tweet(q, count)
 
 
 @api.route('/amazon/<string:product_name>/<string:product_id>', methods=['POST','GET'])
 def amazon_search(product_name, product_id):
 
-    return postRoutes.selenium_amazon(product_name, product_id)
+    return post_routes.selenium_amazon(product_name, product_id)
 
 
 # @auto.doc()
@@ -31,13 +31,13 @@ def amazon_search(product_name, product_id):
 @api.route('/jumia/<string:product_id>', methods=['POST','GET'])
 def jumia_search(product_id):
 
-    return postRoutes.selenium_jumia(product_id)
+    return post_routes.selenium_jumia(product_id)
 
 
 @api.route('/konga/<string:product_name_code_url>', methods=['POST','GET'])
 def konga_search(product_name_code_url):
 
-    return postRoutes.selenium_konga(product_name_code_url)
+    return post_routes.selenium_konga(product_name_code_url)
 
 # @auto.doc()
 # @api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
@@ -64,17 +64,17 @@ def konga_search(product_name_code_url):
 
 @api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
 def instagram_hashtag(q):
-    return postRoutes.instagram_hashtag(q)
+    return post_routes.instagram_hashtag(q)
 
 
 
 @api.route('/facebook/page-post-comments')
 def facebook_page_post():
-    return postRoutes.facebook_page_post_comments()
+    return post_routes.facebook_page_post_comments()
 
 
 
 @api.route('/instagram/comments', methods=['GET'])
 def instagram_comments():
-    return postRoutes.instagram_comments()
+    return post_routes.instagram_comments()
 

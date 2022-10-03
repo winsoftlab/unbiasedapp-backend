@@ -1,4 +1,4 @@
-from .connectTwitter import connect_api
+from .connect_twitter import connect_api
 import tweepy as tw
 
 

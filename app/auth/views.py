@@ -7,6 +7,7 @@ from ..models import User
 from app import db
 from ..email import sendVerificationEmail
 from .forms import LoginForm, SignUpForm, DeleteAccountForm
+from app import email
 
 
 @auth.before_app_request
@@ -133,18 +134,22 @@ def resend_confirmation():
 
     return redirect(url_for('main.home'))
 
-
 @auth.route('/delete-account/<int:id>', methods=['POST','GET'])
 @login_required
 def delete_account(id):
     form = DeleteAccountForm()
-    if form.validate_on_submit() and form.answer.data==current_user.email:
-        user = User.query.get(id)
-        db.session.delete(user)
-        db.session.commit()
-        flash('Account deleted')
-        return redirect(url_for('main.home'))
-    flash("incorrect input")
+    if request.method =="POST":
+        if form.validate_on_submit():
+            if form.answer.data==current_user.email:
+                user = User.query.filter_by(email=current_user.email).first()
+            elif current_user.email=='anabantiakachi1@gmail.com':
+                user = User.query.filter_by(email=form.answer.data).first()
+            if user:
+                db.session.delete(user)
+                db.session.commit()
+                flash('Account deleted')
+                return redirect(url_for('main.home'))
+            flash("Account not found")
     return render_template('auth/delete_account.html', form=form)
 
 

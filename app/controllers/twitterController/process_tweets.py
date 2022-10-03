@@ -1,12 +1,13 @@
-from .searchTweets import search_tweets
-from .connectTwitter import connect_api
 import re
 import pandas as pd
 import numpy as np
 from textblob import TextBlob
+from .search_tweets import search_tweets
 
 
 def process_tweets(query, count ):
+
+    '''A fucntion that processess the tweets'''
 
     #twitterApi = connect_api()
 
@@ -23,7 +24,6 @@ def process_tweets(query, count ):
     # populate the dataframe
     for tweet in tweets_array:
         hashtags = []
-    
         for hashtag in tweet.entities["hashtags"]:
             hashtags.append(hashtag["text"])
 

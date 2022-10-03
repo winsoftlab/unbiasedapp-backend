@@ -1,5 +1,5 @@
 from . import api
-from app.api import getRoutes
+from app.api import get_routes
 from app.api.authentication import auth
 from flask import g, url_for
 
@@ -27,7 +27,7 @@ def get_all_facebook_analysis():
     Can take query parameters, like date sorting , most recent, and by query string
 
     '''
-    return getRoutes.get_all_facebook_analysis()
+    return get_routes.get_all_facebook_analysis()
   
 
 
@@ -41,7 +41,7 @@ def get_amazon_analysis():
     Can take query parameters, like date sorting , most recent, and by query string
     '''
 
-    return getRoutes.get_amazon_analysis()
+    return get_routes.get_amazon_analysis()
 
 
 
@@ -54,7 +54,7 @@ def get_instagram_analysis():
     API endpoint to Get all Instagram processed data
     Can take query parameters, like date sorting , most recent, and by query string
     '''
-    return getRoutes.get_instagram_analysis()
+    return get_routes.get_instagram_analysis()
 
 
 @api.route('/twitter/')
@@ -64,4 +64,4 @@ def get_twitter_analysis():
     API endpoint to Get all Amazon processed data
     Can take query parameters, like date sorting , most recent, and by query string
     '''
-    return getRoutes.get_twitter_analysis()
+    return get_routes.get_twitter_analysis()

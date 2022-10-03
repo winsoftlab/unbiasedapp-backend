@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from  .scrapeBee import scraping_bee_api
+from  .scrape_bee import scraping_bee_api
 
 
 def html_parser(product_name, product_id, sub_domain):

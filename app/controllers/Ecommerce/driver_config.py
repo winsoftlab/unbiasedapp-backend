@@ -12,7 +12,7 @@ def set_driver_config():
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument('--incoginito')
-    options.add_argument('-lang=en-US')
+    options.add_argument('--lang=en-US')
 
     if os.environ.get("FLASK_CONFIG") == 'heroku' and os.environ.get("FLASK_ENV") == "heroku":
         driver = webdriver.Firefox(options=options,executable_path=os.environ.get("GECKODRIVER_PATH"), firefox_binary=FirefoxBinary(os.environ.get("FIREFOX_BIN")))
