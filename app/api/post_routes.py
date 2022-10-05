@@ -1,17 +1,13 @@
+from . import api
 from flask import jsonify, g, request, session
 from flask_login import current_user
-from app.api.errors import internal_server_error, unauthenticated
+from app.api.errors import  unauthenticated
 from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
 from app.controllers.Ecommerce.konga import begin_konga_search
-from . import api
-from app.controllers.facebookController.facebook_scraper import search_facebook, scrape_facebook_page
-
-from app.controllers.Ecommerce.htmlparse import html_parser
-from ..controllers.twitterController.process_tweets import process_tweets
+from app.controllers.twitterController.search_tweets import search_tweets
 from ..controllers.instagramController.instagram_get_credentials import getCredentials
 from ..controllers.instagramController.Insta_graph_api import InstagramGraphAPI
-
 from app.controllers.facebookController.facebook_graph_api import( page_posts_id, 
                                                                 get_page_access_token, 
                                                                 get_page_post_comments,
@@ -21,11 +17,14 @@ from app.models import (
     InstagramAnalysis, 
     AmazonAnalysis, 
     TwitterAnalysis,
+    JumiaAnalysis,
+    KongaAnalysis,
     User)
 
 
 from app import db
-
+import pickle
+import json
 
 
 def search_tweet(q, count):
@@ -36,48 +35,56 @@ def search_tweet(q, count):
     Response:
         Object: Dict_str
     '''
-    result = process_tweets(q, count)
+    result = search_tweets(q, count)
 
-    new_twitter_analysis = TwitterAnalysis(
-        user_id=g.current_user.id,
-        search_query=q,
-        sentiments= str(result)
-    )
+    _tweet = pickle.dumps(result)
+    
 
-    db.session.add(new_twitter_analysis)
+    analysis = TwitterAnalysis.query.filter_by(search_query=q).first()
+    
+    if analysis == None:
+        new_twitter_analysis = TwitterAnalysis(
+            user_id=g.current_user.id,
+            search_query=q,
+            tweets= _tweet
+        )
+        db.session.add(new_twitter_analysis)
+    else:
+        analysis.tweets = _tweet
     db.session.commit()
+    return {'msg':"Data retrieved successfully"}
 
-
-    return result
-
-
-# def scrapping_bee_amazon(product_name, product_id, sub_domain):
-
-#     review_data = html_parser(product_name, product_id, sub_domain)
-
-#     # new_amazon_analysis = AmazonAnalysis(
-#     #     user_id=g.current_user.id,
-#     #     product_info= '{}:{}'.format(product_id, product_id),
-#     #     sentiments= str(review_data)
-#     # )
-
-#     # db.session.add(new_amazon_analysis)
-#     # db.session.commit()
-
-#     return jsonify(review_data)
 
 def selenium_amazon(product_name, product_id):
-    result = dict()
+    #result = dict()
     url = f'https://www.amazon.com/{product_name}/product-reviews/{product_id}/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent'
 
     #cm_cr_dp_d_show_all_btm?
 
     search_result = begin_amazon_search(url)
-    
-    for i in range(0, len(search_result)):
-        result[i] = search_result[i]
+    _search_result = json.dumps(search_result)
 
-    return jsonify(result)
+    product = AmazonAnalysis.query.filter_by(user_id=g.current_user.id,product_id=product_id).first()
+
+    if product == None:
+        new_search = AmazonAnalysis(
+            user=g.current_user.id,
+            product_id=product_id,
+            product_name=product_name,
+            reviews=_search_result
+            )
+
+        db.session.add(new_search)
+    else:
+
+        product.reviews = _search_result
+    
+    db.session.commit()
+    
+    # for i in range(0, len(search_result)):
+    #     result[i] = search_result[i]
+
+    return {'msg':'Data retrieved successfully'}
 
 
 def selenium_jumia(product_id):
@@ -87,7 +94,18 @@ def selenium_jumia(product_id):
 
 
     search_result = begin_jumia_search(url)
+    _search_result = json.dumps(search_result)
 
+    product = JumiaAnalysis.query.filter_by(product_id=product_id).first()
+
+    if product_id==None:
+        new_search = JumiaAnalysis(user=g.current_user.id,product_id=product_id, reviews=_search_result)
+
+        db.session.add(new_search)
+    else:
+
+        product.reviews = _search_result
+    db.session.commit()
 
     for i in range(0, len(search_result)):
         result[i] = search_result[i]
@@ -101,50 +119,22 @@ def selenium_konga(product_name_code_url):
     
  
     search_result = begin_konga_search(url)
+    _search_result = json.dumps(search_result)
 
-
-    return {'data': search_result}
-
-
-
-# def facebook_search(q, page_num):
-
-#     '''Route for scrapping facebook based on search keyword and page number'''
-
-
-#     result = search_facebook(q, page_num)
-#     text = [i['text'] for i in result if 'text' in i.keys()]
+    product_description = KongaAnalysis.query.filter_by(product_description=product_name_code_url).first()
     
-#     # # Create an instance of the data and commit to database
-    
-#     # prev = FacebookAnalysis.query.filter_by(search_query=q).first()
-#     # #This logic here deletes the previous data if a paritcular search query was found
-#     # if prev:
+    if product_description==None:
+        new_search = KongaAnalysis(user_id=g.current_user.id, product_description=product_name_code_url, reviews=_search_result)
+        db.session.add(new_search)
+    else:
+        product_description.reviews = _search_result
+    db.session.commit()
 
-#     #     db.session.delete(prev)
-#     #     db.session.commit()
+    return {'msg':'Data retrieved successfully'}
 
-#     # new_analysis = FacebookAnalysis(user_id=g.current_user.id, search_query=q, sentiments=str(text))
-
-#     # db.session.add(new_analysis)
-#     # db.session.commit()
-
-#     return  jsonify(result)
-
-
-
-# def facebook_page(page_name, page_num):
-
-#     result = scrape_facebook_page(page_name, page_num)
-    
-#     return jsonify(result)
 
 
 def instagram_comments():
-
-    # if not User.fb_access_token:
-    #     return unauthenticated('Please log in facebook from home page')
-
 
     user = User.query.get(g.current_user.id)
 
@@ -157,11 +147,8 @@ def instagram_comments():
 
     params['page_id'] = user.fb_page_id
     
-    #session['page_id'] = page_id
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
 
-    # print('###############################################')
-    # print(ig_user_id_response)
  
     ig_user_id = ig_user_id_response['instagram_business_account']['id']
 
@@ -169,15 +156,37 @@ def instagram_comments():
 
 
     ig_user_media_response = InstagramGraphAPI(**params).get_user_media()
-    ig_user_media_id = ig_user_media_response[0]['data'][0]['id']
+    ig_user_media_id = ig_user_media_response[0]['data'][1]['id']
 
     params['ig_media_id'] = ig_user_media_id
 
     media_response = InstagramGraphAPI(**params).getComments()
 
+    ig_comment_and_reply_list = [] #A list of IG Comments and replies as a single unit
 
-    return{'media_response': media_response}
+    for i in media_response['data']:
+        ig_comment_and_reply_list.append(i['text'])
+        if i.get('replies') != None:
+            for j in i['replies']['data']:
+                ig_comment_and_reply_list.append(j['text'])
+    
+    analysis = InstagramAnalysis.query.filter_by(page_post_id=ig_user_media_id).first()
+    _ig_comment_and_reply_list = json.dumps(ig_comment_and_reply_list)
+    
+    if analysis==None:
+        new_analysis = InstagramAnalysis(
+            user_id=g.current_user.id,
+            insta_post_id = ig_user_media_id,
+            comments = _ig_comment_and_reply_list
+            )
+        
+        db.session.add(new_analysis)
+    else:
+        analysis.comments =_ig_comment_and_reply_list
 
+    db.session.commit()
+
+    return{'msg':'Data successfully retrieved'}
 
 
 def instagram_hashtag(q):
@@ -220,6 +229,12 @@ def instagram_hashtag(q):
 
     return hashtag_media_response
 
+def retrieve_posts_id(page_response):
+
+    post_id = page_response['posts']['data'][1]['id']
+
+    return post_id
+
 def facebook_page_post_comments():
 
     user = User.query.get(g.current_user.id)
@@ -233,7 +248,7 @@ def facebook_page_post_comments():
 
     params['page_id'] = user.fb_page_id
 
-    print(user.fb_page_id)
+    # print(user.fb_page_id)
 
     response = get_page_access_token(**params)
 
@@ -246,19 +261,24 @@ def facebook_page_post_comments():
     page_response= page_posts_id(**params)
 
 
-
-    page_post_id  = page_response['posts']['data'][1]['id']
+    page_post_id  = retrieve_posts_id(page_response) #calling the retrieve id function
+    #106520682159644_106522525492793
 
     params['page_post_id'] = page_post_id
 
     page_post_response = get_page_post_comments(**params)
 
-    print(page_post_response)
+    #print(page_post_response)
 
     post_comments = page_post_response['data']
-    data = dict()
+
+    #data = dict()
+    comment_reply_list = [] #Empty list of comment and replies as a single list content
+
     for i in range(len(post_comments)):
         comment = post_comments[i]['message']
+
+        comment_reply_list.append(comment) #adding comment to list
 
         comment_id = post_comments[i]['id']
 
@@ -266,6 +286,24 @@ def facebook_page_post_comments():
 
         page_post_comment_reply = get_page_post_comments_reply(**params)
 
-        data[i] = {'comment':comment, 'comment_id':comment_id,'replies': page_post_comment_reply}
+        if page_post_comment_reply['data']!= []:#checking if data exit i.e The comment has a reply
+            for j in range(len(page_post_comment_reply['data'])):
+                comment_reply_list.append(page_post_comment_reply['data'][j]['message'])
 
-    return data
+    analysis = FacebookAnalysis.query.filter_by(fb_post_id=page_post_id).first()
+    _comment_reply_list = json.dumps(comment_reply_list)
+    
+    if analysis == None:
+        new_analysis = FacebookAnalysis(
+            user_id=g.current_user.id,
+            fb_post_id = page_post_id,
+            comments = _comment_reply_list
+            )
+        
+        db.session.add(new_analysis)
+    else:
+        analysis.comments =_comment_reply_list
+        #data[i] = {'comment':comment, 'comment_id':comment_id,'replies': page_post_comment_reply}
+
+    db.session.commit()
+    return {'msg':'Data successfully retrieved'}

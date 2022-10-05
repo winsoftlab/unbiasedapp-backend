@@ -11,14 +11,6 @@ def api_home():
     return {'msg':msg, 'Documentation': url_for('api.documentation', _external=True)}
 
 
-# @api.route('/documentation/')
-# def documentation():
-
-#     '''The endpoint for the Auto documentation of the API 
-#         http://localhost:5000/api/v1/documentation
-#      '''
-#     return auto.html()
-
 
 @api.route('/facebook/')
 def get_all_facebook_analysis():
@@ -28,10 +20,16 @@ def get_all_facebook_analysis():
 
     '''
     return get_routes.get_all_facebook_analysis()
+
+@api.route('/facebook/analysis/<string:post_id>')
+def get_single_facebook_analysis(post_id):
+    '''
+    API Endpoint to Get a single Facebook analysis by a user
+    Can take query parameters, like date sorting , most recent, and by query string
+
+    '''
+    return get_routes.get_single_facebook_page_post(post_id)
   
-
-
-
 
 @api.route('/amazon/')
 @auth.login_required
@@ -42,9 +40,6 @@ def get_amazon_analysis():
     '''
 
     return get_routes.get_amazon_analysis()
-
-
-
 
 
 @api.route('/instagram/')

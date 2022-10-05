@@ -44,7 +44,7 @@ def facebook_auth():
     if page_response['data'] == []:
         flash("Please register your account as a business, create a page and link instagram to use unbiased analytics", category="info")
         return redirect('/')
-    page_id = page_response['data'][0]['id']
+    page_id = page_response['data'][1]['id'] #THIS SHOULD RETURN A LIST OF PAGES BUT i AM ACCESSING THE SECOND PAGE
     
   
     resp =oauth.facebook.get(

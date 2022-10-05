@@ -1,5 +1,4 @@
-from flask import flash, jsonify, render_template, redirect, request, url_for
-from flask_cors import cross_origin
+from flask import flash, render_template, redirect, request, url_for
 from flask_login import login_required, login_user, logout_user, current_user
 
 from . import auth
@@ -7,7 +6,6 @@ from ..models import User
 from app import db
 from ..email import sendVerificationEmail
 from .forms import LoginForm, SignUpForm, DeleteAccountForm
-from app import email
 
 
 @auth.before_app_request

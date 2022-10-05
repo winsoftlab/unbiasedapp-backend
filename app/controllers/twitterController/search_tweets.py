@@ -17,3 +17,8 @@ def search_tweets(search_query, item_count):
         ).items(item_count)
 
     return tweets
+
+
+def tweet_texts(q, count):
+    tweets = search_tweets(q, count)
+    pass

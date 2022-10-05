@@ -2,7 +2,6 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import SessionNotCreatedException
 from app.controllers.Ecommerce.driver_config import set_driver_config
-#from waitress import serve
 from bs4 import BeautifulSoup
 
 #url = 'https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'

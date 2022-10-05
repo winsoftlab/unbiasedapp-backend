@@ -2,16 +2,13 @@ import re
 import pandas as pd
 import numpy as np
 from textblob import TextBlob
-from .search_tweets import search_tweets
 
 
-def process_tweets(query, count ):
+def process_tweets(tweets):
 
     '''A fucntion that processess the tweets'''
 
     #twitterApi = connect_api()
-
-    tweets = search_tweets(query, count)
 
     tweets_array = []
 

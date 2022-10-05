@@ -1,77 +1,55 @@
 from app.api import post_routes
+from flask import request
 from . import api
 
 
 
 @api.route('/search-tweet/<string:q>/<int:count>', methods=['POST'])
 def search_tweet(q, count=100):
+    #TODO The input has to come from a form
+    # q = request.form.get('search_query')
+    # count = request.form.get('count')
+    
     return post_routes.search_tweet(q, count)
 
 
-@api.route('/amazon/<string:product_name>/<string:product_id>', methods=['POST','GET'])
+@api.route('/amazon/<string:product_name>/<string:product_id>', methods=['POST'])
 def amazon_search(product_name, product_id):
+    #TODO The input has to come from a form
+    # product_name = request.form.get('product_name')
+    # product_id = request.form.get('product_id')
 
     return post_routes.selenium_amazon(product_name, product_id)
 
 
-# @auto.doc()
-# @api.route('/amazon/<string:product_name>/<string:product_id>/<string:sub_domain>', methods=['POST','GET'])
-# def scrapping_bee_amazon(product_name, product_id, sub_domain='com'):
-
-#     '''
-#     API endpoint with query parameters product-name:str, product-id:str, sub_domain(default='com')
-
-#     http://localhost:5000/api/v1/amazon/{product-name}/{product-id}/{sub-domain}
-    
-#     '''
-#     return postRoutes.scrapping_bee_amazon(product_name, product_id, sub_domain)
-
-
-
-@api.route('/jumia/<string:product_id>', methods=['POST','GET'])
+@api.route('/jumia/<string:product_id>', methods=['POST'])
 def jumia_search(product_id):
-
+    #TODO The input has to come from a form
+    # product_id = request.form.get('product_id')
     return post_routes.selenium_jumia(product_id)
 
 
-@api.route('/konga/<string:product_name_code_url>', methods=['POST','GET'])
+@api.route('/konga/<string:product_name_code_url>', methods=['POST'])
 def konga_search(product_name_code_url):
+    #TODO The input has to come from a form
+    #product_name_code_url = request.form.get('product_name_code_url')
 
     return post_routes.selenium_konga(product_name_code_url)
 
-# @auto.doc()
-# @api.route('/facebook/search/<string:q>/<int:page_num>', methods=['POST','PUT', 'GET'])
-# def facebook_search(q, page_num=2):
-#     '''
-#     API Endpoint with query parameters query string(q) and page_num for
-#         searching facebook data.
-#         http://localhost:5000/api/v1/facebook/{query-string}/{page-num}
 
-#     '''
-#     return postRoutes.facebook_search(q, page_num)
-
-# @auto.doc()
-# @api.route('/facebook/posts/<string:page_name>/<int:page_num>', methods=['POST','PUT', 'GET'])
-# def facebook_page(page_name='bbcnews', page_num=2):
-#     '''
-#     API Endpoint with query parameters query string(q) and page_num for
-#         searching facebook data.
-#         http://localhost:5000/api/v1/facebook/posts/{facebook-page}/{page-num}
-
-#     '''
-#     return postRoutes.scrape_facebook_page(page_name, page_num)
-
-
-@api.route('/instagram/hashtag-search/<string:q>', methods=['POST','GET'])
+@api.route('/instagram/hashtag-search/<string:q>', methods=['POST'])
 def instagram_hashtag(q):
+    #TODO The input has to come from a form
+    # q= request.form.get('q')
     return post_routes.instagram_hashtag(q)
 
 
 
-@api.route('/facebook/page-post-comments')
+@api.route('/facebook/page-post-comments',methods=['POST','GET'])
 def facebook_page_post():
+    '''Facebook Page post Comments retrival and storage in database'''
+    
     return post_routes.facebook_page_post_comments()
-
 
 
 @api.route('/instagram/comments', methods=['GET'])

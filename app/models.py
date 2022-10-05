@@ -12,37 +12,63 @@ class StripeCustomer(db.Model):
     StripeCustomerId = db.Column(db.String(255), nullable=False)
     StripeSubscriptionId = db.Column(db.String(255), nullable = False, unique=True)
 
+
+
+#--------------------SOCIAL MODELS--------------------------
 class TwitterAnalysis(db.Model):
     __tablename__ = 'twitter_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     search_query= db.Column(db.String(255), nullable=False, unique=True)
-    sentiments = db.Column(db.String)
+    tweets = db.Column(db.String)
 
 
 class FacebookAnalysis(db.Model):
     __tablename__ = 'facebook_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    search_query= db.Column(db.String(255), nullable=False, unique=True)
-    sentiments = db.Column(db.String)
-
-class AmazonAnalysis(db.Model):
-    __tablename__ = 'amazon_analysis'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    product_info = db.Column(db.String(255), nullable=False)
-    sentiments = db.Column(db.String)
-
+    fb_post_id = db.Column(db.String)
+    comments = db.Column(db.String)
 
 class InstagramAnalysis(db.Model):
     __tablename__ = 'instagram_analysis'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    search_query = db.Column(db.String(255), nullable=False, unique=True, default='comments')
-    sentiments = db.Column(db.String)
+    insta_post_id = db.Column(db.String(255), nullable=False, unique=True)
+    comments = db.Column(db.String)
+
+# class InstagramHastagAnalysis(db.models):
+#     __tablename__ = 'instagram_hashtag_analysis'
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+#     hashtg = db.Column(db.String(255))
+#     posts = db.Column(db.String)
+
+#---------------------ECOMMERCE MODELS--------------------------
+class AmazonAnalysis(db.Model):
+    __tablename__ = 'amazon_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    product_id = db.Column(db.String(255), nullable=True)
+    product_name = db.Column(db.String(255), nullable=True)
+    reviews = db.Column(db.String)
 
 
+class JumiaAnalysis(db.Model):
+    __tablename__ = 'jumia_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    product_id = db.Column(db.String(255), nullable=False)
+    reviews = db.Column(db.String)
+
+class KongaAnalysis(db.Model):
+    __tablename__ = 'konga_analysis'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    product_description = db.Column(db.String(255), nullable=True)
+    reviews = db.Column(db.String)
+
+#------------------------USER MODEL---------------------------------
 class User(UserMixin, db.Model):
     __tablename__='users'
     id = db.Column(db.Integer, primary_key=True)
