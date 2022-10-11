@@ -9,7 +9,6 @@ from app.controllers.twitterController.search_tweets import search_tweets
 from ..controllers.instagramController.instagram_get_credentials import getCredentials
 from ..controllers.instagramController.Insta_graph_api import InstagramGraphAPI
 from app.controllers.facebookController.facebook_graph_api import (
-    page_posts_id,
     get_page_access_token,
     get_page_post_comments,
     get_page_post_comments_reply,
@@ -70,7 +69,7 @@ def selenium_amazon(product_name, product_id):
 
     if product is None:
         new_search = AmazonAnalysis(
-            user=g.current_user.id,
+            user_id=g.current_user.id,
             product_id=product_id,
             product_name=product_name,
             reviews=_search_result,
@@ -99,9 +98,9 @@ def selenium_jumia(product_id):
 
     product = JumiaAnalysis.query.filter_by(product_id=product_id).first()
 
-    if product_id is None:
+    if product is None:
         new_search = JumiaAnalysis(
-            user=g.current_user.id, product_id=product_id, reviews=_search_result
+            user_id=g.current_user.id, product_id=product_id, reviews=_search_result
         )
 
         db.session.add(new_search)

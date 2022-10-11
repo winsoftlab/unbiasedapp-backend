@@ -30,12 +30,21 @@ def get_instagram_analysis():
 
 
 @api.route("/twitter/")
-def get_twitter_analysis():
+def get_all_twitter_analysis():
     """
     API endpoint to Get all Amazon processed data
     Can take query parameters, like date sorting , most recent, and by query string
     """
-    return get_routes.get_twitter_analysis()
+    return get_routes.get_all_twitter_analysis()
+
+
+@api.route("/twitter/<string:search_query>")
+def get_single_twitter_analysis(search_query):
+    """
+    API endpoint to Get all Amazon processed data
+    Can take query parameters, like date sorting , most recent, and by query string
+    """
+    return get_routes.get_single_twitter_analysis(search_query)
 
 
 @api.route("/facebook/")
@@ -71,8 +80,8 @@ def get_amazon_analysis():
     return get_routes.get_amazon_analysis()
 
 
-@api.route("/amazon/<string:product_id>/<string:product_name>")
-def get_single_amazon_analysis(product_id, product_name):
+@api.route("/amazon/<string:product_name>/<string:product_id>")
+def get_single_amazon_analysis(product_name, product_id):
     """_summary_
 
     Args:
@@ -82,7 +91,7 @@ def get_single_amazon_analysis(product_id, product_name):
     Returns:
         _type_: _description_
     """
-    return get_routes.get_single_amazon(product_id, product_name)
+    return get_routes.get_single_amazon(product_name, product_id)
 
 
 @api.route("/konga/")

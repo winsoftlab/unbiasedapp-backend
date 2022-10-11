@@ -121,7 +121,21 @@ def get_single_facebook_page_post(post_id):
     return page_not_found("Post not found")
 
 
-def get_twitter_analysis():
+def get_all_twitter_analysis():
+    tweets = TwitterAnalysis.query.filter_by(user_id=g.current_user.id).all()
+
+    if tweets == []:
+        return page_not_found("No analysis has been made yet")
+    all_tweets = []
+    for tweet in tweets:
+        query = tweet.search_query
+        _tweet = pickle.loads(tweet.tweets)
+        _result = process_tweets(_tweet)
+        all_tweets.append({"search query": query, "result": _result})
+    return jsonify(all_tweets)
+
+
+def get_single_twitter_analysis(search_query):
     """_summary_
 
     Returns:
@@ -129,8 +143,8 @@ def get_twitter_analysis():
     """
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
-    tweet = TwitterAnalysis.query.filter_by(user_id=g.current_user.id).first()
-    if tweet:
+    tweet = TwitterAnalysis.query.filter_by(search_query=search_query).first()
+    if tweet is not None:
         query = tweet.search_query
         tweets = pickle.loads(tweet.tweets)
         result = process_tweets(tweets)
@@ -160,7 +174,7 @@ def get_amazon_analysis():
     return page_not_found("No analysis has been made yet")
 
 
-def get_single_amazon(product_id, product_name):
+def get_single_amazon(product_name, product_id):
     """_summary_
 
     Args:
@@ -218,7 +232,7 @@ def get_all_jumia():
                 "reviews": json.loads(jumia_analysis[i].reviews),
             }
         return data
-    return page_posts_id("No analysis has been made yet")
+    return page_not_found("No analysis has been made yet")
 
 
 def get_single_jumia(product_id):
@@ -261,7 +275,7 @@ def get_all_konga():
                 "reviews": json.loads(konga_analysis[i].reviews),
             }
         return data
-    return page_posts_id("No analysis has been made yet")
+    return page_not_found("No analysis has been made yet")
 
 
 def get_single_konga(product_description):
@@ -269,7 +283,9 @@ def get_single_konga(product_description):
         product_description=product_description
     ).first()
     if product is None:
-        return {"msg": f"product with description {product_description} not found"}
+        return page_not_found(
+            f"product with description {product_description} not found"
+        )
     reviews = json.loads(product.reviews)
 
     # TODO Sentiments is analysed here
