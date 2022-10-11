@@ -1,37 +1,114 @@
+from app.controllers.facebookController.facebook_graph_api import (
+    get_page_access_token,
+    page_posts_id,
+)
+from app.controllers.instagramController.instagram_get_credentials import getCredentials
 from app.controllers.twitterController.process_tweets import process_tweets
 from . import api
 
-from flask import g
+from flask import g, jsonify
 from flask_login import current_user
 
 from app import db
 from app.api.errors import page_not_found
 from app.models import (
-    FacebookAnalysis, 
-    AmazonAnalysis, 
+    FacebookAnalysis,
+    AmazonAnalysis,
     InstagramAnalysis,
     TwitterAnalysis,
     JumiaAnalysis,
-    KongaAnalysis
-    )
+    KongaAnalysis,
+    User,
+)
 import pickle
 import json
 
+
+def get_facebook_pages():
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+    user = User.query.get(g.current_user.id)
+    fb_page_lists = json.loads(user.fb_page_id)
+
+    return jsonify(fb_page_lists)
+
+
+def get_posts(page_id):
+    """_summary_
+
+    Args:
+        page_id (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+
+    user = User.query.get(g.current_user.id)
+
+    params = getCredentials()
+
+    params["access_token"] = user.fb_access_token  # User access token
+
+    params["page_id"] = page_id
+
+    # print(user.fb_page_id)
+
+    response = get_page_access_token(**params)
+
+    page_access_token = response["access_token"]  # Page access token
+
+    params["page_access_token"] = page_access_token
+
+    page_response = page_posts_id(**params)
+
+    if not page_response.get("posts"):
+        return jsonify([])
+
+    list_of_posts = []
+
+    for i in range(len(page_response["posts"]["data"])):
+        _ = dict()
+        _[page_response["posts"]["data"][i]["id"]] = (
+            page_response["posts"]["data"][i]["message"][:20] + "..."
+        )
+        list_of_posts.append(_)
+
+    return jsonify(list_of_posts)
+
+
 def get_all_facebook_analysis():
+    """_summary_
 
-    #TODO add sorting parameters from the query parameters parsed from the request.args
-    facebook_analysis = FacebookAnalysis.query.filter_by(user_id=g.current_user.id).all()
+    Returns:
+        _type_: _description_
+    """
 
-    if facebook_analysis !=[]:
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+    facebook_analysis = FacebookAnalysis.query.filter_by(
+        user_id=g.current_user.id
+    ).all()
+
+    if facebook_analysis != []:
         data = dict()
         for items in facebook_analysis:
-            data[items.search_query] = items.sentiments
+            data[items.fb_post_id] = json.loads(items.comments)
         return data
-    
-    return page_not_found('No analysis has been made yet')
+
+    return page_not_found("No analysis has been made yet")
 
 
 def get_single_facebook_page_post(post_id):
+    """_summary_
+
+    Args:
+        post_id (_str_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     post = FacebookAnalysis.query.filter_by(fb_post_id=post_id).first()
 
     _comments = json.loads(post.comments)
@@ -39,49 +116,162 @@ def get_single_facebook_page_post(post_id):
     #     [f.writelines(k) for k in _comments]
 
     if post:
-        #TODO PROCESSING OF COMMENTS GOES HERE
-        return{'data':_comments}
-    return page_not_found('Post not found')
+        # TODO PROCESSING OF COMMENTS GOES HERE
+        return {"data": _comments}
+    return page_not_found("Post not found")
 
 
 def get_twitter_analysis():
+    """_summary_
 
-    #TODO add sorting parameters from the query parameters parsed from the request.args
-    tweet =TwitterAnalysis.query.filter_by(user_id=g.current_user.id).first()
-    
-    #twitter_analysis =TwitterAnalysis.query.filter_by(user_id=g.current_user.id).all()
-    # if  twitter_analysis  !=[]:
-    #     # data = dict()
-    #     # for i in range(0, len(twitter_analysis)):
-    #     #     data[i] =  {'query':twitter_analysis[i].search_query, 'sentiment': twitter_analysis[i].sentiments}
-    #     # return data
+    Returns:
+        _type_: _description_
+    """
+
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+    tweet = TwitterAnalysis.query.filter_by(user_id=g.current_user.id).first()
     if tweet:
         query = tweet.search_query
         tweets = pickle.loads(tweet.tweets)
         result = process_tweets(tweets)
-        return {' search query': query, 'result': result}
-    return page_not_found('No analysis has been made yet')
+        return {" search query": query, "result": result}
+    return page_not_found("No analysis has been made yet")
 
 
 def get_amazon_analysis():
+    """_summary_
 
-    #TODO add sorting parameters from the query parameters parsed from the request.args
+    Returns:
+        _type_: _description_
+    """
+
+    # TODO add sorting parameters from the query parameters parsed from the request.args
     amazon_analysis = AmazonAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
-    if  amazon_analysis !=[]:
+    if amazon_analysis != []:
         data = dict()
         for i in range(0, len(amazon_analysis)):
-            data[i] =  {'query':amazon_analysis[i].product_info, 'sentiment': amazon_analysis[i].sentiments}
+            data[i] = {
+                "product": amazon_analysis[i].product_name,
+                "reviews": json.loads(amazon_analysis[i].reviews),
+            }
         return data
-    
-    return page_not_found('No analysis has been made yet')
+
+    return page_not_found("No analysis has been made yet")
+
+
+def get_single_amazon(product_id, product_name):
+    """_summary_
+
+    Args:
+        product_id (_type_): _description_
+        product_name (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    product = AmazonAnalysis.query.filter_by(
+        product_id=product_id, product_name=product_name
+    ).first()
+
+    if product is None:
+        return page_not_found(
+            f"product with product id {product_id} and produc name {product_name} is not found"
+        )
+
+    reviews = json.loads(product.reviews)
+    # TODO Sentiments are analysed here
+    return jsonify(reviews)
 
 
 def get_instagram_analysis():
+    """_summary_
 
-    #TODO add sorting parameters from the query parameters parsed from the request.args
-    instagram_analysis=InstagramAnalysis.query.filter_by(user_id=g.current_user.id).all()
-    if instagram_analysis !=[]:
-        return {'Data':instagram_analysis}
-    
-    return page_not_found('No analysis has been made yet')
+    Returns:
+        _type_: _description_
+    """
+
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+    instagram_analysis = InstagramAnalysis.query.filter_by(
+        user_id=g.current_user.id
+    ).all()
+    if instagram_analysis != []:
+        return {"Data": instagram_analysis}
+
+    return page_not_found("No analysis has been made yet")
+
+
+def get_all_jumia():
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+    jumia_analysis = JumiaAnalysis.query.filter_by(user_id=g.current_user.id).all()
+
+    if jumia_analysis != []:
+        data = dict()
+        for i in range(0, len(jumia_analysis)):
+            data[i] = {
+                "product": jumia_analysis[i].product_id,
+                "reviews": json.loads(jumia_analysis[i].reviews),
+            }
+        return data
+    return page_posts_id("No analysis has been made yet")
+
+
+def get_single_jumia(product_id):
+    """_summary_
+
+    Args:
+        product_id (_str_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    product = JumiaAnalysis.query.filter_by(product_id=product_id).first_or_404()
+
+    if product is None:
+        return page_not_found(f"No product with product id {product_id}")
+
+    product_review = json.loads(product.reviews)
+
+    # TODO ANALYSIS IS PERFORMED HERE
+
+    return jsonify(product_review)
+
+
+def get_all_konga():
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+
+    konga_analysis = KongaAnalysis.query.filter_by(user_id=g.current_user.id).all()
+
+    if konga_analysis != []:
+        data = dict()
+        for i in range(0, len(konga_analysis)):
+            data[i] = {
+                "product": konga_analysis[i].product_description,
+                "reviews": json.loads(konga_analysis[i].reviews),
+            }
+        return data
+    return page_posts_id("No analysis has been made yet")
+
+
+def get_single_konga(product_description):
+    product = KongaAnalysis.query.filter_by(
+        product_description=product_description
+    ).first()
+    if product is None:
+        return {"msg": f"product with description {product_description} not found"}
+    reviews = json.loads(product.reviews)
+
+    # TODO Sentiments is analysed here
+
+    return jsonify(reviews)

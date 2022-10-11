@@ -17,3 +17,6 @@ def subscription_required(f):
             return redirect(url_for('stripay.subscription', next=request.url))
         return f(*args, **kwargs)
     return decorated_function
+
+#TODO A decorator that requires tokon bearer auth. 
+#TODO A function that generates token on login
