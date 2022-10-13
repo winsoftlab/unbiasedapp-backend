@@ -117,3 +117,53 @@ JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls
 JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2888 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://www.amazon.com/Roku-Streaming-Device-Vision-Controls/product-reviews/B09BKCDXZC/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 2986 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1665488427298	Marionette	INFO	Stopped listening on port 55263
+1665503281798	geckodriver	INFO	Listening on 127.0.0.1:61306
+1665503285332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "61307" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilerL57KD"
+*** You are running in headless mode.
+1665503301446	Marionette	INFO	Marionette enabled
+1665503301515	Marionette	INFO	Listening on port 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+WebDriver BiDi listening on ws://127.0.0.1:61307
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+Read port: 61322
+1665503315180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilerL57KD\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:61307/devtools/browser/84f47fc9-bc2d-4253-bf33-906378252a70
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 2908 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 2982 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 58: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 3077 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1665503360256	Marionette	INFO	Stopped listening on port 61322
+1665503933338	geckodriver	INFO	Listening on 127.0.0.1:53999
+1665503936301	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54000" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiledBRM8E"
+*** You are running in headless mode.
+1665503937826	Marionette	INFO	Marionette enabled
+1665503937836	Marionette	INFO	Listening on port 54011
+Read port: 54011
+WebDriver BiDi listening on ws://127.0.0.1:54000
+1665503942093	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofiledBRM8E\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:54000/devtools/browser/2e4ee7fa-8278-46e1-a6eb-66d67b086ec8
+1665503950568	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 183: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1665504060196	Marionette	INFO	Stopped listening on port 54011
+!!! error running onStopped callback: TypeError: callback is not a function

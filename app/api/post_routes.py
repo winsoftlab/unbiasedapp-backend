@@ -151,16 +151,28 @@ def instagram_comments():
 
     params["access_token"] = user.fb_access_token
 
-    params["page_id"] = user.fb_page_id
+    # FB PAGE ID IS A LIST of dictionaries
+    _p_id = None
+    for key in json.loads(user.fb_page_id)[1].keys():
+        _p_id = key
+        print(_p_id)
+
+    params["page_id"] = _p_id
+
+    # params["page_id"] = json.loads(user.fb_page_id)[
+    #     0
+    # ].keys()  # I am accessing the first one with the key S
 
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
+
+    print(ig_user_id_response)
 
     ig_user_id = ig_user_id_response["instagram_business_account"]["id"]
 
     params["instagram_account_id"] = ig_user_id
 
     ig_user_media_response = InstagramGraphAPI(**params).get_user_media()
-    ig_user_media_id = ig_user_media_response[0]["data"][1]["id"]
+    ig_user_media_id = ig_user_media_response[0]["data"][0]["id"]
 
     params["ig_media_id"] = ig_user_media_id
 
@@ -174,7 +186,7 @@ def instagram_comments():
             for j in i["replies"]["data"]:
                 ig_comment_and_reply_list.append(j["text"])
 
-    analysis = InstagramAnalysis.query.filter_by(page_post_id=ig_user_media_id).first()
+    analysis = InstagramAnalysis.query.filter_by(insta_post_id=ig_user_media_id).first()
     _ig_comment_and_reply_list = json.dumps(ig_comment_and_reply_list)
 
     # SAVING TO DATABASE

@@ -92,10 +92,10 @@ def get_all_facebook_analysis():
     ).all()
 
     if facebook_analysis != []:
-        data = dict()
+        data = []
         for items in facebook_analysis:
-            data[items.fb_post_id] = json.loads(items.comments)
-        return data
+            data.append({items.fb_post_id: json.loads(items.comments)})
+        return jsonify(data)
 
     return page_not_found("No analysis has been made yet")
 
@@ -117,7 +117,7 @@ def get_single_facebook_page_post(post_id):
 
     if post:
         # TODO PROCESSING OF COMMENTS GOES HERE
-        return {"data": _comments}
+        return jsonify(_comments)
     return page_not_found("Post not found")
 
 
@@ -163,13 +163,15 @@ def get_amazon_analysis():
     amazon_analysis = AmazonAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if amazon_analysis != []:
-        data = dict()
+        data = []
         for i in range(0, len(amazon_analysis)):
-            data[i] = {
-                "product": amazon_analysis[i].product_name,
-                "reviews": json.loads(amazon_analysis[i].reviews),
-            }
-        return data
+            data.append(
+                {
+                    "product": amazon_analysis[i].product_name,
+                    "reviews": json.loads(amazon_analysis[i].reviews),
+                }
+            )
+        return jsonify(data)
 
     return page_not_found("No analysis has been made yet")
 
@@ -210,8 +212,10 @@ def get_instagram_analysis():
         user_id=g.current_user.id
     ).all()
     if instagram_analysis != []:
-        return {"Data": instagram_analysis}
-
+        data = []
+        for analysis in instagram_analysis:
+            data.append({analysis.insta_post_id: json.loads(analysis.comments)})
+        return jsonify(data)
     return page_not_found("No analysis has been made yet")
 
 
@@ -225,13 +229,15 @@ def get_all_jumia():
     jumia_analysis = JumiaAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if jumia_analysis != []:
-        data = dict()
+        data = []
         for i in range(0, len(jumia_analysis)):
-            data[i] = {
-                "product": jumia_analysis[i].product_id,
-                "reviews": json.loads(jumia_analysis[i].reviews),
-            }
-        return data
+            data.append(
+                {
+                    "product": jumia_analysis[i].product_id,
+                    "reviews": json.loads(jumia_analysis[i].reviews),
+                }
+            )
+        return jsonify(data)
     return page_not_found("No analysis has been made yet")
 
 
@@ -268,13 +274,15 @@ def get_all_konga():
     konga_analysis = KongaAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if konga_analysis != []:
-        data = dict()
+        data = []
         for i in range(0, len(konga_analysis)):
-            data[i] = {
-                "product": konga_analysis[i].product_description,
-                "reviews": json.loads(konga_analysis[i].reviews),
-            }
-        return data
+            data.append(
+                {
+                    "product": konga_analysis[i].product_description,
+                    "reviews": json.loads(konga_analysis[i].reviews),
+                }
+            )
+        return jsonify(data)
     return page_not_found("No analysis has been made yet")
 
 
