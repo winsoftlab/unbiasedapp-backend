@@ -215,7 +215,6 @@ def instagram_hashtag(q):
 
     params = getCredentials()
 
-    params["access_token"] = session["fb_access_token"]
     params["access_token"] = user.fb_access_token
     params["page_id"] = user.fb_page_id
 
@@ -226,7 +225,9 @@ def instagram_hashtag(q):
     params["hashtag_name"] = q
 
     hashtag_search_response = InstagramGraphAPI(**params).get_hashtagsInfo()
+
     key = "data"
+
     if key not in hashtag_search_response.keys():
         return {"msg": f"No data found for hashtag {q}"}
 
@@ -237,9 +238,10 @@ def instagram_hashtag(q):
     _type = request.args.get("type")
 
     if _type not in ["top_media", "recent_media"]:
+
         _type = "recent_media"
 
-    params["type"] = _type or "recent_media"
+    params["type"] = _type
 
     hashtag_media_response = InstagramGraphAPI(**params).get_hashtagMedia()
 

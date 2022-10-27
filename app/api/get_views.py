@@ -29,6 +29,19 @@ def get_instagram_analysis():
     return get_routes.get_instagram_analysis()
 
 
+@api.route("/instagram/<string:insta_post_id>")
+def get_single_instagram_analysis(insta_post_id):
+    """_summary_
+
+    Args:
+        insta_post_id (_str_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    return get_routes.get_single_instagram_analysis(insta_post_id)
+
+
 @api.route("/twitter/")
 def get_all_twitter_analysis():
     """

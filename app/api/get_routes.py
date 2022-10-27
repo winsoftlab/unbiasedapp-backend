@@ -109,14 +109,15 @@ def get_single_facebook_page_post(post_id):
     Returns:
         _type_: _description_
     """
-    post = FacebookAnalysis.query.filter_by(fb_post_id=post_id).first()
-
-    _comments = json.loads(post.comments)
+    post = FacebookAnalysis.query.filter_by(
+        fb_post_id=post_id, user_id=g.current_user.id
+    ).first()
     # with open('facebook_replies.txt', 'w') as f:
     #     [f.writelines(k) for k in _comments]
 
     if post:
         # TODO PROCESSING OF COMMENTS GOES HERE
+        _comments = json.loads(post.comments)
         return jsonify(_comments)
     return page_not_found("Post not found")
 
@@ -143,7 +144,9 @@ def get_single_twitter_analysis(search_query):
     """
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
-    tweet = TwitterAnalysis.query.filter_by(search_query=search_query).first()
+    tweet = TwitterAnalysis.query.filter_by(
+        search_query=search_query, user_id=g.current_user.id
+    ).first()
     if tweet is not None:
         query = tweet.search_query
         tweets = pickle.loads(tweet.tweets)
@@ -187,12 +190,12 @@ def get_single_amazon(product_name, product_id):
         _type_: _description_
     """
     product = AmazonAnalysis.query.filter_by(
-        product_id=product_id, product_name=product_name
+        product_id=product_id, product_name=product_name, user_id=g.current_user.id
     ).first()
 
     if product is None:
         return page_not_found(
-            f"product with product id {product_id} and produc name {product_name} is not found"
+            f"product with product id {product_id} and product name {product_name} is not found"
         )
 
     reviews = json.loads(product.reviews)
@@ -216,6 +219,23 @@ def get_instagram_analysis():
         for analysis in instagram_analysis:
             data.append({analysis.insta_post_id: json.loads(analysis.comments)})
         return jsonify(data)
+    return page_not_found("No analysis has been made yet")
+
+
+def get_single_instagram_analysis(insta_post_id):
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
+
+    # TODO add sorting parameters from the query parameters parsed from the request.args
+    instagram_analysis = InstagramAnalysis.query.filter_by(
+        user_id=g.current_user.id, insta_post_id=insta_post_id
+    ).first()
+    if instagram_analysis:
+        _comments = json.loads(instagram_analysis.comments)
+        return jsonify(_comments)
     return page_not_found("No analysis has been made yet")
 
 
@@ -250,7 +270,9 @@ def get_single_jumia(product_id):
     Returns:
         _type_: _description_
     """
-    product = JumiaAnalysis.query.filter_by(product_id=product_id).first_or_404()
+    product = JumiaAnalysis.query.filter_by(
+        product_id=product_id, user_id=g.current_user.id
+    ).first()
 
     if product is None:
         return page_not_found(f"No product with product id {product_id}")
@@ -288,7 +310,7 @@ def get_all_konga():
 
 def get_single_konga(product_description):
     product = KongaAnalysis.query.filter_by(
-        product_description=product_description
+        product_description=product_description, user_id=g.current_user.id
     ).first()
     if product is None:
         return page_not_found(
