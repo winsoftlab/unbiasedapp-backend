@@ -55,11 +55,25 @@ def facebook_page_post(page_id, post_id):
 
     Returns:
         _type_: _description_
+
     """
+
+    # TODO Request from  Javascript or Ajax with dynamically assigned values
 
     return post_routes.facebook_page_post_comments(page_id, post_id)
 
 
-@api.route("/instagram/comments", methods=["GET"])
-def instagram_comments():
-    return post_routes.instagram_comments()
+@api.route(
+    "/instagram/comments/<string:fb_page_id>/<string:insta_post_id>/", methods=["POST"]
+)
+def instagram_comments(fb_page_id, insta_post_id):
+    """_summary_
+
+    Args:
+        fb_page_id (_type_): _description_
+        insta_post_id (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    return post_routes.instagram_comments(fb_page_id, insta_post_id)

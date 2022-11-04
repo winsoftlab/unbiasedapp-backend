@@ -167,3 +167,16 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 183: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
 1665504060196	Marionette	INFO	Stopped listening on port 54011
 !!! error running onStopped callback: TypeError: callback is not a function
+1667045848293	geckodriver	INFO	Listening on 127.0.0.1:65477
+1667045851386	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "65478" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileCZ0p4f"
+*** You are running in headless mode.
+1667045858207	Marionette	INFO	Marionette enabled
+1667045858260	Marionette	INFO	Listening on port 65489
+Read port: 65489
+WebDriver BiDi listening on ws://127.0.0.1:65478
+1667045859289	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileCZ0p4f\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:65478/devtools/browser/35673708-1f6b-43fe-9196-353def7bac27

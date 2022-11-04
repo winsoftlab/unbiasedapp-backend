@@ -47,9 +47,11 @@ def begin_amazon_search(url):
         driver.get(url)
         element_text = driver.page_source
         result = amazon_beautiful_soup_search(element_text)
-        search_result.append(
-            result
-        )  # calling the beautifulsoup method to extract the text
+        # search_result.append(
+        #     result
+        # )  # calling the beautifulsoup method to extract the text
+        search_result + result
+
         next_page = driver.find_element(By.PARTIAL_LINK_TEXT, "Next")
         value = next_page.get_attribute("href")
         url = value

@@ -35,6 +35,7 @@ class FacebookAnalysis(db.Model):
 class InstagramAnalysis(db.Model):
     __tablename__ = "instagram_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    fb_page = db.Column(db.String(255), db.ForeignKey("users.fb_page_id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     insta_post_id = db.Column(db.String(255), nullable=False, unique=True)
     comments = db.Column(db.String)

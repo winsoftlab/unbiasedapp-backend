@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 7a50f649ebd6
+Revision ID: fc4fd180941f
 Revises: 
-Create Date: 2022-10-04 20:11:46.711480
+Create Date: 2022-10-27 23:53:44.901479
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7a50f649ebd6'
+revision = 'fc4fd180941f'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -42,16 +42,20 @@ def upgrade():
     op.create_table('facebook_analysis',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=True),
+    sa.Column('fb_page', sa.String(length=255), nullable=True),
     sa.Column('fb_post_id', sa.String(), nullable=True),
     sa.Column('comments', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['fb_page'], ['users.fb_page_id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('instagram_analysis',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
+    sa.Column('fb_page', sa.String(length=255), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.Column('insta_post_id', sa.String(length=255), nullable=False),
     sa.Column('comments', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['fb_page'], ['users.fb_page_id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('insta_post_id')

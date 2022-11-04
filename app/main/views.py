@@ -14,6 +14,21 @@ def home():
     return render_template("Home/layout/main-layout.html")
 
 
+@main.route("/admin", methods=["GET"])
+@login_required
+def admin():
+    # check permission
+    user = User.query.filter_by(email=current_user.email).first()
+
+    if user.email == "anabantiakachi1@gmail.com":
+
+        users = User.query.all()
+
+        return render_template("Home/admin.html", users=users)
+    flash("unauthorized")
+    return redirect("/")
+
+
 @main.route("/dashboard", methods=["GET", "POST"])
 @cross_origin()
 # @login_required
@@ -80,18 +95,3 @@ def get_segment(request):
 
     except:
         return None
-
-
-@main.route("/admin", methods=["GET"])
-@login_required
-def admin():
-    # check permission
-    user = User.query.filter_by(email=current_user.email).first()
-
-    if user.email == "anabantiakachi1@gmail.com":
-
-        users = User.query.all()
-
-        return render_template("Home/admin.html", users=users)
-    flash("unauthorized")
-    return redirect("/")

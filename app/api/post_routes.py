@@ -41,7 +41,9 @@ def search_tweet(q, count):
 
     _tweet = pickle.dumps(result)
 
-    analysis = TwitterAnalysis.query.filter_by(search_query=q).first()
+    analysis = TwitterAnalysis.query.filter_by(
+        search_query=q, user_id=g.current_user.id
+    ).first()
 
     if analysis is None:
         new_twitter_analysis = TwitterAnalysis(
@@ -96,7 +98,9 @@ def selenium_jumia(product_id):
     search_result = begin_jumia_search(url)
     _search_result = json.dumps(search_result)
 
-    product = JumiaAnalysis.query.filter_by(product_id=product_id).first()
+    product = JumiaAnalysis.query.filter_by(
+        product_id=product_id, user_id=g.current_user.id
+    ).first()
 
     if product is None:
         new_search = JumiaAnalysis(
@@ -123,7 +127,7 @@ def selenium_konga(product_name_code_url):
     _search_result = json.dumps(search_result)
 
     product_description = KongaAnalysis.query.filter_by(
-        product_description=product_name_code_url
+        product_description=product_name_code_url, user_id=g.current_user.id
     ).first()
 
     if product_description is None:
@@ -140,7 +144,7 @@ def selenium_konga(product_name_code_url):
     return {"msg": "Data retrieved successfully"}
 
 
-def instagram_comments():
+def instagram_comments(fb_page_id, insta_post_id):
 
     user = User.query.get(g.current_user.id)
 
@@ -151,30 +155,7 @@ def instagram_comments():
 
     params["access_token"] = user.fb_access_token
 
-    # FB PAGE ID IS A LIST of dictionaries
-    _p_id = None
-    for key in json.loads(user.fb_page_id)[1].keys():
-        _p_id = key
-        print(_p_id)
-
-    params["page_id"] = _p_id
-
-    # params["page_id"] = json.loads(user.fb_page_id)[
-    #     0
-    # ].keys()  # I am accessing the first one with the key S
-
-    ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
-
-    print(ig_user_id_response)
-
-    ig_user_id = ig_user_id_response["instagram_business_account"]["id"]
-
-    params["instagram_account_id"] = ig_user_id
-
-    ig_user_media_response = InstagramGraphAPI(**params).get_user_media()
-    ig_user_media_id = ig_user_media_response[0]["data"][0]["id"]
-
-    params["ig_media_id"] = ig_user_media_id
+    params["ig_media_id"] = insta_post_id
 
     media_response = InstagramGraphAPI(**params).getComments()
 
@@ -186,14 +167,17 @@ def instagram_comments():
             for j in i["replies"]["data"]:
                 ig_comment_and_reply_list.append(j["text"])
 
-    analysis = InstagramAnalysis.query.filter_by(insta_post_id=ig_user_media_id).first()
+    analysis = InstagramAnalysis.query.filter_by(
+        insta_post_id=insta_post_id, user_id=g.current_user.id
+    ).first()
     _ig_comment_and_reply_list = json.dumps(ig_comment_and_reply_list)
 
     # SAVING TO DATABASE
     if analysis is None:
         new_analysis = InstagramAnalysis(
             user_id=g.current_user.id,
-            insta_post_id=ig_user_media_id,
+            fb_page=fb_page_id,
+            insta_post_id=insta_post_id,
             comments=_ig_comment_and_reply_list,
         )
 
@@ -316,7 +300,9 @@ def facebook_page_post_comments(page_id, post_id):
             for j in range(len(page_post_comment_reply["data"])):
                 comment_reply_list.append(page_post_comment_reply["data"][j]["message"])
 
-    analysis = FacebookAnalysis.query.filter_by(fb_post_id=post_id).first()
+    analysis = FacebookAnalysis.query.filter_by(
+        fb_post_id=post_id, user_id=g.current_user.id
+    ).first()
     _comment_reply_list = json.dumps(comment_reply_list)
 
     if analysis is None:

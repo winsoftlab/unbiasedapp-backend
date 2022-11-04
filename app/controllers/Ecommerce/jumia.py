@@ -21,7 +21,8 @@ def begin_jumia_search(url):
             element_text
         )  # calling the beautifulsoup method to extract the text
 
-        search_result.append(result)  # appending the result to the initial value
+        # search_result.append(result)  # appending the result to the initial value
+        search_result + result
         try:
             next_page = driver.find_element(
                 By.CSS_SELECTOR, "a[aria-label='Next Page']"

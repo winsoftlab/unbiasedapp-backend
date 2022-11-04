@@ -2,6 +2,7 @@ from app.controllers.facebookController.facebook_graph_api import (
     get_page_access_token,
     page_posts_id,
 )
+from app.controllers.instagramController.Insta_graph_api import InstagramGraphAPI
 from app.controllers.instagramController.instagram_get_credentials import getCredentials
 from app.controllers.twitterController.process_tweets import process_tweets
 from . import api
@@ -10,7 +11,7 @@ from flask import g, jsonify
 from flask_login import current_user
 
 from app import db
-from app.api.errors import page_not_found
+from app.api.errors import page_not_found, unauthenticated
 from app.models import (
     FacebookAnalysis,
     AmazonAnalysis,
@@ -31,9 +32,10 @@ def get_facebook_pages():
         _type_: _description_
     """
     user = User.query.get(g.current_user.id)
-    fb_page_lists = json.loads(user.fb_page_id)
-
-    return jsonify(fb_page_lists)
+    if user.fb_page_id:
+        fb_page_lists = json.loads(user.fb_page_id)
+        return jsonify(fb_page_lists)
+    return page_not_found("No facebook pages found for the account")
 
 
 def get_posts(page_id):
@@ -201,6 +203,42 @@ def get_single_amazon(product_name, product_id):
     reviews = json.loads(product.reviews)
     # TODO Sentiments are analysed here
     return jsonify(reviews)
+
+
+def get_ig_media_id(fb_page_id):
+
+    user = User.query.get(g.current_user.id)
+
+    if user is None or user.fb_access_token is None:
+        return unauthenticated("Please Login facebook to access api")
+
+    params = getCredentials()
+
+    params["access_token"] = user.fb_access_token
+
+    params["page_id"] = fb_page_id
+
+    ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
+
+    if not ig_user_media_response.get("instagram_business_account"):
+
+        return jsonify({"msg": "Kindly connect your Instagram to your facebook page"})
+
+    ig_user_id = ig_user_id_response["instagram_business_account"]["id"]
+
+    params["instagram_account_id"] = ig_user_id
+
+    ig_user_media_response = InstagramGraphAPI(**params).get_user_media()
+
+    list_of_post = []
+
+    for i in ig_user_media_response[0]["data"]:
+
+        list_of_post.append(i["id"])
+
+    return jsonify(list_of_post)
+
+    #   ig_user_media_id = ig_user_media_response[0]["data"][i]["id"]
 
 
 def get_instagram_analysis():
