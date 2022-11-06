@@ -11,7 +11,7 @@ from flask import g, jsonify
 from flask_login import current_user
 
 from app import db
-from app.api.errors import page_not_found, unauthenticated
+from app.api.errors import error_response, unauthenticated
 from app.models import (
     FacebookAnalysis,
     AmazonAnalysis,
@@ -35,7 +35,7 @@ def get_facebook_pages():
     if user.fb_page_id:
         fb_page_lists = json.loads(user.fb_page_id)
         return jsonify(fb_page_lists)
-    return page_not_found("No facebook pages found for the account")
+    return error_response(404, "No facebook pages found for the account")
 
 
 def get_posts(page_id):
@@ -99,7 +99,7 @@ def get_all_facebook_analysis():
             data.append({items.fb_post_id: json.loads(items.comments)})
         return jsonify(data)
 
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_single_facebook_page_post(post_id):
@@ -121,14 +121,14 @@ def get_single_facebook_page_post(post_id):
         # TODO PROCESSING OF COMMENTS GOES HERE
         _comments = json.loads(post.comments)
         return jsonify(_comments)
-    return page_not_found("Post not found")
+    return error_response(404, "Post not found")
 
 
 def get_all_twitter_analysis():
     tweets = TwitterAnalysis.query.filter_by(user_id=g.current_user.id).all()
 
     if tweets == []:
-        return page_not_found("No analysis has been made yet")
+        return error_response(404, "No analysis has been made yet")
     all_tweets = []
     for tweet in tweets:
         query = tweet.search_query
@@ -154,7 +154,7 @@ def get_single_twitter_analysis(search_query):
         tweets = pickle.loads(tweet.tweets)
         result = process_tweets(tweets)
         return {" search query": query, "result": result}
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_amazon_analysis():
@@ -178,7 +178,7 @@ def get_amazon_analysis():
             )
         return jsonify(data)
 
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_single_amazon(product_name, product_id):
@@ -196,8 +196,9 @@ def get_single_amazon(product_name, product_id):
     ).first()
 
     if product is None:
-        return page_not_found(
-            f"product with product id {product_id} and product name {product_name} is not found"
+        return error_response(
+            404,
+            f"product with product id {product_id} and product name {product_name} is not found",
         )
 
     reviews = json.loads(product.reviews)
@@ -257,7 +258,7 @@ def get_instagram_analysis():
         for analysis in instagram_analysis:
             data.append({analysis.insta_post_id: json.loads(analysis.comments)})
         return jsonify(data)
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_single_instagram_analysis(insta_post_id):
@@ -274,7 +275,7 @@ def get_single_instagram_analysis(insta_post_id):
     if instagram_analysis:
         _comments = json.loads(instagram_analysis.comments)
         return jsonify(_comments)
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_all_jumia():
@@ -296,7 +297,7 @@ def get_all_jumia():
                 }
             )
         return jsonify(data)
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_single_jumia(product_id):
@@ -313,7 +314,7 @@ def get_single_jumia(product_id):
     ).first()
 
     if product is None:
-        return page_not_found(f"No product with product id {product_id}")
+        return error_response(404, f"No product with product id {product_id}")
 
     product_review = json.loads(product.reviews)
 
@@ -343,7 +344,7 @@ def get_all_konga():
                 }
             )
         return jsonify(data)
-    return page_not_found("No analysis has been made yet")
+    return error_response(404, "No analysis has been made yet")
 
 
 def get_single_konga(product_description):
@@ -351,8 +352,8 @@ def get_single_konga(product_description):
         product_description=product_description, user_id=g.current_user.id
     ).first()
     if product is None:
-        return page_not_found(
-            f"product with description {product_description} not found"
+        return error_response(
+            404, f"product with description {product_description} not found"
         )
     reviews = json.loads(product.reviews)
 
