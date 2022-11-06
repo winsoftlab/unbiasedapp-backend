@@ -1,8 +1,7 @@
-from lib2to3.pgen2 import token
 from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from ..models import User
 from flask import g
-from .errors import error_response, forbiden
+from .errors import error_response
 from . import api
 
 
@@ -10,18 +9,21 @@ basic_auth = HTTPBasicAuth()
 token_auth = HTTPTokenAuth()
 
 
-@api.before_request
-@token_auth.login_required
+@api.before_app_first_request
+@basic_auth.login_required
 def before_request():
-    if not g.current_user.is_anonymous and not g.current_user.confirmed:
-        return forbiden("Unconfirmed account")
+    if (
+        not basic_auth.current_user().is_anonymous
+        and not basic_auth.current_user().confirmed
+    ):
+        return error_response(401, message="Unconfirmed account")
 
 
-# @basic_auth.verify_password
-# def verify_password(username, password):
-#     user = User.query.filter_by(username=username).first()
-#     if user and user.check_password(password):
-#         return user
+@basic_auth.verify_password
+def verify_password(username, password):
+    user = User.query.filter_by(username=username).first()
+    if user and user.verify_password(password):
+        return user
 
 
 @basic_auth.error_handler

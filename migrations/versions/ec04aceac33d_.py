@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: fc4fd180941f
+Revision ID: ec04aceac33d
 Revises: 
-Create Date: 2022-10-27 23:53:44.901479
+Create Date: 2022-11-06 17:58:20.236552
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'fc4fd180941f'
+revision = 'ec04aceac33d'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -26,9 +26,12 @@ def upgrade():
     sa.Column('confirmed', sa.Boolean(), nullable=True),
     sa.Column('fb_access_token', sa.String(), nullable=True),
     sa.Column('fb_page_id', sa.String(length=128), nullable=True),
+    sa.Column('token', sa.String(length=32), nullable=True),
+    sa.Column('token_expiration', sa.DateTime(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)
+    op.create_index(op.f('ix_users_token'), 'users', ['token'], unique=True)
     op.create_index(op.f('ix_users_username'), 'users', ['username'], unique=True)
     op.create_table('amazon_analysis',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
@@ -107,6 +110,7 @@ def downgrade():
     op.drop_table('facebook_analysis')
     op.drop_table('amazon_analysis')
     op.drop_index(op.f('ix_users_username'), table_name='users')
+    op.drop_index(op.f('ix_users_token'), table_name='users')
     op.drop_index(op.f('ix_users_email'), table_name='users')
     op.drop_table('users')
     # ### end Alembic commands ###

@@ -22,7 +22,7 @@ from app.models import (
     KongaAnalysis,
     User,
 )
-
+from app.api.authentication import basic_auth
 
 from app import db
 import pickle
@@ -42,15 +42,16 @@ def search_tweet(q, count):
     _tweet = pickle.dumps(result)
 
     analysis = TwitterAnalysis.query.filter_by(
-        search_query=q, user_id=g.current_user.id
+        search_query=q, user_id=basic_auth.current_user().id
     ).first()
 
     if analysis is None:
         new_twitter_analysis = TwitterAnalysis(
-            user_id=g.current_user.id, search_query=q, tweets=_tweet
+            user_id=basic_auth.current_user().id, search_query=q, tweets=_tweet
         )
         db.session.add(new_twitter_analysis)
     else:
+        request.method = "PUT"
         analysis.tweets = _tweet
     db.session.commit()
     return {"msg": "Data retrieved successfully"}
@@ -66,12 +67,12 @@ def selenium_amazon(product_name, product_id):
     _search_result = json.dumps(search_result)
 
     product = AmazonAnalysis.query.filter_by(
-        user_id=g.current_user.id, product_id=product_id
+        user_id=basic_auth.current_user().id, product_id=product_id
     ).first()
 
     if product is None:
         new_search = AmazonAnalysis(
-            user_id=g.current_user.id,
+            user_id=basic_auth.current_user().id,
             product_id=product_id,
             product_name=product_name,
             reviews=_search_result,
@@ -99,12 +100,14 @@ def selenium_jumia(product_id):
     _search_result = json.dumps(search_result)
 
     product = JumiaAnalysis.query.filter_by(
-        product_id=product_id, user_id=g.current_user.id
+        product_id=product_id, user_id=basic_auth.current_user().id
     ).first()
 
     if product is None:
         new_search = JumiaAnalysis(
-            user_id=g.current_user.id, product_id=product_id, reviews=_search_result
+            user_id=basic_auth.current_user().id,
+            product_id=product_id,
+            reviews=_search_result,
         )
 
         db.session.add(new_search)
@@ -127,12 +130,12 @@ def selenium_konga(product_name_code_url):
     _search_result = json.dumps(search_result)
 
     product_description = KongaAnalysis.query.filter_by(
-        product_description=product_name_code_url, user_id=g.current_user.id
+        product_description=product_name_code_url, user_id=basic_auth.current_user().id
     ).first()
 
     if product_description is None:
         new_search = KongaAnalysis(
-            user_id=g.current_user.id,
+            user_id=basic_auth.current_user().id,
             product_description=product_name_code_url,
             reviews=_search_result,
         )
@@ -146,7 +149,7 @@ def selenium_konga(product_name_code_url):
 
 def instagram_comments(fb_page_id, insta_post_id):
 
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
 
     if user is None or user.fb_access_token is None:
         return unauthenticated("Please Login facebook to access api")
@@ -168,14 +171,14 @@ def instagram_comments(fb_page_id, insta_post_id):
                 ig_comment_and_reply_list.append(j["text"])
 
     analysis = InstagramAnalysis.query.filter_by(
-        insta_post_id=insta_post_id, user_id=g.current_user.id
+        insta_post_id=insta_post_id, user_id=basic_auth.current_user().id
     ).first()
     _ig_comment_and_reply_list = json.dumps(ig_comment_and_reply_list)
 
     # SAVING TO DATABASE
     if analysis is None:
         new_analysis = InstagramAnalysis(
-            user_id=g.current_user.id,
+            user_id=basic_auth.current_user().id,
             fb_page=fb_page_id,
             insta_post_id=insta_post_id,
             comments=_ig_comment_and_reply_list,
@@ -192,7 +195,7 @@ def instagram_comments(fb_page_id, insta_post_id):
 
 def instagram_hashtag(q):
 
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
 
     if user is None and user.fb_access_token is None:
         return unauthenticated("Please Login facebook to access api")
@@ -256,7 +259,7 @@ def facebook_page_post_comments(page_id, post_id):
     post using the page id and the page access token
     """
 
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
 
     if user is None or user.fb_access_token is None:
         return unauthenticated("Please login with Facebook to access facebook data")
@@ -301,13 +304,13 @@ def facebook_page_post_comments(page_id, post_id):
                 comment_reply_list.append(page_post_comment_reply["data"][j]["message"])
 
     analysis = FacebookAnalysis.query.filter_by(
-        fb_post_id=post_id, user_id=g.current_user.id
+        fb_post_id=post_id, user_id=basic_auth.current_user().id
     ).first()
     _comment_reply_list = json.dumps(comment_reply_list)
 
     if analysis is None:
         new_analysis = FacebookAnalysis(
-            user_id=g.current_user.id,
+            user_id=basic_auth.current_user().id,
             fb_page_id=page_id,
             fb_post_id=post_id,
             comments=_comment_reply_list,

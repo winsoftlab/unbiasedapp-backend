@@ -1,3 +1,4 @@
+from app.api.authentication import basic_auth, token_auth
 from app.controllers.facebookController.facebook_graph_api import (
     get_page_access_token,
     page_posts_id,
@@ -31,7 +32,7 @@ def get_facebook_pages():
     Returns:
         _type_: _description_
     """
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user.id)
     if user.fb_page_id:
         fb_page_lists = json.loads(user.fb_page_id)
         return jsonify(fb_page_lists)
@@ -48,7 +49,7 @@ def get_posts(page_id):
         _type_: _description_
     """
 
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
 
     params = getCredentials()
 
@@ -90,7 +91,7 @@ def get_all_facebook_analysis():
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
     facebook_analysis = FacebookAnalysis.query.filter_by(
-        user_id=g.current_user.id
+        user_id=basic_auth.current_user().id
     ).all()
 
     if facebook_analysis != []:
@@ -112,7 +113,7 @@ def get_single_facebook_page_post(post_id):
         _type_: _description_
     """
     post = FacebookAnalysis.query.filter_by(
-        fb_post_id=post_id, user_id=g.current_user.id
+        fb_post_id=post_id, user_id=basic_auth.current_user().id
     ).first()
     # with open('facebook_replies.txt', 'w') as f:
     #     [f.writelines(k) for k in _comments]
@@ -125,7 +126,7 @@ def get_single_facebook_page_post(post_id):
 
 
 def get_all_twitter_analysis():
-    tweets = TwitterAnalysis.query.filter_by(user_id=g.current_user.id).all()
+    tweets = TwitterAnalysis.query.filter_by(user_id=basic_auth.current_user().id).all()
 
     if tweets == []:
         return error_response(404, "No analysis has been made yet")
@@ -147,7 +148,7 @@ def get_single_twitter_analysis(search_query):
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
     tweet = TwitterAnalysis.query.filter_by(
-        search_query=search_query, user_id=g.current_user.id
+        search_query=search_query, user_id=basic_auth.current_user().id
     ).first()
     if tweet is not None:
         query = tweet.search_query
@@ -165,7 +166,9 @@ def get_amazon_analysis():
     """
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
-    amazon_analysis = AmazonAnalysis.query.filter_by(user_id=g.current_user.id).all()
+    amazon_analysis = AmazonAnalysis.query.filter_by(
+        user_id=basic_auth.current_user().id
+    ).all()
 
     if amazon_analysis != []:
         data = []
@@ -192,7 +195,9 @@ def get_single_amazon(product_name, product_id):
         _type_: _description_
     """
     product = AmazonAnalysis.query.filter_by(
-        product_id=product_id, product_name=product_name, user_id=g.current_user.id
+        product_id=product_id,
+        product_name=product_name,
+        user_id=basic_auth.current_user().id,
     ).first()
 
     if product is None:
@@ -208,7 +213,7 @@ def get_single_amazon(product_name, product_id):
 
 def get_ig_media_id(fb_page_id):
 
-    user = User.query.get(g.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
 
     if user is None or user.fb_access_token is None:
         return unauthenticated("Please Login facebook to access api")
@@ -251,7 +256,7 @@ def get_instagram_analysis():
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
     instagram_analysis = InstagramAnalysis.query.filter_by(
-        user_id=g.current_user.id
+        user_id=basic_auth.current_user().id
     ).all()
     if instagram_analysis != []:
         data = []
@@ -270,7 +275,7 @@ def get_single_instagram_analysis(insta_post_id):
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
     instagram_analysis = InstagramAnalysis.query.filter_by(
-        user_id=g.current_user.id, insta_post_id=insta_post_id
+        user_id=basic_auth.current_user().id, insta_post_id=insta_post_id
     ).first()
     if instagram_analysis:
         _comments = json.loads(instagram_analysis.comments)
@@ -285,7 +290,9 @@ def get_all_jumia():
         _type_: _description_
     """
     # TODO add sorting parameters from the query parameters parsed from the request.args
-    jumia_analysis = JumiaAnalysis.query.filter_by(user_id=g.current_user.id).all()
+    jumia_analysis = JumiaAnalysis.query.filter_by(
+        user_id=basic_auth.current_user().id
+    ).all()
 
     if jumia_analysis != []:
         data = []
@@ -310,7 +317,7 @@ def get_single_jumia(product_id):
         _type_: _description_
     """
     product = JumiaAnalysis.query.filter_by(
-        product_id=product_id, user_id=g.current_user.id
+        product_id=product_id, user_id=basic_auth.current_user().id
     ).first()
 
     if product is None:
@@ -332,7 +339,9 @@ def get_all_konga():
 
     # TODO add sorting parameters from the query parameters parsed from the request.args
 
-    konga_analysis = KongaAnalysis.query.filter_by(user_id=g.current_user.id).all()
+    konga_analysis = KongaAnalysis.query.filter_by(
+        user_id=basic_auth.current_user().id
+    ).all()
 
     if konga_analysis != []:
         data = []
@@ -349,7 +358,7 @@ def get_all_konga():
 
 def get_single_konga(product_description):
     product = KongaAnalysis.query.filter_by(
-        product_description=product_description, user_id=g.current_user.id
+        product_description=product_description, user_id=basic_auth.current_user().id
     ).first()
     if product is None:
         return error_response(

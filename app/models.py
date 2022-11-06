@@ -20,7 +20,7 @@ class StripeCustomer(db.Model):
 class TwitterAnalysis(db.Model):
     __tablename__ = "twitter_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     search_query = db.Column(db.String(255), nullable=False, unique=True)
     tweets = db.Column(db.String)
 
@@ -28,7 +28,7 @@ class TwitterAnalysis(db.Model):
 class FacebookAnalysis(db.Model):
     __tablename__ = "facebook_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     fb_page = db.Column(db.String(255), db.ForeignKey("users.fb_page_id"))
     fb_post_id = db.Column(db.String)
     comments = db.Column(db.String)
@@ -38,7 +38,7 @@ class InstagramAnalysis(db.Model):
     __tablename__ = "instagram_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     fb_page = db.Column(db.String(255), db.ForeignKey("users.fb_page_id"))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     insta_post_id = db.Column(db.String(255), nullable=False, unique=True)
     comments = db.Column(db.String)
 
@@ -54,7 +54,7 @@ class InstagramAnalysis(db.Model):
 class AmazonAnalysis(db.Model):
     __tablename__ = "amazon_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     product_id = db.Column(db.String(255), nullable=True)
     product_name = db.Column(db.String(255), nullable=True)
     reviews = db.Column(db.String)
@@ -63,7 +63,7 @@ class AmazonAnalysis(db.Model):
 class JumiaAnalysis(db.Model):
     __tablename__ = "jumia_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     product_id = db.Column(db.String(255), nullable=False)
     reviews = db.Column(db.String)
 
@@ -71,7 +71,7 @@ class JumiaAnalysis(db.Model):
 class KongaAnalysis(db.Model):
     __tablename__ = "konga_analysis"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), default=None)
     product_description = db.Column(db.String(255), nullable=True)
     reviews = db.Column(db.String)
 
@@ -89,11 +89,11 @@ class User(UserMixin, db.Model):
     fb_page_id = db.Column(db.String(128))
 
     # User data analyses
-    jumia_analysis = db.relationship("JumiaAnalysis", backref="users")
-    konga_analysis = db.relationship("KongaAnalysis", backref="users")
-    amazon_analysis = db.relationship("AmazonAnalysis", backref="users")
-    facebook_analysis = db.relationship("FacebookAnalysis", backref="users")
-    instagram_analysis = db.relationship("KongaAnalysis", backref="users")
+    # jumia_analysis = db.relationship("JumiaAnalysis", backref="users")
+    # konga_analysis = db.relationship("KongaAnalysis", backref="users")
+    # amazon_analysis = db.relationship("AmazonAnalysis", backref="users")
+    # facebook_analysis = db.relationship("FacebookAnalysis", backref="users")
+    # instagram_analysis = db.relationship("InstagramAnalysis", backref="users")
 
     # API tokens and verification
     token = db.Column(db.String(32), index=True, unique=True)
@@ -104,7 +104,7 @@ class User(UserMixin, db.Model):
         if self.token and self.token_expiration > now + timedelta(seconds=60):
             return self.token
         self.token = base64.b64encode(os.urandom(24)).decode("utf-8")
-        self.token_expiration = now + timedelta(Seconds=expires_in)
+        self.token_expiration = now + timedelta(seconds=expires_in)
         db.session.add(self)
         return self.token
 

@@ -1,6 +1,15 @@
 import os
 from app import create_app, db
-from app.models import User, StripeCustomer
+from app.models import (
+    AmazonAnalysis,
+    FacebookAnalysis,
+    InstagramAnalysis,
+    JumiaAnalysis,
+    KongaAnalysis,
+    TwitterAnalysis,
+    User,
+    StripeCustomer,
+)
 from flask_migrate import Migrate, upgrade
 
 app = create_app(os.getenv("FLASK_CONFIG") or "default")
@@ -9,7 +18,17 @@ migrate = Migrate(app, db)
 
 @app.shell_context_processor
 def make_Shell_context():
-    return dict(db=db, User=User, StripeCustomer=StripeCustomer)
+    return dict(
+        db=db,
+        User=User,
+        StripeCustomer=StripeCustomer,
+        FacebookAnalysis=FacebookAnalysis,
+        InstagramAnalysis=InstagramAnalysis,
+        TwitterAnalysis=TwitterAnalysis,
+        KongaAnalysis=KongaAnalysis,
+        AmazonAnalysis=AmazonAnalysis,
+        JumiaAnalysis=JumiaAnalysis,
+    )
 
 
 @app.cli.command()
