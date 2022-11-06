@@ -1,48 +1,72 @@
-from flask_httpauth import HTTPBasicAuth
+from lib2to3.pgen2 import token
+from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from ..models import User
-from flask import g, jsonify
-from .errors import unauthenticated, forbiden
+from flask import g
+from .errors import error_response, forbiden
 from . import api
 
 
-auth = HTTPBasicAuth()
+basic_auth = HTTPBasicAuth()
+token_auth = HTTPTokenAuth()
+
 
 @api.before_request
-@auth.login_required
+@token_auth.login_required
 def before_request():
-    if not g.current_user.is_anonymous and \
-            not g.current_user.confirmed:
-        return forbiden('Unconfirmed account')
+    if not g.current_user.is_anonymous and not g.current_user.confirmed:
+        return forbiden("Unconfirmed account")
 
 
-@api.route('/token/', methods=['POST'])
-def get_token():
-    if g.current_user.is_anonymous or g.token_used:
-        return unauthenticated('Invalid credentials')
-        
-    return jsonify({'token': g.current_user.generate_auth_token(
-        expiration=3600) ,'expiration':3600})
-
-@auth.verify_password
-def verify_password(email_or_token, password):
-    if email_or_token == '':
-        return False
-    if password == '':
-        g.current_user = User.verify_auth_token(email_or_token)
-        g.token_used = True
-        return g.current_user is not None
-
-    user = User.query.filter_by(email=email_or_token).first()
-
-    if not user:
-        return False
-
-    g.current_user = user
-    g.token_used = False
-
-    return user.verify_password(password)
+# @basic_auth.verify_password
+# def verify_password(username, password):
+#     user = User.query.filter_by(username=username).first()
+#     if user and user.check_password(password):
+#         return user
 
 
-@auth.error_handler
-def auth_error():
-    return unauthenticated('Invalid credentials')
+@basic_auth.error_handler
+def auth_error(status):
+    return error_response(status)
+
+
+@token_auth.verify_token
+def verify_token(token):
+    return User.check_token(token) if token else None
+
+
+@token_auth.error_handler
+def token_auth_error(status):
+    return error_response(status)
+
+
+# @api.route("/token/", methods=["POST"])
+# def get_token():
+#     if g.current_user.is_anonymous or g.token_used:
+#         return unauthenticated("Invalid credentials")
+
+#     return jsonify(
+#         {
+#             "token": g.current_user.generate_auth_token(expiration=3600),
+#             "expiration": 3600,
+#         }
+#     )
+
+
+# @basic_auth.verify_password
+# def verify_password(email_or_token, password):
+#     if email_or_token == "":
+#         return False
+#     if password == "":
+#         g.current_user = User.verify_auth_token(email_or_token)
+#         g.token_used = True
+#         return g.current_user is not None
+
+#     user = User.query.filter_by(email=email_or_token).first()
+
+#     if not user:
+#         return False
+
+#     g.current_user = user
+#     g.token_used = False
+
+#     return user.verify_password(password)

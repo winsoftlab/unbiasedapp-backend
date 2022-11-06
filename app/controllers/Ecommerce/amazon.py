@@ -50,7 +50,7 @@ def begin_amazon_search(url):
         # search_result.append(
         #     result
         # )  # calling the beautifulsoup method to extract the text
-        search_result + result
+        search_result.extend(result)
 
         next_page = driver.find_element(By.PARTIAL_LINK_TEXT, "Next")
         value = next_page.get_attribute("href")

@@ -54,12 +54,12 @@ def create_app(config_name):
 
     app.register_blueprint(paypal_blueprint, url_prefix="/paypal")
 
-    from .data import data as data_blueprint
-
-    app.register_blueprint(data_blueprint, url_prefix="/data")
-
     from .api import api as api_blueprint
 
     app.register_blueprint(api_blueprint, url_prefix="/api/v1")
+
+    from .errors import bp as error_bp
+
+    app.register_blueprint(error_bp)
 
     return app
