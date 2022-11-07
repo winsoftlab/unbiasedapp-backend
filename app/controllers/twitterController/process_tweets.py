@@ -6,7 +6,7 @@ from textblob import TextBlob
 
 def process_tweets(tweets):
 
-    """A fucntion that processess the tweets"""
+    """A function that processess the tweets"""
 
     # twitterApi = connect_api()
 

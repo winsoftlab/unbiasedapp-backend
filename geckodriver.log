@@ -180,3 +180,76 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
 console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
 DevTools listening on ws://127.0.0.1:65478/devtools/browser/35673708-1f6b-43fe-9196-353def7bac27
+1667775424286	geckodriver	INFO	Listening on 127.0.0.1:64425
+1667775427483	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "64426" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6MuVRG"
+*** You are running in headless mode.
+1667775434815	Marionette	INFO	Marionette enabled
+1667775434824	Marionette	INFO	Listening on port 64435
+Read port: 64435
+WebDriver BiDi listening on ws://127.0.0.1:64426
+1667775435502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6MuVRG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64426/devtools/browser/33c2732b-4200-41a1-a664-b34bb07a7cd6
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews&sortBy=recent line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1667775542421	Marionette	INFO	Stopped listening on port 64435
+1667776785724	geckodriver	INFO	Listening on 127.0.0.1:54297
+1667776788962	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54298" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEtovrM"
+*** You are running in headless mode.
+1667776794193	Marionette	INFO	Marionette enabled
+1667776794207	Marionette	INFO	Listening on port 54307
+Read port: 54307
+WebDriver BiDi listening on ws://127.0.0.1:54298
+1667776796429	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEtovrM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54298/devtools/browser/8436a421-ff49-473f-aa36-cab3561026d6
+1667776820762	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1667776821273	Marionette	INFO	Stopped listening on port 54307
+1667777026659	geckodriver	INFO	Listening on 127.0.0.1:54531
+1667777029650	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54532" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileup9uW7"
+*** You are running in headless mode.
+1667777030730	Marionette	INFO	Marionette enabled
+1667777030742	Marionette	INFO	Listening on port 54542
+Read port: 54542
+WebDriver BiDi listening on ws://127.0.0.1:54532
+1667777030955	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileup9uW7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54532/devtools/browser/25e80623-1177-4ee2-a782-5474a5b35b06
+1667777038629	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=all_reviews&sortBy=recent line 3275 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Apple-iPhone-256GB-Space-Gray/product-reviews/B07ZQSSKY4/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews&sortBy=recent line 3050 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1667777062449	geckodriver	INFO	Listening on 127.0.0.1:54679
+1667777065161	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54680" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLuMWrK"
+*** You are running in headless mode.
+1667777066150	Marionette	INFO	Marionette enabled
+1667777066163	Marionette	INFO	Listening on port 54700
+Read port: 54700
+WebDriver BiDi listening on ws://127.0.0.1:54680
+1667777066428	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLuMWrK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54680/devtools/browser/fb36e467-a6b3-40a6-9b00-d976ce62ade9
+1667777075163	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1667777080785	Marionette	INFO	Stopped listening on port 54700
+1667777120973	geckodriver	INFO	Listening on 127.0.0.1:54810
+1667777123871	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54811" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileNqqrwS"
+*** You are running in headless mode.
+1667777124541	Marionette	INFO	Marionette enabled
+1667777124548	Marionette	INFO	Listening on port 54820
+WebDriver BiDi listening on ws://127.0.0.1:54811
+Read port: 54820
+1667777125672	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileNqqrwS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54811/devtools/browser/a00a39a9-3adc-4d6d-aa60-03573bc63695
+1667777133167	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1667777219596	Marionette	INFO	Stopped listening on port 54820
+[Parent 17752, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167

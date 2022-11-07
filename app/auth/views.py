@@ -1,4 +1,4 @@
-from flask import flash, render_template, redirect, request, url_for
+from flask import flash, render_template, redirect, request, url_for, make_response
 from flask_login import login_required, login_user, logout_user, current_user
 
 from . import auth
@@ -41,7 +41,7 @@ def login():
             next = request.args.get("next")
             if next is None or not next.startswith("/"):
                 next = url_for("main.home")
-            return redirect(next)
+            response = make_response(redirect(next))
         flash("Invalid username or password")
     return render_template("auth/login.html", form=form)
 

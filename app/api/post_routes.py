@@ -1,7 +1,7 @@
 from . import api
-from flask import jsonify, g, request, session
+from flask import jsonify, g, request
 from flask_login import current_user
-from app.api.errors import unauthenticated
+from app.api.errors import error_response, unauthenticated
 from app.controllers.Ecommerce.amazon import begin_amazon_search
 from app.controllers.Ecommerce.jumia import begin_jumia_search
 from app.controllers.Ecommerce.konga import begin_konga_search
@@ -39,6 +39,11 @@ def search_tweet(q, count):
     """
     result = search_tweets(q, count)
 
+    if result.num_tweets == 0:  # Check if the tweet object has tweets
+        return error_response(
+            500, "Unable to retrieve Tweets, check your internet and try again"
+        )
+
     _tweet = pickle.dumps(result)
 
     analysis = TwitterAnalysis.query.filter_by(
@@ -54,7 +59,7 @@ def search_tweet(q, count):
         request.method = "PUT"
         analysis.tweets = _tweet
     db.session.commit()
-    return {"msg": "Data retrieved successfully"}
+    return "", 201
 
 
 def selenium_amazon(product_name, product_id):
@@ -88,7 +93,7 @@ def selenium_amazon(product_name, product_id):
     # for i in range(0, len(search_result)):
     #     result[i] = search_result[i]
 
-    return {"msg": "Data retrieved successfully"}
+    return {"msg": "Data retrieved successfully"}, 201
 
 
 def selenium_jumia(product_id):
@@ -119,7 +124,7 @@ def selenium_jumia(product_id):
     for i in range(0, len(search_result)):
         result[i] = search_result[i]
 
-    return jsonify(result)
+    return jsonify(result), 201
 
 
 def selenium_konga(product_name_code_url):
