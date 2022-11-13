@@ -27,7 +27,7 @@ def set_driver_config():
     else:
         driver = webdriver.Firefox(
             options=options,
-            executable_path=os.environ.get("GECKODRIVER_PATH"),
+            executable_path=os.environ.get("GECKODRIVER_PATH") or "C:/bin/geckodriver",
             firefox_binary=FirefoxBinary(),
         )
     return driver

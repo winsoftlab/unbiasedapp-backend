@@ -9,6 +9,7 @@ from app.models import (
     TwitterAnalysis,
     User,
     StripeCustomer,
+    Task,
 )
 from flask_migrate import Migrate, upgrade
 
@@ -28,6 +29,7 @@ def make_Shell_context():
         KongaAnalysis=KongaAnalysis,
         AmazonAnalysis=AmazonAnalysis,
         JumiaAnalysis=JumiaAnalysis,
+        Task=Task,
     )
 
 

@@ -4,7 +4,8 @@ from selenium.common.exceptions import SessionNotCreatedException
 from app.controllers.Ecommerce.driver_config import set_driver_config
 from bs4 import BeautifulSoup
 
-# url = 'https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews'
+
+# url = "https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews"
 
 # def begin_amazon_search(url):
 #     """Takes the url of the product review page and recursively get the review"""
@@ -65,10 +66,22 @@ def amazon_beautiful_soup_search(resp):
     data_str = ""
 
     soup = BeautifulSoup(resp, "html.parser")
-    for item in soup.findAll(
+    review_date = soup.findAll(
+        "span", class_="a-size-base a-color-secondary review-date"
+    )
+    review_text = soup.findAll(
         "span", class_="a-size-base review-text review-text-content"
-    ):
-        data_str = data_str + item.get_text()
+    )
+
+    for item_date, item_text in zip(review_date, review_text):
+        date = item_date.get_text().strip("\n")
+        text = item_text.get_text().strip("\n")
+        sentence = text + date
+        data_str = data_str + f"{sentence}" + "\n"
+        # print(data_str)
     result = data_str.split("\n")
 
     return result
+
+
+# span class_="a-size-base a-color-secondary review-date"

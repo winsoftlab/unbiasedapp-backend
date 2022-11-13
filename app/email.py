@@ -6,7 +6,7 @@ from flask_mail import Message
 from app import mail
 
 
-async def sendVerificationEmail(email_data):
+def sendVerificationEmail(email_data):
     app = current_app._get_current_object()
 
     msg = Message(
@@ -23,5 +23,4 @@ async def sendVerificationEmail(email_data):
     )
 
     with app.app_context():
-
-        await mail.send(msg)
+        mail.send(msg)

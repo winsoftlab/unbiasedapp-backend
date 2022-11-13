@@ -2,6 +2,8 @@ from flask import Flask
 from .extensions import mail, login_manger, db, cors, oauth
 from config import config
 from celery import Celery
+from redis import Redis
+import rq
 
 celery_app = Celery(__name__)
 # celery = Celery(__name__)
@@ -25,6 +27,11 @@ def create_app(config_name):
         sslify = SSLify(app)
 
     celery_app.conf.update(app.config)
+
+    # REDIS INTEGRATION
+
+    app.redis = Redis.from_url(app.config["REDIS_URL"])
+    app.task_queue = rq.Queue("unbiasedapp-tasks", connection=app.redis)
 
     # EXTENSIONS INITIALIZATION
     login_manger.init_app(app)

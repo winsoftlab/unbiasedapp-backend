@@ -24,6 +24,7 @@ class Config:
     CORS_HEADERS = "Content-Type"
     CELERY_BROKER_URL = "amqp://guest:guest@localhost:6379/"  # "redis://localhost:6379" #'pyamqp://Akachi:12345Akachi@localhost:5672/flask_host'
     result_backend = "redis://redis:6379"  #'rpc://'
+    REDIS_URL = os.environ.get("REDIS_URL") or "redis://"
     SSL_REDIRECT = False
 
     @staticmethod

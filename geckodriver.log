@@ -253,3 +253,650 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1667777219596	Marionette	INFO	Stopped listening on port 54820
 [Parent 17752, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1668358185137	geckodriver	INFO	Listening on 127.0.0.1:54799
+1668358188307	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "54800" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLU421p"
+*** You are running in headless mode.
+1668358193821	Marionette	INFO	Marionette enabled
+1668358193843	Marionette	INFO	Listening on port 54810
+Read port: 54810
+WebDriver BiDi listening on ws://127.0.0.1:54800
+1668358194675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileLU421p\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:54800/devtools/browser/25a2472b-4f07-4d2b-b46a-cbda77d2fc6e
+1668358203857	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668358302681	geckodriver	INFO	Listening on 127.0.0.1:55026
+1668358305710	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "55027" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXPnOxZ"
+*** You are running in headless mode.
+1668358307379	Marionette	INFO	Marionette enabled
+1668358307396	Marionette	INFO	Listening on port 55036
+Read port: 55036
+WebDriver BiDi listening on ws://127.0.0.1:55027
+1668358307652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileXPnOxZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55027/devtools/browser/7a9d87cf-3ffa-4156-85c9-5fd9dee20011
+1668358315536	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3210 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668358702463	geckodriver	INFO	Listening on 127.0.0.1:55397
+1668358705629	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "55398" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilegcHiFO"
+*** You are running in headless mode.
+1668358712450	Marionette	INFO	Marionette enabled
+1668358712467	Marionette	INFO	Listening on port 55411
+Read port: 55411
+WebDriver BiDi listening on ws://127.0.0.1:55398
+1668358713804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilegcHiFO\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:55398/devtools/browser/09b037c5-c095-4724-82fc-df76b9064d1a
+1668358723645	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668358780932	Marionette	INFO	Stopped listening on port 55411
+1668358931956	geckodriver	INFO	Listening on 127.0.0.1:55716
+1668358934995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "55717" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilexN9s3V"
+*** You are running in headless mode.
+1668358939215	Marionette	INFO	Marionette enabled
+1668358939226	Marionette	INFO	Listening on port 55726
+Read port: 55726
+WebDriver BiDi listening on ws://127.0.0.1:55717
+1668358939436	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilexN9s3V\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55717/devtools/browser/af0bf140-218b-4f42-ac85-60fcc112857f
+1668358947768	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3422 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3222 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668358975342	Marionette	INFO	Stopped listening on port 55726
+1668359572847	geckodriver	INFO	Listening on 127.0.0.1:55876
+1668359575896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "55877" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileogOWMu"
+*** You are running in headless mode.
+1668359577615	Marionette	INFO	Marionette enabled
+1668359577631	Marionette	INFO	Listening on port 55886
+Read port: 55886
+WebDriver BiDi listening on ws://127.0.0.1:55877
+1668359577947	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileogOWMu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55877/devtools/browser/ded3f6b7-7a69-4de1-8770-782a174a4cfe
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668359586574	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3423 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3223 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668359616477	Marionette	INFO	Stopped listening on port 55886
+[Parent 19956, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+WARNING: At least one completion condition is taking too long to complete. Conditions: [{"name":"TelemetryController: shutting down","state":{"initialized":true,"initStarted":true,"haveDelayedInitTask":true,"shutdownBarrier":"Not started","connectionsBarrier":"Not started","sendModule":{"sendingEnabled":true,"pendingPingRequestCount":0,"pendingPingActivityCount":0,"unpersistedPingCount":0,"persistedPingCount":0,"schedulerState":{"shutdown":false,"hasSendTask":false,"sendsFailed":false,"sendTaskState":"bail out - no pings to send","backoffDelay":60000}},"haveDelayedNewProfileTask":true},"filename":"resource://gre/modules/TelemetryControllerParent.jsm","lineNumber":928,"stack":["resource://gre/modules/TelemetryControllerParent.jsm:setupTelemetry:928","resource://gre/modules/TelemetryControllerParent.jsm:observe:1043","resource://gre/modules/TelemetryControllerParent.jsm:observe:150","resource://gre/modules/TelemetryStartup.jsm:TelemetryStartup.prototype.observe:33"]}] Barrier: profile-before-change-telemetry
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+1668359984183	geckodriver	INFO	Listening on 127.0.0.1:55994
+1668359987242	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "55995" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIanjBC"
+*** You are running in headless mode.
+1668359988361	Marionette	INFO	Marionette enabled
+1668359988373	Marionette	INFO	Listening on port 56004
+Read port: 56004
+WebDriver BiDi listening on ws://127.0.0.1:55995
+1668359988878	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIanjBC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55995/devtools/browser/2ac14b5b-0fef-433c-a013-610665d2fe3a
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668359996782	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3334 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3425 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3225 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360096964	Marionette	INFO	Stopped listening on port 56004
+1668360170759	geckodriver	INFO	Listening on 127.0.0.1:56131
+1668360173792	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56132" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile1HjeOx"
+*** You are running in headless mode.
+1668360174880	Marionette	INFO	Marionette enabled
+1668360174893	Marionette	INFO	Listening on port 56141
+Read port: 56141
+WebDriver BiDi listening on ws://127.0.0.1:56132
+1668360175099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile1HjeOx\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56132/devtools/browser/2ed5cffd-53f7-4842-a3ba-deffb346a2af
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360183235	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:56153
+1668360219835	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3mx1HR"
+*** You are running in headless mode.
+1668360220817	Marionette	INFO	Marionette enabled
+1668360220828	Marionette	INFO	Listening on port 56163
+Read port: 56163
+WebDriver BiDi listening on ws://127.0.0.1:56154
+1668360221043	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3mx1HR\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:56154/devtools/browser/574c67f1-2883-4d48-9f7a-98df890560e3
+1668360228985	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360259015	Marionette	INFO	Stopped listening on port 56163
+1668360396796	geckodriver	INFO	Listening on 127.0.0.1:56253
+1668360399821	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56254" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilepGQ5c7"
+*** You are running in headless mode.
+1668360402989	Marionette	INFO	Marionette enabled
+1668360403001	Marionette	INFO	Listening on port 56264
+Read port: 56264
+WebDriver BiDi listening on ws://127.0.0.1:56254
+1668360403220	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilepGQ5c7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56254/devtools/browser/6e2d5d46-a766-4550-8195-52766cad828e
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360410900	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3210 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3301 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3101 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360431886	Marionette	INFO	Stopped listening on port 56264
+[Parent 27848, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1668360507823	geckodriver	INFO	Listening on 127.0.0.1:56354
+1668360510861	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56355" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileey1YgN"
+*** You are running in headless mode.
+1668360511877	Marionette	INFO	Marionette enabled
+1668360511889	Marionette	INFO	Listening on port 56364
+WebDriver BiDi listening on ws://127.0.0.1:56355
+Read port: 56364
+1668360513500	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileey1YgN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56355/devtools/browser/5a864cab-bea6-4280-88f1-ef29f489cbb0
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360519840	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360550669	Marionette	INFO	Stopped listening on port 56364
+1668360617254	geckodriver	INFO	Listening on 127.0.0.1:56498
+1668360620357	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56499" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileY6Yptq"
+*** You are running in headless mode.
+1668360621425	Marionette	INFO	Marionette enabled
+1668360621440	Marionette	INFO	Listening on port 56508
+Read port: 56508
+WebDriver BiDi listening on ws://127.0.0.1:56499
+1668360621690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileY6Yptq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56499/devtools/browser/c7fbcf93-ddce-470b-a031-78438b0d4f00
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360630312	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3435 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3223 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360661331	Marionette	INFO	Stopped listening on port 56508
+1668360742298	geckodriver	INFO	Listening on 127.0.0.1:56623
+1668360745351	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56624" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileDUYssJ"
+*** You are running in headless mode.
+1668360746352	Marionette	INFO	Marionette enabled
+1668360746365	Marionette	INFO	Listening on port 56633
+Read port: 56633
+WebDriver BiDi listening on ws://127.0.0.1:56624
+1668360746574	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileDUYssJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56624/devtools/browser/7c2b1986-bec5-485e-a1a4-f557302f69bb
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360754114	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668360774775	Marionette	INFO	Stopped listening on port 56633
+1668360874915	geckodriver	INFO	Listening on 127.0.0.1:56738
+1668360877945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56739" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileFikq0z"
+*** You are running in headless mode.
+1668360878988	Marionette	INFO	Marionette enabled
+1668360879003	Marionette	INFO	Listening on port 56748
+Read port: 56748
+WebDriver BiDi listening on ws://127.0.0.1:56739
+1668360879216	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileFikq0z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56739/devtools/browser/2b54296c-bad4-4e9c-8eb0-8505ce30232b
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668360886612	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3423 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3223 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668360957479	Marionette	INFO	Stopped listening on port 56748
+1668360990950	geckodriver	INFO	Listening on 127.0.0.1:56877
+1668360993987	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56878" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilekchimw"
+*** You are running in headless mode.
+1668360994956	Marionette	INFO	Marionette enabled
+1668360994972	Marionette	INFO	Listening on port 56887
+Read port: 56887
+WebDriver BiDi listening on ws://127.0.0.1:56878
+1668360995265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilekchimw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56878/devtools/browser/7ce21a69-91c8-4089-9cd2-c65508265915
+1668361010257	geckodriver	INFO	Listening on 127.0.0.1:56900
+1668361013303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "56901" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileSzmy6T"
+*** You are running in headless mode.
+1668361014171	Marionette	INFO	Marionette enabled
+1668361014184	Marionette	INFO	Listening on port 56910
+Read port: 56910
+WebDriver BiDi listening on ws://127.0.0.1:56901
+1668361014410	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileSzmy6T\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56901/devtools/browser/e76b16f4-e994-486f-b88d-5f665da87d61
+1668361022417	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668361047489	Marionette	INFO	Stopped listening on port 56910
+1668361109061	geckodriver	INFO	Listening on 127.0.0.1:57007
+1668361112112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "57008" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEGVAYO"
+*** You are running in headless mode.
+1668361113424	Marionette	INFO	Marionette enabled
+1668361113437	Marionette	INFO	Listening on port 57017
+Read port: 57017
+WebDriver BiDi listening on ws://127.0.0.1:57008
+1668361113643	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileEGVAYO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57008/devtools/browser/5ac83c33-a416-4ec0-834d-89784ef7ff2a
+1668361121209	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3209 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3300 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3100 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668361146232	Marionette	INFO	Stopped listening on port 57017
+[Parent 15204, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1668361223850	geckodriver	INFO	Listening on 127.0.0.1:57117
+1668361226894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "57118" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileWv82nj"
+*** You are running in headless mode.
+1668361227807	Marionette	INFO	Marionette enabled
+1668361227820	Marionette	INFO	Listening on port 57128
+Read port: 57128
+WebDriver BiDi listening on ws://127.0.0.1:57118
+1668361228050	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileWv82nj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57118/devtools/browser/ab2a3b6e-c10f-48a7-a8ef-716335c1e858
+1668361236222	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668361290270	geckodriver	INFO	Listening on 127.0.0.1:57332
+1668361293328	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "57333" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile4Frj9o"
+*** You are running in headless mode.
+1668361295038	Marionette	INFO	Marionette enabled
+1668361295052	Marionette	INFO	Listening on port 57344
+Read port: 57344
+WebDriver BiDi listening on ws://127.0.0.1:57333
+1668361295292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile4Frj9o\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57333/devtools/browser/21a87b70-5e63-4f27-93b8-5b7d154e4836
+1668361304155	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3217 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3308 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3108 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668361331361	Marionette	INFO	Stopped listening on port 57344
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1668362754118	geckodriver	INFO	Listening on 127.0.0.1:57785
+1668362758278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "57786" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilesJIg7R"
+*** You are running in headless mode.
+1668362772381	Marionette	INFO	Marionette enabled
+1668362772498	Marionette	INFO	Listening on port 57901
+Read port: 57901
+Read port: 57901
+WebDriver BiDi listening on ws://127.0.0.1:57786
+Read port: 57901
+1668362775571	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilesJIg7R\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57786/devtools/browser/f43a431c-aeaf-41fe-8ebe-78d02db57ff1
+1668362805397	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1668362813016	geckodriver	INFO	Listening on 127.0.0.1:57920
+1668362816094	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "57921" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileAtAloe"
+*** You are running in headless mode.
+1668362817357	Marionette	INFO	Marionette enabled
+1668362817375	Marionette	INFO	Listening on port 57933
+Read port: 57933
+WebDriver BiDi listening on ws://127.0.0.1:57921
+1668362817980	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileAtAloe\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:57921/devtools/browser/5ac0562c-07d2-4dbc-b3c1-f7fa87d37451
+1668362826942	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668362872992	geckodriver	INFO	Listening on 127.0.0.1:58143
+1668362876218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58144" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile05LoKf"
+*** You are running in headless mode.
+1668362877636	Marionette	INFO	Marionette enabled
+1668362877655	Marionette	INFO	Listening on port 58165
+Read port: 58165
+WebDriver BiDi listening on ws://127.0.0.1:58144
+1668362878320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile05LoKf\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:58144/devtools/browser/319d1637-6189-4977-ae9b-803d2b4425a8
+1668362889303	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3222 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3301 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3101 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668362954704	Marionette	INFO	Stopped listening on port 58165
+1668363053535	geckodriver	INFO	Listening on 127.0.0.1:58311
+1668363056562	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58312" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile0f7oWr"
+*** You are running in headless mode.
+1668363057508	Marionette	INFO	Marionette enabled
+1668363057523	Marionette	INFO	Listening on port 58321
+Read port: 58321
+WebDriver BiDi listening on ws://127.0.0.1:58312
+1668363057782	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile0f7oWr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58312/devtools/browser/4a4fff4d-7d35-4cdc-af31-52d4efa891ef
+1668363065779	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3216 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3307 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3107 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363087810	Marionette	INFO	Stopped listening on port 58321
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1668363158142	geckodriver	INFO	Listening on 127.0.0.1:58428
+1668363161174	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58429" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6yxsby"
+*** You are running in headless mode.
+1668363162267	Marionette	INFO	Marionette enabled
+1668363162283	Marionette	INFO	Listening on port 58438
+Read port: 58438
+WebDriver BiDi listening on ws://127.0.0.1:58429
+1668363162573	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile6yxsby\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58429/devtools/browser/02b308e9-1a95-46d4-96b3-9da89e240b8c
+1668363170101	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3423 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3223 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363198019	Marionette	INFO	Stopped listening on port 58438
+1668363241544	geckodriver	INFO	Listening on 127.0.0.1:58556
+1668363244586	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58557" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileHda4E5"
+*** You are running in headless mode.
+1668363245652	Marionette	INFO	Marionette enabled
+1668363245672	Marionette	INFO	Listening on port 58566
+Read port: 58566
+WebDriver BiDi listening on ws://127.0.0.1:58557
+1668363245921	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileHda4E5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58557/devtools/browser/5c8b3c88-3a86-4b41-bd8e-547eef19a1cf
+1668363253981	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3434 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3222 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363276831	Marionette	INFO	Stopped listening on port 58566
+[Parent 26176, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1668363293297	geckodriver	INFO	Listening on 127.0.0.1:58661
+1668363296331	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58662" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile1i8bOt"
+*** You are running in headless mode.
+1668363297373	Marionette	INFO	Marionette enabled
+1668363297388	Marionette	INFO	Listening on port 58671
+Read port: 58671
+WebDriver BiDi listening on ws://127.0.0.1:58662
+1668363297648	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile1i8bOt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58662/devtools/browser/a0684b15-ab95-4b34-a578-62981e11fa68
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668363305349	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3332 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363348526	geckodriver	INFO	Listening on 127.0.0.1:58835
+1668363351093	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "58836" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileu6A25k"
+*** You are running in headless mode.
+1668363361787	Marionette	INFO	Marionette enabled
+1668363361803	Marionette	INFO	Listening on port 58859
+Read port: 58859
+WebDriver BiDi listening on ws://127.0.0.1:58836
+1668363364797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileu6A25k\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:58836/devtools/browser/7cbbec0d-ce25-406f-a2c8-f091631a02db
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3422 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3222 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363442500	Marionette	INFO	Stopped listening on port 58859
+[Parent 21800, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 21800, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 380))
+1668363540354	geckodriver	INFO	Listening on 127.0.0.1:59035
+1668363543288	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59036" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileJGHzGc"
+*** You are running in headless mode.
+1668363548069	Marionette	INFO	Marionette enabled
+1668363548079	Marionette	INFO	Listening on port 59045
+Read port: 59045
+WebDriver BiDi listening on ws://127.0.0.1:59036
+1668363548292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileJGHzGc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59036/devtools/browser/12ce83ca-efe6-4fe7-aedb-fc45458d3d5e
+1668363556428	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363579274	Marionette	INFO	Stopped listening on port 59045
+1668363656808	geckodriver	INFO	Listening on 127.0.0.1:59129
+1668363659867	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59130" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileGCekWY"
+*** You are running in headless mode.
+1668363660620	Marionette	INFO	Marionette enabled
+1668363660629	Marionette	INFO	Listening on port 59139
+Read port: 59139
+WebDriver BiDi listening on ws://127.0.0.1:59130
+1668363660820	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileGCekWY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59130/devtools/browser/aec3aa7e-6bf6-4e90-99d1-b429afcfbf99
+1668363668315	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3339 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3430 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3230 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668363686300	Marionette	INFO	Stopped listening on port 59139
+1668364097234	geckodriver	INFO	Listening on 127.0.0.1:59238
+1668364100276	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59239" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilecca7VE"
+*** You are running in headless mode.
+1668364101083	Marionette	INFO	Marionette enabled
+1668364101092	Marionette	INFO	Listening on port 59248
+Read port: 59248
+WebDriver BiDi listening on ws://127.0.0.1:59239
+1668364101292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofilecca7VE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59239/devtools/browser/6134e245-9c72-4a46-907e-b5f7f2005b88
+1668364108955	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3334 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3425 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3225 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364137588	Marionette	INFO	Stopped listening on port 59248
+1668364202034	geckodriver	INFO	Listening on 127.0.0.1:59360
+1668364205103	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59361" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3p6F1K"
+*** You are running in headless mode.
+1668364205903	Marionette	INFO	Marionette enabled
+1668364205913	Marionette	INFO	Listening on port 59370
+Read port: 59370
+WebDriver BiDi listening on ws://127.0.0.1:59361
+1668364206116	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile3p6F1K\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59361/devtools/browser/13485b23-205a-40dd-a1a9-ada98a81d79d
+1668364213666	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 7 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364233692	Marionette	INFO	Stopped listening on port 59370
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+!!! error running onStopped callback: TypeError: callback is not a function
+1668364284384	geckodriver	INFO	Listening on 127.0.0.1:59475
+1668364287450	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59476" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileu7VgWm"
+*** You are running in headless mode.
+1668364288265	Marionette	INFO	Marionette enabled
+1668364288274	Marionette	INFO	Listening on port 59485
+Read port: 59485
+WebDriver BiDi listening on ws://127.0.0.1:59476
+1668364288472	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileu7VgWm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59476/devtools/browser/45f25da3-527d-464c-b0dc-62a1eb3783a8
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668364295721	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3336 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3426 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3227 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364319001	Marionette	INFO	Stopped listening on port 59485
+1668364422164	geckodriver	INFO	Listening on 127.0.0.1:59591
+1668364425223	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59592" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileOC3wDH"
+*** You are running in headless mode.
+1668364426018	Marionette	INFO	Marionette enabled
+1668364426028	Marionette	INFO	Listening on port 59601
+Read port: 59601
+WebDriver BiDi listening on ws://127.0.0.1:59592
+1668364426225	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileOC3wDH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59592/devtools/browser/f7bbfc57-8f41-4af8-a729-e1b790618f44
+1668364435225	geckodriver	INFO	Listening on 127.0.0.1:59610
+1668364438319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59611" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileP6kEz1"
+*** You are running in headless mode.
+1668364439190	Marionette	INFO	Marionette enabled
+1668364439200	Marionette	INFO	Listening on port 59620
+Read port: 59620
+WebDriver BiDi listening on ws://127.0.0.1:59611
+1668364439403	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileP6kEz1\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59611/devtools/browser/981e210b-ad7c-4b65-ae90-18bda3ca9e12
+1668364447431	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3340 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3431 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364580733	geckodriver	INFO	Listening on 127.0.0.1:59804
+1668364583787	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile2tQxXA"
+*** You are running in headless mode.
+1668364584717	Marionette	INFO	Marionette enabled
+1668364584726	Marionette	INFO	Listening on port 59814
+Read port: 59814
+WebDriver BiDi listening on ws://127.0.0.1:59805
+1668364584925	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile2tQxXA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59805/devtools/browser/3187eb5b-dcfe-4e62-9ae9-645059c32715
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668364592807	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3340 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3431 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364736372	geckodriver	INFO	Listening on 127.0.0.1:59917
+1668364739422	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "59918" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileE8ESrR"
+*** You are running in headless mode.
+1668364740332	Marionette	INFO	Marionette enabled
+1668364740342	Marionette	INFO	Listening on port 59927
+Read port: 59927
+WebDriver BiDi listening on ws://127.0.0.1:59918
+1668364740549	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileE8ESrR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59918/devtools/browser/31974379-a3ff-4dc0-954c-64b16cda658b
+1668364748812	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3422 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3234 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668364789171	Marionette	INFO	Stopped listening on port 59927
+1668364984320	geckodriver	INFO	Listening on 127.0.0.1:60048
+1668364987366	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "60049" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIE04Fv"
+*** You are running in headless mode.
+1668364988156	Marionette	INFO	Marionette enabled
+1668364988173	Marionette	INFO	Listening on port 60058
+Read port: 60058
+WebDriver BiDi listening on ws://127.0.0.1:60049
+1668364988361	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileIE04Fv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60049/devtools/browser/99931779-d3f4-4b9b-ae77-9f5611b8ecc0
+1668364998841	geckodriver	INFO	Listening on 127.0.0.1:60070
+1668365001884	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "60071" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileyBiCSv"
+*** You are running in headless mode.
+1668365002585	Marionette	INFO	Marionette enabled
+1668365002593	Marionette	INFO	Listening on port 60080
+Read port: 60080
+WebDriver BiDi listening on ws://127.0.0.1:60071
+1668365002763	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofileyBiCSv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60071/devtools/browser/ff35d76f-5f19-4c2d-ac36-ae03c77e2113
+1668365039026	geckodriver	INFO	Listening on 127.0.0.1:60093
+1668365042093	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--disable-gpu" "--no-sandbox" "enable-automation" "--disable-infobars" "--disable-dev-shm-usage" "--incoginito" "--lang=en-US" "--remote-debugging-port" "60094" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile29V2gj"
+*** You are running in headless mode.
+1668365042797	Marionette	INFO	Marionette enabled
+1668365042806	Marionette	INFO	Listening on port 60103
+Read port: 60103
+WebDriver BiDi listening on ws://127.0.0.1:60094
+1668365043337	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Akachi\\AppData\\Local\\Temp\\rust_mozprofile29V2gj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60094/devtools/browser/52d6fa39-de39-4c22-9eb2-21325121b94b
+1668365050679	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews line 3331 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_2?ie=UTF8&pageNumber=2&reviewerType=all_reviews line 3422 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.amazon.com/Bulova-Two-Tone-Stainless-Chronograph-Bracelet/product-reviews/B0713STW5H/ref=cm_cr_arp_d_paging_btm_3?ie=UTF8&pageNumber=3&reviewerType=all_reviews line 3222 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1668365127262	Marionette	INFO	Stopped listening on port 60103
