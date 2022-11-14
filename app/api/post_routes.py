@@ -149,7 +149,7 @@ def selenium_konga(product_name_code_url):
         product_description.reviews = _search_result
     db.session.commit()
 
-    return {"msg": "Data retrieved successfully"}
+    return {"msg": "Data retrieved successfully"}, 201
 
 
 def instagram_comments(fb_page_id, insta_post_id):
@@ -170,10 +170,13 @@ def instagram_comments(fb_page_id, insta_post_id):
     ig_comment_and_reply_list = []  # A list of IG Comments and replies as a single unit
 
     for i in media_response["data"]:
-        ig_comment_and_reply_list.append(i["text"])
+        # print(i)
+        text_date = i["text"] + ">" + i["timestamp"]
+        ig_comment_and_reply_list.append(text_date)
         if i.get("replies") != None:
             for j in i["replies"]["data"]:
-                ig_comment_and_reply_list.append(j["text"])
+                rep_date = j["text"] + ">" + j["timestamp"]
+                ig_comment_and_reply_list.append(rep_date)
 
     analysis = InstagramAnalysis.query.filter_by(
         insta_post_id=insta_post_id, user_id=basic_auth.current_user().id
@@ -195,7 +198,7 @@ def instagram_comments(fb_page_id, insta_post_id):
 
     db.session.commit()
 
-    return {"msg": "Data successfully retrieved"}
+    return {"msg": "Data successfully retrieved"}, 201
 
 
 def instagram_hashtag(q):
@@ -245,18 +248,7 @@ def retrieve_posts_id(page_response):
 
     post_id = page_response["posts"]["data"][1]["id"]
 
-    # for i in range(len(posts)):
-    #     yield posts[i]["id"]
     return post_id
-
-
-# def show_facebook_pages(user):
-#     fb_pages = user.fb_page_id
-#     return fb_pages
-
-# def list_facebook_posts_id(fb_page_d):
-
-#     return list_of_posts_id
 
 
 def facebook_page_post_comments(page_id, post_id):
@@ -292,7 +284,7 @@ def facebook_page_post_comments(page_id, post_id):
     )  # Empty list of comment and replies as a single list content
 
     for i in range(len(post_comments)):
-        comment = post_comments[i]["message"]
+        comment = post_comments[i]["message"] + ">" + post_comments[i]["created_time"]
 
         comment_reply_list.append(comment)  # adding comment to list
 
@@ -306,7 +298,13 @@ def facebook_page_post_comments(page_id, post_id):
             page_post_comment_reply["data"] != []
         ):  # checking if data exit i.e The comment has a reply
             for j in range(len(page_post_comment_reply["data"])):
-                comment_reply_list.append(page_post_comment_reply["data"][j]["message"])
+                reply = (
+                    page_post_comment_reply["data"][j]["message"]
+                    + ">"
+                    + page_post_comment_reply["data"][j]["created_time"]
+                )
+
+                comment_reply_list.append(reply)
 
     analysis = FacebookAnalysis.query.filter_by(
         fb_post_id=post_id, user_id=basic_auth.current_user().id
@@ -316,7 +314,7 @@ def facebook_page_post_comments(page_id, post_id):
     if analysis is None:
         new_analysis = FacebookAnalysis(
             user_id=basic_auth.current_user().id,
-            fb_page_id=page_id,
+            fb_page=page_id,
             fb_post_id=post_id,
             comments=_comment_reply_list,
         )
@@ -327,4 +325,4 @@ def facebook_page_post_comments(page_id, post_id):
 
     db.session.commit()
 
-    return {"msg": "Data successfully retrieved"}
+    return {"msg": "Data successfully retrieved"}, 201

@@ -32,7 +32,9 @@ def get_facebook_pages():
     Returns:
         _type_: _description_
     """
-    user = User.query.get(basic_auth.current_user.id)
+    user = User.query.get(basic_auth.current_user().id)
+    if not user.fb_access_token:
+        return error_response(403, "Please login Facebook")
     if user.fb_page_id:
         fb_page_lists = json.loads(user.fb_page_id)
         return jsonify(fb_page_lists)
@@ -50,6 +52,9 @@ def get_posts(page_id):
     """
 
     user = User.query.get(basic_auth.current_user().id)
+
+    if not user.fb_access_token:
+        return error_response(403, "Please login facebook")
 
     params = getCredentials()
 
@@ -226,7 +231,7 @@ def get_ig_media_id(fb_page_id):
 
     ig_user_id_response = InstagramGraphAPI(**params).get_instagram_account_id()
 
-    if not ig_user_media_response.get("instagram_business_account"):
+    if not ig_user_id_response.get("instagram_business_account"):
 
         return jsonify({"msg": "Kindly connect your Instagram to your facebook page"})
 

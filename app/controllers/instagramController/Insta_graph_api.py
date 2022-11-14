@@ -129,7 +129,7 @@ class InstagramGraphAPI:
         """
         params = self.params
         endpointParams = dict()
-        endpointParams["fields"] = "like_count,replies,username,text"
+        endpointParams["fields"] = "like_count,replies,username,text,timestamp"
         endpointParams["access_token"] = params["access_token"]
         url = params["endpoint_base"] + params["ig_media_id"] + "/" + "comments"
 

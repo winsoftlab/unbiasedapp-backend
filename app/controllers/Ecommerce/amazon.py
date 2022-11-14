@@ -76,7 +76,7 @@ def amazon_beautiful_soup_search(resp):
     for item_date, item_text in zip(review_date, review_text):
         date = item_date.get_text().strip("\n")
         text = item_text.get_text().strip("\n")
-        sentence = text + date
+        sentence = text + ">" + date
         data_str = data_str + f"{sentence}" + "\n"
         # print(data_str)
     result = data_str.split("\n")

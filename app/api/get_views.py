@@ -1,7 +1,6 @@
 from app.api.authentication import token_auth, basic_auth
 from . import api
 from app.api import get_routes
-from flask import g, url_for
 
 
 @api.route("/")
@@ -88,6 +87,17 @@ def get_single_facebook_analysis(post_id):
 
     """
     return get_routes.get_single_facebook_page_post(post_id)
+
+
+@api.route("/instagram/posts/<string:fb_page_id>")
+@token_auth.login_required
+def get_instagram_posts(fb_page_id):
+    """
+    API Endpoint to Get a single Facebook analysis by a user
+    Can take query parameters, like date sorting , most recent, and by query string
+
+    """
+    return get_routes.get_ig_media_id(fb_page_id)
 
 
 # ---------ECOMMMERCE VIEWS-----------

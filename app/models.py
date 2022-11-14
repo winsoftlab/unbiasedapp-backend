@@ -9,6 +9,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import redis
 import rq
 
+# TODO replace the TimedJSONWebSignatureSerializer with jwt
+# import jwt
+
 
 class StripeCustomer(db.Model):
     __tablename__ = "stripe_customer"
@@ -104,7 +107,7 @@ class User(UserMixin, db.Model):
     # TASKS MANGER
     tasks = db.relationship("Task", backref="users", lazy="dynamic")
 
-    def get_token(self, expires_in=3600):
+    def get_token(self, expires_in=7200):
         now = datetime.utcnow()
         if self.token and self.token_expiration > now + timedelta(seconds=60):
             return self.token
